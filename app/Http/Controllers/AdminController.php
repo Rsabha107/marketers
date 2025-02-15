@@ -44,7 +44,7 @@ class AdminController extends Controller
     public function login(LoginRequest $request)
     {
 
-Log::info('AdminController::login');
+        Log::info('AdminController::login');
         // $rules = $request->validate([
         //     'email' => ['required', 'email'],
         //     'password' => ['required'],
@@ -65,7 +65,7 @@ Log::info('AdminController::login');
         // Log::info('otp flag: ' . config('tracki.use_otp'));
 
         // dd(auth()->check());
-Log::info('AdminController::login step 2');
+        Log::info('AdminController::login step 2');
         $request->authenticate();
         // if (Auth::attempt($fields, $request->remember)) {
         // RateLimiter::hit($this->throttleKey());
@@ -109,7 +109,7 @@ Log::info('AdminController::login step 2');
 
         //  dd('login');
         Log::info('AdminController::login => ' . $user->role);
-        if ($user->hasRole(['SuperAdmin', 'HRMSADMIN'])){
+        if ($user->hasRole(['SuperAdmin', 'HRMSADMIN'])) {
             // return redirect()->intended('/');
             Log::info('AdminController::login => SuperAdmin or HRMSADMIN');
             return redirect()->route('hr.admin.dashboard');
@@ -118,7 +118,7 @@ Log::info('AdminController::login step 2');
             Log::info('AdminController::login => Employee');
             return redirect()->route('hr.emp.dashboard');
         }
-        
+
         // }
 
         // Toastr::success('Has been add successfully :)','Success');
@@ -161,7 +161,7 @@ Log::info('AdminController::login step 2');
             ->latest()
             ->first();
 
-        if($otp_attempts->attempts >= $maxAttempts){
+        if ($otp_attempts->attempts >= $maxAttempts) {
             $notification = array(
                 'message' => 'Max attempts reached',
                 'alert-type' => 'error'

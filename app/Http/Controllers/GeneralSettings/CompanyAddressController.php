@@ -85,7 +85,7 @@ class CompanyAddressController extends Controller
                 '<i class="fa-solid fa-pen-to-square text-primary"></i></a>' .
                 '<a href="javascript:void(0)" class="btn btn-sm" data-table="company_address_table" data-id="' .
                 $op->id .
-                '" id="deleteEmployeeAddress" data-bs-toggle="tooltip" data-bs-placement="right" title="Delete">' .
+                '" id="deleteBusinessAddress" data-bs-toggle="tooltip" data-bs-placement="right" title="Delete">' .
                 '<i class="bx bx-trash text-danger"></i></a></div></div>';
 
             return [
@@ -122,13 +122,13 @@ class CompanyAddressController extends Controller
 
         $rules = [
             'location_name' => 'required',
-            'employee_address1' => 'required',
-            'employee_address_country' => 'required',
-            'primary_address' => Rule::unique('business_addresses')->where('company_id', $request->id),
+            'address1' => 'required',
+            'country_id' => 'required',
+            'default_address' => Rule::unique('business_addresses')->where('company_id', $request->id),
         ];
 
         $customMessages = [
-            'primary_address.unique' => 'Only one primary address is allowed.'
+            'default_address.unique' => 'Only one primary address is allowed.'
         ];
 
         $validator = Validator::make($request->all(), $rules, $customMessages);

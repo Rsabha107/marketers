@@ -55,7 +55,7 @@ $(document).ready(function () {
 
 
     // delete task item
-    $("body").on("click", "#deleteEmployeeAddress", function (e) {
+    $("body").on("click", "#deleteBusinessAddress", function (e) {
         var id = $(this).data("id");
         var tableID = $(this).data("table");
         e.preventDefault();
@@ -72,7 +72,7 @@ $(document).ready(function () {
         }).then((result) => {
             if (result.isConfirmed) {
                 $.ajax({
-                    url: "/hr/admin/address/delete/" + id,
+                    url: "/general/settings/address/delete/" + id,
                     method: "GET",
                     success: function (result) {
                         if (!result["error"]) {
