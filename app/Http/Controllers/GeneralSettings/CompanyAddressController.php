@@ -81,9 +81,9 @@ class CompanyAddressController extends Controller
                 '<div class="font-sans-serif btn-reveal-trigger position-static">' .
                 '<a href="javascript:void(0)" class="btn btn-sm" id="edit_company_address" data-action="update" " data-type="edit" data-id=' .
                 $op->id .
-                ' data-table="company_address_table" data-bs-toggle="tooltip" data-bs-placement="right" title="Update">' .
+                ' data-table="business_address_table" data-bs-toggle="tooltip" data-bs-placement="right" title="Update">' .
                 '<i class="fa-solid fa-pen-to-square text-primary"></i></a>' .
-                '<a href="javascript:void(0)" class="btn btn-sm" data-table="company_address_table" data-id="' .
+                '<a href="javascript:void(0)" class="btn btn-sm" data-table="business_address_table" data-id="' .
                 $op->id .
                 '" id="deleteBusinessAddress" data-bs-toggle="tooltip" data-bs-placement="right" title="Delete">' .
                 '<i class="bx bx-trash text-danger"></i></a></div></div>';

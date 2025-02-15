@@ -7720,3 +7720,30 @@ DST Off\">2025-02-15 16:55:04.426265 Asia/Kuwait (+03:00)</span>
   'offset' => '0',
   'search' => '',
 )  
+[2025-02-15 23:09:28] local.INFO: array (
+  'address1' => 'required',
+  'country_id' => 'required',
+  'default_address' => 
+  \Illuminate\Validation\Rules\Unique::__set_state(array(
+     'ignore' => NULL,
+     'idColumn' => 'id',
+     'table' => 'company_addresses',
+     'column' => 'NULL',
+     'wheres' => 
+    array (
+      0 => 
+      array (
+        'column' => 'company_id',
+        'value' => 2,
+      ),
+      1 => 
+      array (
+        'column' => 'id',
+        'value' => '!=',
+      ),
+    ),
+     'using' => 
+    array (
+    ),
+  )),
+)  

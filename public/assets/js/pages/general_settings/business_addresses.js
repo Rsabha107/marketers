@@ -59,7 +59,7 @@ $(document).ready(function () {
         var id = $(this).data("id");
         var tableID = $(this).data("table");
         e.preventDefault();
-        // alert("tableID: "+tableID);
+        alert("tableID: "+tableID);
         var link = $(this).attr("href");
         Swal.fire({
             title: "Are you sure?",
