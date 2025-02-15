@@ -37,20 +37,25 @@
         </div>
     </div>
 
-    <?php if (isset($component)) { $__componentOriginal71c6471fa76ce19017edc287b6f4508c = $component; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.procurement.purchase.admin-purchase-card','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+    <?php if (isset($component)) { $__componentOriginal9e888b38131810175ce133fe9dfb26d4 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal9e888b38131810175ce133fe9dfb26d4 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.procurement.purchase.admin-purchase-card','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('procurement.purchase.admin-purchase-card'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
-<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
-<?php if (isset($__componentOriginal71c6471fa76ce19017edc287b6f4508c)): ?>
-<?php $component = $__componentOriginal71c6471fa76ce19017edc287b6f4508c; ?>
-<?php unset($__componentOriginal71c6471fa76ce19017edc287b6f4508c); ?>
+<?php if (isset($__attributesOriginal9e888b38131810175ce133fe9dfb26d4)): ?>
+<?php $attributes = $__attributesOriginal9e888b38131810175ce133fe9dfb26d4; ?>
+<?php unset($__attributesOriginal9e888b38131810175ce133fe9dfb26d4); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal9e888b38131810175ce133fe9dfb26d4)): ?>
+<?php $component = $__componentOriginal9e888b38131810175ce133fe9dfb26d4; ?>
+<?php unset($__componentOriginal9e888b38131810175ce133fe9dfb26d4); ?>
 <?php endif; ?>
 </div>
 <?php echo $__env->make('procurement.admin.partials.purchase_modal', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>

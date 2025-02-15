@@ -33,7 +33,7 @@
                         <th data-sortable="true" data-field="created_at" data-visible="false"><?= get_label('created_at', 'Created at') ?></th>
                         <th data-sortable="true" data-field="updated_at" data-visible="false"><?= get_label('updated_at', 'Updated at') ?></th>
                         <!-- <th data-formatter="actions2Formatter"><?= get_label('actions', 'Actions') ?></th> -->
-                        @if(Auth()->user()->hasRole('SuperAdmin|HRMSADMIN'))
+                        @if(Auth::user()->hasRole('SuperAdmin|HRMSADMIN'))
                         <th data-field="actions"><?= get_label('actions', 'Actions') ?></th>
                         @endif
                     </tr>

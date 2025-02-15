@@ -16,9 +16,9 @@ class Workspace extends Model
 
     // protected static function booted(){
 
-    //     Log::info(auth()->user()->functional_area_id);
+    //     Log::info(Auth::user()->functional_area_id);
     //     self::addGlobalScope(function(EloquentBuilder $builder){
-    //         $builder->when(auth()->user()->functional_area_id, function ($query, $user_fa) {
+    //         $builder->when(Auth::user()->functional_area_id, function ($query, $user_fa) {
     //             return $query->where('functional_areas.id', $user_fa);
     //         });
     //     });

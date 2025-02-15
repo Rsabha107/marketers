@@ -1,3 +1,4 @@
+
 <?php $__env->startSection('main'); ?>
     <!-- ===============================================-->
     <!--    Main Content-->
@@ -42,20 +43,25 @@
 
             
             <?php echo $__env->make('procurement.admin.partials.item_modal', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-            <?php if (isset($component)) { $__componentOriginal71c6471fa76ce19017edc287b6f4508c = $component; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.procurement.items.admin-item-master-card','data' => ['projectId' => '']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+            <?php if (isset($component)) { $__componentOriginal045957b021ad67fd47fd5671270d832b = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal045957b021ad67fd47fd5671270d832b = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.procurement.items.admin-item-master-card','data' => ['projectId' => '']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('procurement.items.admin-item-master-card'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
-<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
 <?php $component->withAttributes(['projectId' => '']); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
-<?php if (isset($__componentOriginal71c6471fa76ce19017edc287b6f4508c)): ?>
-<?php $component = $__componentOriginal71c6471fa76ce19017edc287b6f4508c; ?>
-<?php unset($__componentOriginal71c6471fa76ce19017edc287b6f4508c); ?>
+<?php if (isset($__attributesOriginal045957b021ad67fd47fd5671270d832b)): ?>
+<?php $attributes = $__attributesOriginal045957b021ad67fd47fd5671270d832b; ?>
+<?php unset($__attributesOriginal045957b021ad67fd47fd5671270d832b); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal045957b021ad67fd47fd5671270d832b)): ?>
+<?php $component = $__componentOriginal045957b021ad67fd47fd5671270d832b; ?>
+<?php unset($__componentOriginal045957b021ad67fd47fd5671270d832b); ?>
 <?php endif; ?>
         </div>
 

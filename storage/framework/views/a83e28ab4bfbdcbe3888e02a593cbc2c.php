@@ -36,21 +36,26 @@
                 </path>
             </svg><!-- <i class="fa fa-times"></i> Font Awesome fontawesome.com --></span>
     </a>
-    <?php if (isset($component)) { $__componentOriginal71c6471fa76ce19017edc287b6f4508c = $component; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.projects.admin-project-drawer','data' => ['id' => '','formAction' => ''.e(route('project.store')).'','functionalareas' => $functional_areas,'tags' => $tags,'projecttype' => $project_type,'eventcategory' => $event_category,'clients' => $clients,'employees' => $employees,'formId' => 'add_project_form']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+    <?php if (isset($component)) { $__componentOriginal9c65ea2d124f77fdaebfabcb515fbc50 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal9c65ea2d124f77fdaebfabcb515fbc50 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.projects.admin-project-drawer','data' => ['id' => '','formAction' => ''.e(route('project.store')).'','functionalareas' => $functional_areas,'tags' => $tags,'projecttype' => $project_type,'eventcategory' => $event_category,'clients' => $clients,'employees' => $employees,'formId' => 'add_project_form']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('projects.admin-project-drawer'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
-<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
 <?php $component->withAttributes(['id' => '','formAction' => ''.e(route('project.store')).'','functionalareas' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($functional_areas),'tags' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($tags),'projecttype' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($project_type),'eventcategory' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($event_category),'clients' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($clients),'employees' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($employees),'formId' => 'add_project_form']); ?>
 
      <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
-<?php if (isset($__componentOriginal71c6471fa76ce19017edc287b6f4508c)): ?>
-<?php $component = $__componentOriginal71c6471fa76ce19017edc287b6f4508c; ?>
-<?php unset($__componentOriginal71c6471fa76ce19017edc287b6f4508c); ?>
+<?php if (isset($__attributesOriginal9c65ea2d124f77fdaebfabcb515fbc50)): ?>
+<?php $attributes = $__attributesOriginal9c65ea2d124f77fdaebfabcb515fbc50; ?>
+<?php unset($__attributesOriginal9c65ea2d124f77fdaebfabcb515fbc50); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal9c65ea2d124f77fdaebfabcb515fbc50)): ?>
+<?php $component = $__componentOriginal9c65ea2d124f77fdaebfabcb515fbc50; ?>
+<?php unset($__componentOriginal9c65ea2d124f77fdaebfabcb515fbc50); ?>
 <?php endif; ?>
 
 </div>

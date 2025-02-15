@@ -209,7 +209,7 @@ class TaskController extends Controller
 
         // dd($task->files->count());
 
-        $user_department = auth()->user()->department_assignment_id;
+        $user_department = Auth::user()->department_assignment_id;
 
         $search = request()->search;
         // $search = $request->input('search');
@@ -236,7 +236,7 @@ class TaskController extends Controller
         // $tasks = Task::when($user_department, function ($query, $user_department) {
         //     return $query->where('tasks.department_assignment_id', $user_department);
         // })
-        //     ->when(auth()->user()->functional_area_id, function ($query, $user_fa) {
+        //     ->when(Auth::user()->functional_area_id, function ($query, $user_fa) {
         //         return $query->where('events.functional_area_id', $user_fa);
         //     });
         // ->first();
@@ -401,7 +401,7 @@ class TaskController extends Controller
 
         // dd($fileData);
 
-        // $user_department = auth()->user()->department_assignment_id;
+        // $user_department = Auth::user()->department_assignment_id;
 
         // $search = request('search');
         // $sort = 'id'; //(request('sort')) ? request('sort') : "id";
@@ -438,7 +438,7 @@ class TaskController extends Controller
 
         // dd($fileData);
 
-        // $user_department = auth()->user()->department_assignment_id;
+        // $user_department = Auth::user()->department_assignment_id;
 
         // $search = request('search');
         // $sort = 'id'; //(request('sort')) ? request('sort') : "id";
@@ -744,7 +744,7 @@ class TaskController extends Controller
         return response()->json([
             'error' => false,
             'message' => 'task added successfully to project ' . $task->project->name . '.',
-            'user_name' => auth()->user()->username, //$data->users->username,
+            'user_name' => Auth::user()->username, //$data->users->username,
             // 'note_text' => $data->note_text,
             // 'note_date' => format_date($data->created_at,  'H:i:s'),
             'id' => $task->id
@@ -872,14 +872,14 @@ class TaskController extends Controller
 
     public function taskDetails(Request $request, $id)
     {
-        // $hasit = auth()->user()->hasRole('department restricted');
+        // $hasit = Auth::user()->hasRole('department restricted');
         // Log::alert('TaskController::taskDetails');
         $workspace = session()->get('workspace_id');
 
         // Log::alert('TaskController::workspace' . $workspace);
 
         // Log::info($request->url());
-        $user_department = auth()->user()->department_assignment_id;
+        $user_department = Auth::user()->department_assignment_id;
 
         $util_controller = new UtilController;
 
@@ -907,7 +907,7 @@ class TaskController extends Controller
 
         // $util = new UtilController;
         // Log::info($user_department);
-        // $hasit = auth()->user()->hasPermissionTo('project.menu');
+        // $hasit = Auth::user()->hasPermissionTo('project.menu');
         // $hasit = Auth::user()->hasPermissionTo('project.menu');
         // dd($hasit);
 
@@ -1001,8 +1001,8 @@ class TaskController extends Controller
 
     public function ltTaskDetails()
     {
-        // $hasit = auth()->user()->hasRole('department restricted');
-        $user_department = auth()->user()->department_assignment_id;
+        // $hasit = Auth::user()->hasRole('department restricted');
+        $user_department = Auth::user()->department_assignment_id;
 
         $taskData = Task::join('events', 'events.id', '=', 'tasks.event_id')
             ->join('department', 'department.id', '=', 'tasks.department_assignment_id')
@@ -1015,7 +1015,7 @@ class TaskController extends Controller
             ->when($user_department, function ($query, $user_department) {
                 return $query->where('tasks.department_assignment_id', $user_department);
             })
-            ->when(auth()->user()->functional_area_id, function ($query, $user_fa) {
+            ->when(Auth::user()->functional_area_id, function ($query, $user_fa) {
                 return $query->where('events.functional_area_id', $user_fa);
             })
             ->orderBy('tasks.start_date', 'asc')
@@ -1048,8 +1048,8 @@ class TaskController extends Controller
 
     public function endingSoonTaskDetails()
     {
-        // $hasit = auth()->user()->hasRole('department restricted');
-        $user_department = auth()->user()->department_assignment_id;
+        // $hasit = Auth::user()->hasRole('department restricted');
+        $user_department = Auth::user()->department_assignment_id;
 
         $taskData = Task::join('events', 'events.id', '=', 'tasks.event_id')
             ->join('department', 'department.id', '=', 'tasks.department_assignment_id')
@@ -1063,7 +1063,7 @@ class TaskController extends Controller
             ->when($user_department, function ($query, $user_department) {
                 return $query->where('tasks.department_assignment_id', $user_department);
             })
-            ->when(auth()->user()->functional_area_id, function ($query, $user_fa) {
+            ->when(Auth::user()->functional_area_id, function ($query, $user_fa) {
                 return $query->where('events.functional_area_id', $user_fa);
             })
             ->orderBy('tasks.start_date', 'asc')
@@ -1096,8 +1096,8 @@ class TaskController extends Controller
 
     public function startingSoonTaskDetails()
     {
-        // $hasit = auth()->user()->hasRole('department restricted');
-        $user_department = auth()->user()->department_assignment_id;
+        // $hasit = Auth::user()->hasRole('department restricted');
+        $user_department = Auth::user()->department_assignment_id;
 
         $taskData = Task::join('events', 'events.id', '=', 'tasks.event_id')
             ->join('department', 'department.id', '=', 'tasks.department_assignment_id')
@@ -1111,7 +1111,7 @@ class TaskController extends Controller
             ->when($user_department, function ($query, $user_department) {
                 return $query->where('tasks.department_assignment_id', $user_department);
             })
-            ->when(auth()->user()->functional_area_id, function ($query, $user_fa) {
+            ->when(Auth::user()->functional_area_id, function ($query, $user_fa) {
                 return $query->where('events.functional_area_id', $user_fa);
             })
             ->orderBy('tasks.start_date', 'asc')
@@ -1493,7 +1493,7 @@ class TaskController extends Controller
             return response()->json([
                 'error' => false,
                 'message' => 'Note added successfully to task ' . $task->name . '.',
-                'user_name' => auth()->user()->username, //$data->users->username,
+                'user_name' => Auth::user()->username, //$data->users->username,
                 'note_text' => $data->note_text,
                 'note_date' => format_date($data->created_at,  'H:i:s'),
                 'id' => $task->id
@@ -1551,7 +1551,7 @@ class TaskController extends Controller
             return response()->json([
                 'error' => false,
                 'message' => 'file added successfully to task ' . $task->name . '.', 'id' => $task->id,
-                'user_name' => auth()->user()->username, //$data->users->username,
+                'user_name' => Auth::user()->username, //$data->users->username,
                 'original_file_name' => $data->original_file_name,
                 'task_file_id' => $data->id,
                 'file_size' => $data->file_size,

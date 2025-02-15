@@ -18,61 +18,24 @@ use KitLoong\MigrationsGenerator\Migration\Generator\ColumnGenerator;
 use KitLoong\MigrationsGenerator\Migration\Generator\IndexGenerator;
 use KitLoong\MigrationsGenerator\Migration\Writer\MigrationWriter;
 use KitLoong\MigrationsGenerator\Migration\Writer\SquashWriter;
+use KitLoong\MigrationsGenerator\Schema\Models\Index;
 use KitLoong\MigrationsGenerator\Schema\Models\Table;
 use KitLoong\MigrationsGenerator\Setting;
-use KitLoong\MigrationsGenerator\Support\CheckMigrationMethod;
 use KitLoong\MigrationsGenerator\Support\MigrationNameHelper;
 use KitLoong\MigrationsGenerator\Support\TableName;
 
 class TableMigration
 {
-    use CheckMigrationMethod;
     use TableName;
 
-    /**
-     * @var \KitLoong\MigrationsGenerator\Migration\Generator\ColumnGenerator
-     */
-    private $columnGenerator;
-
-    /**
-     * @var \KitLoong\MigrationsGenerator\Support\MigrationNameHelper
-     */
-    private $migrationNameHelper;
-
-    /**
-     * @var \KitLoong\MigrationsGenerator\Migration\Generator\IndexGenerator
-     */
-    private $indexGenerator;
-
-    /**
-     * @var \KitLoong\MigrationsGenerator\Migration\Writer\MigrationWriter
-     */
-    private $migrationWriter;
-
-    /**
-     * @var \KitLoong\MigrationsGenerator\Setting
-     */
-    private $setting;
-
-    /**
-     * @var \KitLoong\MigrationsGenerator\Migration\Writer\SquashWriter
-     */
-    private $squashWriter;
-
     public function __construct(
-        ColumnGenerator $columnGenerator,
-        MigrationNameHelper $migrationNameHelper,
-        IndexGenerator $indexGenerator,
-        MigrationWriter $migrationWriter,
-        Setting $setting,
-        SquashWriter $squashWriter
+        private readonly ColumnGenerator $columnGenerator,
+        private readonly MigrationNameHelper $migrationNameHelper,
+        private readonly IndexGenerator $indexGenerator,
+        private readonly MigrationWriter $migrationWriter,
+        private readonly Setting $setting,
+        private readonly SquashWriter $squashWriter,
     ) {
-        $this->columnGenerator     = $columnGenerator;
-        $this->migrationNameHelper = $migrationNameHelper;
-        $this->indexGenerator      = $indexGenerator;
-        $this->migrationWriter     = $migrationWriter;
-        $this->setting             = $setting;
-        $this->squashWriter        = $squashWriter;
     }
 
     /**
@@ -85,7 +48,7 @@ class TableMigration
         $upList = new Collection();
         $upList->push($this->up($table));
 
-        if ($table->getCustomColumns()->isNotEmpty()) {
+        if ($table->getUdtColumns()->isNotEmpty()) {
             foreach ($this->upAdditionalStatements($table) as $statement) {
                 $upList->push($statement);
             }
@@ -99,7 +62,7 @@ class TableMigration
             $this->makeMigrationClassName($table->getName()),
             $upList,
             new Collection([$down]),
-            MigrationFileType::TABLE()
+            MigrationFileType::TABLE,
         );
 
         return $path;
@@ -113,7 +76,7 @@ class TableMigration
         $upList = new Collection();
         $upList->push($this->up($table));
 
-        if ($table->getCustomColumns()->isNotEmpty()) {
+        if ($table->getUdtColumns()->isNotEmpty()) {
             foreach ($this->upAdditionalStatements($table) as $statement) {
                 $upList->push($statement);
             }
@@ -129,7 +92,7 @@ class TableMigration
      */
     private function up(Table $table): SchemaBlueprint
     {
-        $up = $this->getSchemaBlueprint($table, SchemaBuilder::CREATE());
+        $up = $this->getSchemaBlueprint($table, SchemaBuilder::CREATE);
 
         $blueprint = new TableBlueprint();
 
@@ -138,12 +101,14 @@ class TableMigration
             $blueprint->setLineBreak();
         }
 
-        if ($this->hasTableComment() && $table->getComment() !== null && $table->getComment() !== '') {
-            $blueprint->setMethod(new Method(TableMethod::COMMENT(), $table->getComment()));
+        if ($table->getComment() !== null && $table->getComment() !== '') {
+            $blueprint->setMethod(new Method(TableMethod::COMMENT, $table->getComment()));
         }
 
-        $chainableIndexes    = $this->indexGenerator->getChainableIndexes($table->getName(), $table->getIndexes());
-        $notChainableIndexes = $this->indexGenerator->getNotChainableIndexes($table->getIndexes(), $chainableIndexes);
+        $indexes = $table->getIndexes()->filter(static fn (Index $index) => !$index->hasUdtColumn());
+
+        $chainableIndexes    = $this->indexGenerator->getChainableIndexes($table->getName(), $indexes);
+        $notChainableIndexes = $this->indexGenerator->getNotChainableIndexes($indexes, $chainableIndexes);
 
         foreach ($table->getColumns() as $column) {
             $method = $this->columnGenerator->generate($table, $column, $chainableIndexes);
@@ -175,8 +140,16 @@ class TableMigration
     {
         $statements = [];
 
-        foreach ($table->getCustomColumns() as $column) {
+        foreach ($table->getUdtColumns() as $column) {
             foreach ($column->getSqls() as $sql) {
+                $statements[] = new DBStatementBlueprint($sql);
+            }
+        }
+
+        $indexes = $table->getIndexes()->filter(static fn (Index $index) => $index->hasUdtColumn());
+
+        foreach ($indexes as $index) {
+            foreach ($index->getUDTColumnSqls() as $sql) {
                 $statements[] = new DBStatementBlueprint($sql);
             }
         }
@@ -189,7 +162,7 @@ class TableMigration
      */
     private function down(Table $table): SchemaBlueprint
     {
-        return $this->getSchemaBlueprint($table, SchemaBuilder::DROP_IF_EXISTS());
+        return $this->getSchemaBlueprint($table, SchemaBuilder::DROP_IF_EXISTS);
     }
 
     /**
@@ -202,7 +175,7 @@ class TableMigration
         $withoutPrefix = $this->stripTablePrefix($table);
         return $this->migrationNameHelper->makeClassName(
             $this->setting->getTableFilename(),
-            $withoutPrefix
+            $withoutPrefix,
         );
     }
 
@@ -217,7 +190,7 @@ class TableMigration
         return $this->migrationNameHelper->makeFilename(
             $this->setting->getTableFilename(),
             $this->setting->getDateForMigrationFilename(),
-            $withoutPrefix
+            $withoutPrefix,
         );
     }
 
@@ -226,7 +199,7 @@ class TableMigration
      */
     private function shouldSetCharset(): bool
     {
-        if (DB::getDriverName() !== Driver::MYSQL()->getValue()) {
+        if (!in_array(DB::getDriverName(), [Driver::MARIADB->value, Driver::MYSQL->value])) {
             return false;
         }
 
@@ -236,8 +209,8 @@ class TableMigration
     private function setTableCharset(TableBlueprint $blueprint, Table $table): TableBlueprint
     {
         $blueprint->setProperty(
-            TableProperty::COLLATION(),
-            $collation = $table->getCollation()
+            TableProperty::COLLATION,
+            $collation = $table->getCollation(),
         );
 
         if ($collation === null) {
@@ -245,7 +218,7 @@ class TableMigration
         }
 
         $charset = Str::before($collation, '_');
-        $blueprint->setProperty(TableProperty::CHARSET(), $charset);
+        $blueprint->setProperty(TableProperty::CHARSET, $charset);
 
         return $blueprint;
     }
@@ -254,7 +227,7 @@ class TableMigration
     {
         return new SchemaBlueprint(
             $table->getName(),
-            $schemaBuilder
+            $schemaBuilder,
         );
     }
 }

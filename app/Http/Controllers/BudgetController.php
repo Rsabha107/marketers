@@ -32,12 +32,12 @@ class BudgetController extends Controller
     //
     public function budgetUtilization()
     {
-        // $hasit = auth()->user()->hasRole('department restricted');
-        $user_department = auth()->user()->department_assignment_id;
+        // $hasit = Auth::user()->hasRole('department restricted');
+        $user_department = Auth::user()->department_assignment_id;
 
         // $util = new UtilController;
         // Log::info($user_department);
-        // $hasit = auth()->user()->hasPermissionTo('project.menu');
+        // $hasit = Auth::user()->hasPermissionTo('project.menu');
         // $hasit = Auth::user()->hasPermissionTo('project.menu');
         // dd($hasit);
 

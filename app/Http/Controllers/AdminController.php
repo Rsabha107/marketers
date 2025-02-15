@@ -64,7 +64,7 @@ class AdminController extends Controller
         // Log::info($request);
         // Log::info('otp flag: ' . config('tracki.use_otp'));
 
-        // dd(auth()->check());
+        // dd(Auth::check());
         Log::info('AdminController::login step 2');
         $request->authenticate();
         // if (Auth::attempt($fields, $request->remember)) {
@@ -74,14 +74,14 @@ class AdminController extends Controller
 
         $user = User::find(Auth::user()->id);
 
-        // auth()->logout();
+        // Auth::logout();
         // $credentials = [$user->getAuthIdentifierName() => $user->getAuthIdentifier(), 'password' => $user->getAuthPassword];
         // $ok = Auth::attempt($credentials, false);
 
         // $usingid = Auth::loginUsingId($user->id);
 
-        // dd($user->getAuthIdentifierName(), $user->getAuthIdentifier(), $user->getAuthPassword(), $user->email,$ok, $usingid, auth()->check);
-        // dd(auth()->check());
+        // dd($user->getAuthIdentifierName(), $user->getAuthIdentifier(), $user->getAuthPassword(), $user->email,$ok, $usingid, Auth::check);
+        // dd(Auth::check());
 
         $request->session()->regenerate();
 
@@ -93,19 +93,19 @@ class AdminController extends Controller
 
         Auth::logoutOtherDevices($request->password);
 
-        if (config('tracki.use_otp')) {
-            // $this->showOtp();
-            // $simpleOTP = new SimpleOTP();
-            // $code = $simpleOTP->create(auth()->user()->email);
-            $code = \adevesa\SimpleOTP\Facades\SimpleOTP::create(auth()->user()->email);
-            // now sedning the code by email
-            $content = [
-                'otp_token'     => $code->code,
-                'subject'   => 'Sparkle HRMS: Your OTP has arrived',
-            ];
-            Mail::to(auth()->user()->email)->queue(new SendOTP($content));
-            return view('tracki/auth/otp');
-        }
+        // if (config('tracki.use_otp')) {
+        //     // $this->showOtp();
+        //     // $simpleOTP = new SimpleOTP();
+        //     // $code = $simpleOTP->create(Auth::user()->email);
+        //     // $code = \adevesa\SimpleOTP\Facades\SimpleOTP::create(Auth::user()->email);
+        //     // now sedning the code by email
+        //     $content = [
+        //         'otp_token'     => $code->code,
+        //         'subject'   => 'Sparkle HRMS: Your OTP has arrived',
+        //     ];
+        //     Mail::to(Auth::user()->email)->queue(new SendOTP($content));
+        //     return view('tracki/auth/otp');
+        // }
 
         //  dd('login');
         Log::info('AdminController::login => ' . $user->role);
@@ -127,68 +127,68 @@ class AdminController extends Controller
         ])->onlyInput('email');
     }
 
-    public function resendOTP()
-    {
-        // dd( Session::all());
-        if (config('tracki.use_otp')) {
-            // $this->showOtp();
-            // $simpleOTP = new SimpleOTP();
-            // $code = $simpleOTP->create('rsabha@gmail.com');
-            $code = \adevesa\SimpleOTP\Facades\SimpleOTP::create(auth()->user()->email);
+    // public function resendOTP()
+    // {
+    //     // dd( Session::all());
+    //     if (config('tracki.use_otp')) {
+    //         // $this->showOtp();
+    //         // $simpleOTP = new SimpleOTP();
+    //         // $code = $simpleOTP->create('rsabha@gmail.com');
+    //         $code = \adevesa\SimpleOTP\Facades\SimpleOTP::create(Auth::user()->email);
 
-            // now sedning the code by email
-            $content = [
-                'otp_token'     => $code->code,
-                'subject'   => 'Sparkle HRMS: Your OTP has arrived',
-            ];
-            Mail::to(auth()->user()->email)->queue(new SendOTP($content));
+    //         // now sedning the code by email
+    //         $content = [
+    //             'otp_token'     => $code->code,
+    //             'subject'   => 'Sparkle HRMS: Your OTP has arrived',
+    //         ];
+    //         Mail::to(Auth::user()->email)->queue(new SendOTP($content));
 
-            $notification = array(
-                'message' => 'We have a sent a new OTP code to your email, please check',
-                'alert-type' => 'success'
-            );
+    //         $notification = array(
+    //             'message' => 'We have a sent a new OTP code to your email, please check',
+    //             'alert-type' => 'success'
+    //         );
 
-            return redirect('tracki/auth/otp')->with($notification);
-            // return redirect('tracki/auth/otp')->with('message', 'OTP re-sent to your email');
-        }
-    }
+    //         return redirect('tracki/auth/otp')->with($notification);
+    //         // return redirect('tracki/auth/otp')->with('message', 'OTP re-sent to your email');
+    //     }
+    // }
 
-    public function verifyOtpAndLogin(Request $request)
-    {
-        $maxAttempts = (int) config('simple-otp.otp_max_attempts');
-        $otp_attempts = SimpleOTP::where('identity', auth()->user()->email)
-            ->where('validated_at', null)
-            ->latest()
-            ->first();
+    // public function verifyOtpAndLogin(Request $request)
+    // {
+    //     $maxAttempts = (int) config('simple-otp.otp_max_attempts');
+    //     // $otp_attempts = SimpleOTP::where('identity', Auth::user()->email)
+    //         // ->where('validated_at', null)
+    //         // ->latest()
+    //         // ->first();
 
-        if ($otp_attempts->attempts >= $maxAttempts) {
-            $notification = array(
-                'message' => 'Max attempts reached',
-                'alert-type' => 'error'
-            );
-            return redirect('/tracki/auth/signin')->with($notification);
-            // return redirect('tracki/auth/otp')->with($notification);
-        };
+    //     if ($otp_attempts->attempts >= $maxAttempts) {
+    //         $notification = array(
+    //             'message' => 'Max attempts reached',
+    //             'alert-type' => 'error'
+    //         );
+    //         return redirect('/tracki/auth/signin')->with($notification);
+    //         // return redirect('tracki/auth/otp')->with($notification);
+    //     };
 
 
-        // $isValid = SimpleOTP::verify(auth()->user()->email, $request->otp);
-        $isValid = \adevesa\SimpleOTP\Facades\SimpleOTP::verify(auth()->user()->email, $request->otp);
-        // dd($isValid);
-        if ($isValid) {
-            session()->put('OTPSESSIONKEY', true);
-        }
+    //     // $isValid = SimpleOTP::verify(Auth::user()->email, $request->otp);
+    //     $isValid = \adevesa\SimpleOTP\Facades\SimpleOTP::verify(Auth::user()->email, $request->otp);
+    //     // dd($isValid);
+    //     if ($isValid) {
+    //         session()->put('OTPSESSIONKEY', true);
+    //     }
 
-        // Log::info('AdminController::verifyOtpErrors => isValid: ' . $isValid);
-        if (auth()->check() && session()->get('OTPSESSIONKEY')) {
-            return redirect()->intended('/');
-        } else {
-            $notification = array(
-                'message' => 'The provided OTP does not match our records',
-                'alert-type' => 'error'
-            );
-            return redirect('tracki/auth/otp')->with($notification);
-        }
-    }
+    //     // Log::info('AdminController::verifyOtpErrors => isValid: ' . $isValid);
+    //     if (Auth::check() && session()->get('OTPSESSIONKEY')) {
+    //         return redirect()->intended('/');
+    //     } else {
+    //         $notification = array(
+    //             'message' => 'The provided OTP does not match our records',
+    //             'alert-type' => 'error'
+    //         );
+    //         return redirect('tracki/auth/otp')->with($notification);
+    //     }
+    // }
 
     public function logout(Request $request): RedirectResponse
     {

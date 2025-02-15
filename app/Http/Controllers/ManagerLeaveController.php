@@ -29,7 +29,7 @@ class ManagerLeaveController extends Controller
     public function index()
     {
         //
-        $employee_id = auth()->user()->employee_id;
+        $employee_id = Auth::user()->employee_id;
 
         // $employees = Employee::findOrFail($employee_id);
         // $employee_leaves = $employees->leaves();
@@ -182,7 +182,7 @@ class ManagerLeaveController extends Controller
         $status = (request()->status) ? request()->status : "";
 
         $op = EmployeeLeave::whereHas('employees', function (Builder $query) {
-            $query->where('reporting_to_id', '=', auth()->user()->employee_id);
+            $query->where('reporting_to_id', '=', Auth::user()->employee_id);
         })->orderBy($sort, $order);
 
         $user_id = ($user->hasRole('SuperAdmin') || $user->hasRole('HRMSADMIN')) ? 0 : $user->employee_id;

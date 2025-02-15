@@ -1,13 +1,14 @@
 <?php
 
 use App\Models\Workspace;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 
 
 
 
-// $user_workspace = auth()->user()->workspaces;
-if (auth()->user()->usertype == 'admin'  && !session()->has('workspace_id')) {
+// $user_workspace = Auth::user()->workspaces;
+if (Auth::user()->usertype == 'admin'  && !session()->has('workspace_id')) {
 
     $all_ws = Workspace::all();
     $current_ws = null;
@@ -71,7 +72,7 @@ if (auth()->user()->usertype == 'admin'  && !session()->has('workspace_id')) {
 
                 <button class="badge badge-phoenix fs-10 badge-phoenix-{{$badge_color}} me-1 mb-1 dropdown-toggle" id="activeLinkExample" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{$set_ws_message}}</button>
                 <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="activeLinkExample">
-                    @if (auth()->user()->usertype == 'admin')
+                    @if (Auth::user()->usertype == 'admin')
 
                     @foreach ($all_ws as $uws)
 
@@ -84,7 +85,7 @@ if (auth()->user()->usertype == 'admin'  && !session()->has('workspace_id')) {
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="{{route('tracki.setup.workspace.switch',0)}}">Show All</a>
                     @else
-                    @foreach (auth()->user()->workspaces as $uws)
+                    @foreach (Auth::user()->workspaces as $uws)
 
                     <?php
                     ($uws->id == $current_ws) ? $active = "active" : $active = "";

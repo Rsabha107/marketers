@@ -33,21 +33,26 @@
                 </path>
             </svg><!-- <i class="fa fa-times"></i> Font Awesome fontawesome.com --></span>
     </a>
-    <?php if (isset($component)) { $__componentOriginal71c6471fa76ce19017edc287b6f4508c = $component; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.procurement.purchase.admin-purchase-drawer','data' => ['id' => '','formAction' => ''.e(route('procurement.purchase.store')).'','currency' => $currency,'formId' => 'add_purchase_form','vendors' => $vendors,'projects' => $projects,'items' => $items,'addresses' => $addresses]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+    <?php if (isset($component)) { $__componentOriginal8349d8a2fe988f3e911d0df4544bf783 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal8349d8a2fe988f3e911d0df4544bf783 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.procurement.purchase.admin-purchase-drawer','data' => ['id' => '','formAction' => ''.e(route('procurement.purchase.store')).'','currency' => $currency,'formId' => 'add_purchase_form','vendors' => $vendors,'projects' => $projects,'items' => $items,'addresses' => $addresses]] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('procurement.purchase.admin-purchase-drawer'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
-<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
 <?php $component->withAttributes(['id' => '','formAction' => ''.e(route('procurement.purchase.store')).'','currency' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($currency),'formId' => 'add_purchase_form','vendors' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($vendors),'projects' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($projects),'items' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($items),'addresses' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($addresses)]); ?>
 
      <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
-<?php if (isset($__componentOriginal71c6471fa76ce19017edc287b6f4508c)): ?>
-<?php $component = $__componentOriginal71c6471fa76ce19017edc287b6f4508c; ?>
-<?php unset($__componentOriginal71c6471fa76ce19017edc287b6f4508c); ?>
+<?php if (isset($__attributesOriginal8349d8a2fe988f3e911d0df4544bf783)): ?>
+<?php $attributes = $__attributesOriginal8349d8a2fe988f3e911d0df4544bf783; ?>
+<?php unset($__attributesOriginal8349d8a2fe988f3e911d0df4544bf783); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal8349d8a2fe988f3e911d0df4544bf783)): ?>
+<?php $component = $__componentOriginal8349d8a2fe988f3e911d0df4544bf783; ?>
+<?php unset($__componentOriginal8349d8a2fe988f3e911d0df4544bf783); ?>
 <?php endif; ?>
 
 </div>

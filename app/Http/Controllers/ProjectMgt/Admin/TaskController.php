@@ -57,9 +57,9 @@ class TaskController extends Controller
     public function list($id = null)
     {
         $workspace = session()->get('workspace_id');
-        $user = User::findOrFail(auth()->user()->id);
+        $user = User::findOrFail(Auth::user()->id);
 
-        // $user_department = auth()->user()->department_assignment_id;
+        // $user_department = Auth::user()->department_assignment_id;
 
         $search = request()->search;
         $sort = (request()->sort) ? request()->sort : "id";
@@ -84,7 +84,7 @@ class TaskController extends Controller
         // $tasks = Task::when($user_department, function ($query, $user_department) {
         //     return $query->where('tasks.department_assignment_id', $user_department);
         // })
-        //     ->when(auth()->user()->functional_area_id, function ($query, $user_fa) {
+        //     ->when(Auth::user()->functional_area_id, function ($query, $user_fa) {
         //         return $query->where('events.functional_area_id', $user_fa);
         //     });
         // ->first();
@@ -274,9 +274,9 @@ class TaskController extends Controller
     public function employeeList($id = null)
     {
         $workspace = session()->get('workspace_id');
-        $user = User::findOrFail(auth()->user()->id);
+        $user = User::findOrFail(Auth::user()->id);
 
-        $user_department = auth()->user()->department_assignment_id;
+        $user_department = Auth::user()->department_assignment_id;
 
         $search = request()->search;
         $sort = (request()->sort) ? request()->sort : "id";
@@ -303,7 +303,7 @@ class TaskController extends Controller
         // $tasks = Task::when($user_department, function ($query, $user_department) {
         //     return $query->where('tasks.department_assignment_id', $user_department);
         // })
-        //     ->when(auth()->user()->functional_area_id, function ($query, $user_fa) {
+        //     ->when(Auth::user()->functional_area_id, function ($query, $user_fa) {
         //         return $query->where('events.functional_area_id', $user_fa);
         //     });
         // ->first();
@@ -714,7 +714,7 @@ class TaskController extends Controller
         return response()->json([
             'error' => $error,
             'message' => $message,
-            'user_name' => auth()->user()->username, //$data->users->username,
+            'user_name' => Auth::user()->username, //$data->users->username,
             // 'note_text' => $data->note_text,
             // 'note_date' => format_date($data->created_at,  'H:i:s'),
             // 'id' => $task->id

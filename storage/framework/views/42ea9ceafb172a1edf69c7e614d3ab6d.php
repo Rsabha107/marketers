@@ -21,7 +21,7 @@
                 </div>
             </a>
         </div>
-        <?php if(\Spatie\Permission\PermissionServiceProvider::bladeMethodWrapper('hasRole', 'xxx')): ?>
+        <?php if (\Illuminate\Support\Facades\Blade::check('hasrole', 'xxx')): ?>
             <div class="search-box navbar-top-search-box d-none d-lg-block" data-list='{"valueNames":["title"]}'
                 style="width:25rem;">
                 <form class="position-relative" data-bs-toggle="search" data-bs-display="static">

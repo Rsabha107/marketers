@@ -70,7 +70,7 @@ class SubtaskController extends Controller
             return response()->json([
                 'error' => false,
                 'message' => 'Subtask added successfully to task ' . $task->name . '.',
-                'user_name' => auth()->user()->username, //$data->users->username,
+                'user_name' => Auth::user()->username, //$data->users->username,
                 'subtask_title' => $data->title,
                 'subtask_priority_title' => $data->priority->title,
                 'subtask_color' => $data->priority->color,

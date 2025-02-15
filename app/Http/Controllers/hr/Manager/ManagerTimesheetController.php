@@ -37,7 +37,7 @@ class ManagerTimesheetController extends Controller
         // dd($id);
         // $employee_timesheets = EmployeeTimeSheet::all();
         $timesheet_periods = EmployeeTimeSheet::select('timesheet_period')->distinct()->get();
-        // $employees = Employee::when(auth()->user()->employee_id, function ($query, $id) {
+        // $employees = Employee::when(Auth::user()->employee_id, function ($query, $id) {
         //     return $query->where('employees_all.id', $id);
         // })->get();
         $employee_leave_statuses = EmployeeLeaveStatus::all();
@@ -63,7 +63,7 @@ class ManagerTimesheetController extends Controller
 
     public function list($id = null)
     {
-        $user = User::findOrFail(auth()->user()->id);
+        $user = User::findOrFail(Auth::user()->id);
 
         // table options
         $search = request('search');
@@ -77,7 +77,7 @@ class ManagerTimesheetController extends Controller
 
 
         $op = EmployeeTimeSheet::whereHas('employees', function (Builder $query) {
-            $query->where('reporting_to_id', '=', auth()->user()->employee_id);
+            $query->where('reporting_to_id', '=', Auth::user()->employee_id);
         })->orderBy($sort, $order);
 
         $user_id = ($user->hasRole('SuperAdmin') || $user->hasRole('HRMSADMIN')) ? 0 : $user->employee_id;

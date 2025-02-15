@@ -1,7 +1,6 @@
 <?php
 
 use App\Models\User;
-use App\Providers\RouteServiceProvider;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -37,9 +36,7 @@ $sendVerification = function () {
     $user = Auth::user();
 
     if ($user->hasVerifiedEmail()) {
-        $path = session('url.intended', RouteServiceProvider::HOME);
-
-        $this->redirect($path);
+        $this->redirectIntended(default: route('dashboard', absolute: false));
 
         return;
     }

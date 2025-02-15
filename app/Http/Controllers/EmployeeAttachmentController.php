@@ -103,7 +103,7 @@ class EmployeeAttachmentController extends Controller
             return response()->json([
                 'error' => false,
                 'message' => 'file added successfully',
-                'user_name' => auth()->user()->username, //$data->users->username,
+                'user_name' => Auth::user()->username, //$data->users->username,
                 'original_file_name' => $data->original_file_name,
                 'task_file_id' => $data->id,
                 'file_size' => $data->file_size,

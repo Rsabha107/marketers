@@ -46,7 +46,7 @@ class EmployeeLetterController extends Controller
 
     public function list()
     {
-        $user = User::findOrFail(auth()->user()->id);
+        $user = User::findOrFail(Auth::user()->id);
 
         $search = request('search');
         $sort = (request('sort')) ? request('sort') : "id";

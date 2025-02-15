@@ -112,7 +112,7 @@ class PayrollBankController extends Controller
 
     public function payment_list()
     {
-        $user = User::findOrFail(auth()->user()->id);
+        $user = User::findOrFail(Auth::user()->id);
 
         $search = request('search');
         $sort = "employees_all.id";
@@ -212,7 +212,7 @@ class PayrollBankController extends Controller
 
     public function list()
     {
-        $user = User::findOrFail(auth()->user()->id);
+        $user = User::findOrFail(Auth::user()->id);
 
         $search = request('search');
         $sort = "employees_all.id";

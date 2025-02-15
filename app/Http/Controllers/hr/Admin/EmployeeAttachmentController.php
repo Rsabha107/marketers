@@ -114,7 +114,7 @@ class EmployeeAttachmentController extends Controller
             return response()->json([
                 'error' => false,
                 'message' => 'file added successfully',
-                'user_name' => auth()->user()->username, //$data->users->username,
+                'user_name' => Auth::user()->username, //$data->users->username,
                 'original_file_name' => $data->original_file_name,
                 'task_file_id' => $data->id,
                 'file_size' => $data->file_size,
@@ -139,7 +139,7 @@ class EmployeeAttachmentController extends Controller
         // $size = Storage::disk('private')->size($file->file_name);
         // dd($size);
         // dd($contents);
-        if (auth()->check()) {
+        if (Auth::check()) {
             $filepath = storage_path($file->file_path . $file->file_name);
             // dd($filepath);
             // return response()->file($contents);

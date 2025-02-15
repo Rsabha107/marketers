@@ -1,138 +1,46 @@
-# Laravel DataTables CHANGELOG
+# Laravel DataTables 
 
-[![Latest Stable Version](https://poser.pugx.org/yajra/laravel-datatables-oracle/v/stable.png)](https://packagist.org/packages/yajra/laravel-datatables-oracle)
-[![Total Downloads](https://poser.pugx.org/yajra/laravel-datatables-oracle/downloads.png)](https://packagist.org/packages/yajra/laravel-datatables-oracle)
-[![Build Status](https://travis-ci.org/yajra/laravel-datatables.png?branch=master)](https://travis-ci.org/yajra/laravel-datatables)
-[![Latest Unstable Version](https://poser.pugx.org/yajra/laravel-datatables-oracle/v/unstable.svg)](https://packagist.org/packages/yajra/laravel-datatables-oracle)
-[![License](https://poser.pugx.org/yajra/laravel-datatables-oracle/license.svg)](https://packagist.org/packages/yajra/laravel-datatables-oracle)
+## CHANGELOG
 
 ### [Unreleased]
 
-### [v10.3.1] - 2023-02-20
+### [v11.1.6](https://github.com/yajra/laravel-datatables/compare/v11.1.5...v11.1.6) - 2025-01-21
 
-- fix: Fix anonymous resource collection data formatting #2944
-- fix: phpunit 10 deprecation #2955
-- fix: bump orchestra/testbench to 8 #2949
+- fix: static analysis #3213
+- ci: update workflow #3213
 
-### [v10.3.0] - 2023-02-07
+### [v11.1.5](https://github.com/yajra/laravel-datatables/compare/v11.1.4...v11.1.5) - 2024-09-26
 
-- Add Laravel 10 compatibility #2948
+- Add skip total records back #3170
+- Alternative to #3169. 
+- Partially reverts #3157.
 
-### [v10.2.3] - 2023-01-18
+### [v11.1.4](https://github.com/yajra/laravel-datatables/compare/v11.1.3...v11.1.4) - 2024-08-17
 
-- fix: Custom Order on eager loaded relationships was not working
-- fix #2905
+- fix: Ensure dates are not turned into arrays by the processor #3163
+- fix: ##3156
 
-### [v10.2.2] - 2023-01-11
+### [v11.1.3](https://github.com/yajra/laravel-datatables/compare/v11.1.2...v11.1.3) - 2024-07-15
 
-- fix: prevent deprecation errors in php 8.1+ #2931
-- fixes #2930
+- fix: make query for filteredRecords when totalRecords was manually set #3157
 
-### [v10.2.1] - 2022-12-07
+### [v11.1.2](https://github.com/yajra/laravel-datatables/compare/v11.1.1...v11.1.2) - 2024-07-03
 
-- fix: case insensitive starts with search #2917 #2916
+- fix: ErrorException when direction is null #3154
 
-### [v10.2.0] - 2022-11-03
+### [v11.1.1](https://github.com/yajra/laravel-datatables/compare/v11.1.0...v11.1.1) - 2024-04-16
 
-- PHP 8.1 Depreciation Fix #2877
-- Methods pointing to the "uncustomizable" classes. #2861
+- fix: mariadb support for scout search #3146
 
-### [v10.1.6] - 2022-10-10
+### [v11.1.0](https://github.com/yajra/laravel-datatables/compare/v11.0.0...v11.1.0) - 2024-04-16
 
-- Fix anonymous resource collection #2870
-- Fix #2827
-- Add stale workflow
+- feat: Optimize simple queries #3135
+- fix: #3133
 
-### [v10.1.5] - 2022-10-06
+### [v11.0.0](https://github.com/yajra/laravel-datatables/compare/v11.0.0...master) - 2024-03-14
 
-- Fix with method error with static analysis #2865
+- Laravel 11 support
 
-### [v10.1.4] - 2022-09-27
 
-- Fixed the search column for same table relations #2856
+[Unreleased]: https://github.com/yajra/laravel-datatables/compare/v11.0.0...master
 
-### [v10.1.3] - 2022-09-20
-
-- Fix relation key name for BelongsToMany #2850
-
-### [v10.1.2] - 2022-07-12
-
-- Fix HasOneThrough #2818
-
-### [v10.1.1] - 2022-06-24
-
-- Fix null recordsFiltered on empty collection #2806
-- Fix #2793
-
-### [v10.1.0] - 2022-06-21
-
-- Add support for dependency injection when using closure. #2800
-
-### [v10.0.8] - 2022-06-21
-
-- Make canCreate at QueryDataTable accept QueryBuilder only #2798
-
-### [v10.0.7] - 2022-05-23
-
-- Fix create eloquent datatable from relation #2789
-
-### [v10.0.6] - 2022-05-18
-
-- Added null parameter type as allowed to handle default Action column from laravel-datatables-html #2787
-
-### [v10.0.5] - 2022-05-17
-
-- Fix Return value must be of type int, string returned.
-
-### [v10.0.4] - 2022-05-08
-
-- Fix accidental formatter issue on eloquent 
-- Add formatColumn test for eloquent
-
-### [v10.0.3] - 2022-05-08
-
-- Additional fix & test for zero total records
-
-### [v10.0.2] - 2022-05-08
-
-- Fix set total & filtered records count https://github.com/yajra/laravel-datatables/pull/2778
-- Fix set total & filtered records count
-- Fix #1453 #1454 #2050 #2609
-- Add feature test
-- Deprecate `skipTotalRecords`, just use `setTotalRecords` directly.
-
-### [v10.0.1] - 2022-05-08
-
-- Code clean-up and several phpstan fixes
-
-### [v10.0.0] - 2022-05-08
-
-- Laravel DataTables v10.x to support Laravel 9.x
-- Added PHPStan with max level static analysis
-- Drop `queryBuilder()` method
-- Drop support for `ApiResourceDataTable`
-- PHP8 syntax / method signature changed
-
-[Unreleased]: https://github.com/yajra/laravel-datatables/compare/v10.3.1...10.x
-[v10.3.1]: https://github.com/yajra/laravel-datatables/compare/v10.3.1...v10.3.0
-[v10.3.0]: https://github.com/yajra/laravel-datatables/compare/v10.3.0...v10.2.3
-[v10.2.3]: https://github.com/yajra/laravel-datatables/compare/v10.2.3...v10.2.2
-[v10.2.2]: https://github.com/yajra/laravel-datatables/compare/v10.2.2...v10.2.1
-[v10.2.1]: https://github.com/yajra/laravel-datatables/compare/v10.2.1...v10.2.0
-[v10.2.0]: https://github.com/yajra/laravel-datatables/compare/v10.2.0...v10.1.6
-[v10.1.6]: https://github.com/yajra/laravel-datatables/compare/v10.1.6...v10.1.5
-[v10.1.5]: https://github.com/yajra/laravel-datatables/compare/v10.1.5...v10.1.4
-[v10.1.4]: https://github.com/yajra/laravel-datatables/compare/v10.1.4...v10.1.3
-[v10.1.3]: https://github.com/yajra/laravel-datatables/compare/v10.1.3...v10.1.2
-[v10.1.2]: https://github.com/yajra/laravel-datatables/compare/v10.1.2...v10.1.1
-[v10.1.1]: https://github.com/yajra/laravel-datatables/compare/v10.1.1...v10.1.0
-[v10.1.0]: https://github.com/yajra/laravel-datatables/compare/v10.1.0...v10.0.8
-[v10.0.8]: https://github.com/yajra/laravel-datatables/compare/v10.0.8...v10.0.7
-[v10.0.7]: https://github.com/yajra/laravel-datatables/compare/v10.0.7...v10.0.6
-[v10.0.6]: https://github.com/yajra/laravel-datatables/compare/v10.0.6...v10.0.5
-[v10.0.5]: https://github.com/yajra/laravel-datatables/compare/v10.0.5...v10.0.4
-[v10.0.4]: https://github.com/yajra/laravel-datatables/compare/v10.0.4...v10.0.3
-[v10.0.3]: https://github.com/yajra/laravel-datatables/compare/v10.0.3...v10.0.2
-[v10.0.2]: https://github.com/yajra/laravel-datatables/compare/v10.0.2...v10.0.1
-[v10.0.1]: https://github.com/yajra/laravel-datatables/compare/v10.0.1...v10.0.0
-[v10.0.0]: https://github.com/yajra/laravel-datatables/compare/v10.0.0...10.x

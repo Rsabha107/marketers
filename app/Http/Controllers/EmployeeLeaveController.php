@@ -32,7 +32,7 @@ class EmployeeLeaveController extends Controller
         //
         // dd($id);
         $employee_leaves = EmployeeLeave::all();
-        $employees = Employee::when(auth()->user()->employee_id, function ($query, $id) {
+        $employees = Employee::when(Auth::user()->employee_id, function ($query, $id) {
             return $query->where('employees_all.id', $id);
         });
         $employees = $employees = $employees->where('administrator_flag', 'N')->get();
@@ -484,8 +484,8 @@ class EmployeeLeaveController extends Controller
         $user_id = Auth::user()->id;
         $user = User::find($user_id);
         // log::info('performer_id for super user going in ');
-        if (auth()->user()->hasAnyRole('SuperAdmin', 'HRMSADMIN')) {
-            $performer = Employee::where('work_email_address', auth()->user()->email)->first();
+        if (Auth::user()->hasAnyRole('SuperAdmin', 'HRMSADMIN')) {
+            $performer = Employee::where('work_email_address', Auth::user()->email)->first();
             $performer_id = $performer->id;
             // log::info('performer_id for super user: '.$performer_id);
         } else {

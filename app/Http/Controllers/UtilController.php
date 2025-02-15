@@ -12,6 +12,7 @@ use App\Models\Status;
 use App\Models\Task;
 use App\Models\TaskFileUpload;
 use App\Models\TaskNote;
+use Illuminate\Support\Facades\Auth;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use Illuminate\Support\Facades\Log;
 
@@ -41,7 +42,7 @@ class UtilController extends Controller
 
     public function getSumTaskProgress($id)
     {
-        $user_department = auth()->user()->department_assignment_id;
+        $user_department = Auth::user()->department_assignment_id;
 
         $sumTaskProgress = DB::table('tasks')
             ->select(DB::raw("sum(tasks.progress) as sum_progress"))

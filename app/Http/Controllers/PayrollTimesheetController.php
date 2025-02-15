@@ -43,12 +43,12 @@ class PayrollTimesheetController extends Controller
         $timesheet_periods = EmployeeTimeSheet::select('timesheet_period')->distinct()->get();
 
         // $employees = Employee::all();
-        $employees = Employee::when(auth()->user()->employee_id, function ($query, $id) {
+        $employees = Employee::when(Auth::user()->employee_id, function ($query, $id) {
             return $query->where('employees_all.id', $id);
         })->get();
         $employee_leave_statuses = EmployeeLeaveStatus::all();
         // $months_name = MonthsNames::orderBy('month_order', 'ASC')->get();
-        // $emp = Employee::findOrFail(auth()->user()->employee_id);
+        // $emp = Employee::findOrFail(Auth::user()->employee_id);
 
         // dd(FacadesRoute::currentRouteName());
         // dd(FacadesRequest::url());
@@ -106,7 +106,7 @@ class PayrollTimesheetController extends Controller
 
     public function listMissingTimesheet()
     {
-        $user = User::findOrFail(auth()->user()->id);
+        $user = User::findOrFail(Auth::user()->id);
 
         $period = 'September-2024';
         $period = '';
@@ -284,7 +284,7 @@ class PayrollTimesheetController extends Controller
 
     public function list($id = null)
     {
-        $user = User::findOrFail(auth()->user()->id);
+        $user = User::findOrFail(Auth::user()->id);
 
         // table options
         $search = request('search');

@@ -24,7 +24,7 @@ class EmployeeEmergencyContactController extends Controller
         // dd($id);
         $employee_emergencies = EmployeeEmergencyContact::all();
         // $employees = Employee::all();
-        $employees = Employee::when(auth()->user()->employee_id, function ($query, $id) {
+        $employees = Employee::when(Auth::user()->employee_id, function ($query, $id) {
             return $query->where('employees_all.id', $id);
         });
         $employees = $employees = $employees->where('administrator_flag', 'N')->get();

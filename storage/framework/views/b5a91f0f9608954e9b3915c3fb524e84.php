@@ -68,20 +68,25 @@
         </div>
     </div>
     <?php echo $__env->make('projects.admin.partials.project_modal', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-    <?php if (isset($component)) { $__componentOriginal71c6471fa76ce19017edc287b6f4508c = $component; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.projects.admin-projects-card','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+    <?php if (isset($component)) { $__componentOriginal407e8111f35c57ff434ae52db3423cf7 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal407e8111f35c57ff434ae52db3423cf7 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.projects.admin-projects-card','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('projects.admin-projects-card'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
-<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
-<?php if (isset($__componentOriginal71c6471fa76ce19017edc287b6f4508c)): ?>
-<?php $component = $__componentOriginal71c6471fa76ce19017edc287b6f4508c; ?>
-<?php unset($__componentOriginal71c6471fa76ce19017edc287b6f4508c); ?>
+<?php if (isset($__attributesOriginal407e8111f35c57ff434ae52db3423cf7)): ?>
+<?php $attributes = $__attributesOriginal407e8111f35c57ff434ae52db3423cf7; ?>
+<?php unset($__attributesOriginal407e8111f35c57ff434ae52db3423cf7); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal407e8111f35c57ff434ae52db3423cf7)): ?>
+<?php $component = $__componentOriginal407e8111f35c57ff434ae52db3423cf7; ?>
+<?php unset($__componentOriginal407e8111f35c57ff434ae52db3423cf7); ?>
 <?php endif; ?>
 <?php $__env->stopSection(); ?>
 

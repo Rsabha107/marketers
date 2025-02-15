@@ -67,8 +67,8 @@ class EmployeeDashboardController extends Controller
     {
         // dd('inside trackiDashboard');
         $workspace = session()->get('workspace_id');
-        $user_department = auth()->user()->department_assignment_id;
-        $user_workspace = auth()->user()->workspace_id;
+        $user_department = Auth::user()->department_assignment_id;
+        $user_workspace = Auth::user()->workspace_id;
 
         // if (session()->has('workspace_id')){
         //     dd('session for workspace: '.session()->get('workspace_id'));
@@ -107,7 +107,7 @@ class EmployeeDashboardController extends Controller
         //     ->when($user_department, function ($query, $user_department) {
         //         return $query->where('tasks.department_assignment_id', $user_department);
         //     })
-        //     ->when(auth()->user()->functional_area_id, function ($query, $user_fa) {
+        //     ->when(Auth::user()->functional_area_id, function ($query, $user_fa) {
         //         return $query->where('events.functional_area_id', $user_fa);
         //     })
         //     ->count();
@@ -119,7 +119,7 @@ class EmployeeDashboardController extends Controller
         //     ->when($user_department, function ($query, $user_department) {
         //         return $query->where('tasks.department_assignment_id', $user_department);
         //     })
-        //     ->when(auth()->user()->functional_area_id, function ($query, $user_fa) {
+        //     ->when(Auth::user()->functional_area_id, function ($query, $user_fa) {
         //         return $query->where('events.functional_area_id', $user_fa);
         //     })
         //     ->count();
@@ -132,7 +132,7 @@ class EmployeeDashboardController extends Controller
         //     ->when($user_department, function ($query, $user_department) {
         //         return $query->where('tasks.department_assignment_id', $user_department);
         //     })
-        //     ->when(auth()->user()->functional_area_id, function ($query, $user_fa) {
+        //     ->when(Auth::user()->functional_area_id, function ($query, $user_fa) {
         //         return $query->where('events.functional_area_id', $user_fa);
         //     })
         //     ->count();
@@ -145,7 +145,7 @@ class EmployeeDashboardController extends Controller
         //     ->when($user_department, function ($query, $user_department) {
         //         return $query->where('tasks.department_assignment_id', $user_department);
         //     })
-        //     ->when(auth()->user()->functional_area_id, function ($query, $user_fa) {
+        //     ->when(Auth::user()->functional_area_id, function ($query, $user_fa) {
         //         return $query->where('events.functional_area_id', $user_fa);
         //     })
         //     ->count();
@@ -163,7 +163,7 @@ class EmployeeDashboardController extends Controller
         //     ->when($user_department, function ($query, $user_department) {
         //         return $query->where('tasks.department_assignment_id', $user_department);
         //     })
-        //     ->when(auth()->user()->functional_area_id, function ($query, $user_fa) {
+        //     ->when(Auth::user()->functional_area_id, function ($query, $user_fa) {
         //         return $query->where('events.functional_area_id', $user_fa);
         //     })
         //     ->having('value', '>', '0')

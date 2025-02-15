@@ -74,7 +74,7 @@ class ProjectController extends Controller
         $budget_name = BudgetName::all();
         // $budget_name = BudgetFunctionalAreaMapping::join('workspaces', 'workspaces.id', '=', 'budget_fa_mapping.fa_name_id')
         //     ->join('budget_name', 'budget_name.id', '=', 'budget_fa_mapping.budget_name_id')
-        //     ->when(auth()->user()->workspace_id, function ($query, $fa) {
+        //     ->when(Auth::user()->workspace_id, function ($query, $fa) {
         //         return $query->where('workspaces.id', $fa);
         //     })->get(['budget_name.id', 'budget_name.name']);
 
@@ -101,7 +101,7 @@ class ProjectController extends Controller
     {
 
         // {
-        // dd(auth()->user()->getPermissionsViaRoles());
+        // dd(Auth::user()->getPermissionsViaRoles());
         // $record_type = Crypt::decrypt($rt);
         // $record_type = Session::get('record_type');
         // $record_type = Session::get('record_type');
@@ -129,7 +129,7 @@ class ProjectController extends Controller
         $active_active = null;
         $active_unbudgeted = null;
         $archived = null;
-        $user_department = auth()->user()->department_assignment_id;
+        $user_department = Auth::user()->department_assignment_id;
         $workspace = session()->get('workspace_id');
 
         $workspaces = Workspace::all();
@@ -160,7 +160,7 @@ class ProjectController extends Controller
         $util_controller = new UtilController;
         $data_arr = [];
 
-        // $user_department = auth()->user()->department_assignment_id;
+        // $user_department = Auth::user()->department_assignment_id;
 
         // dd($users);
         $view =  view('tracki.project.vw.cards', [
@@ -196,7 +196,7 @@ class ProjectController extends Controller
 
     public function test($status = null)
     {
-        // dd(auth()->user()->getPermissionsViaRoles());
+        // dd(Auth::user()->getPermissionsViaRoles());
         // $record_type = Crypt::decrypt($rt);
         // $record_type = Session::get('record_type');
         // $record_type = Session::get('record_type');
@@ -206,7 +206,7 @@ class ProjectController extends Controller
         $active_active = null;
         $active_unbudgeted = null;
         $archived = null;
-        $user_department = auth()->user()->department_assignment_id;
+        $user_department = Auth::user()->department_assignment_id;
         $workspace = session()->get('workspace_id');
 
         $event_category = EventCategory::all();
@@ -266,7 +266,7 @@ class ProjectController extends Controller
         $util_controller = new UtilController;
         $data_arr = [];
 
-        // $user_department = auth()->user()->department_assignment_id;
+        // $user_department = Auth::user()->department_assignment_id;
 
         return view('tracki.users.create-new', [
             // 'count'                 => $count,
@@ -293,7 +293,7 @@ class ProjectController extends Controller
 
     public function showCard($status = null)
     {
-        // dd(auth()->user()->getPermissionsViaRoles());
+        // dd(Auth::user()->getPermissionsViaRoles());
         // $record_type = Crypt::decrypt($rt);
         // $record_type = Session::get('record_type');
         // $record_type = Session::get('record_type');
@@ -322,7 +322,7 @@ class ProjectController extends Controller
         $active_active = null;
         $active_unbudgeted = null;
         $archived = null;
-        $user_department = auth()->user()->department_assignment_id;
+        $user_department = Auth::user()->department_assignment_id;
         $workspace = session()->get('workspace_id');
 
         $workspaces = Workspace::all();
@@ -392,7 +392,7 @@ class ProjectController extends Controller
         $util_controller = new UtilController;
         $data_arr = [];
 
-        // $user_department = auth()->user()->department_assignment_id;
+        // $user_department = Auth::user()->department_assignment_id;
 
         // dd($users);
         return view('tracki.project.card', [
@@ -463,7 +463,7 @@ class ProjectController extends Controller
     public function getProjectData($status = null, $project_id = null)
     {
 
-        // $user_department = auth()->user()->department_assignment_id;
+        // $user_department = Auth::user()->department_assignment_id;
 
         $workspace = session()->get('workspace_id');
 
@@ -561,11 +561,11 @@ class ProjectController extends Controller
 
     public function showArchive()
     {
-        // dd(auth()->user()->getPermissionsViaRoles());
+        // dd(Auth::user()->getPermissionsViaRoles());
         // $record_type = Crypt::decrypt($rt);
         // $record_type = Session::get('record_type');
         // $record_type = Session::get('record_type');
-        $user_department = auth()->user()->department_assignment_id;
+        $user_department = Auth::user()->department_assignment_id;
 
         $eventData = Event::leftJoin('tasks', 'tasks.event_id', '=', 'events.id')
             ->leftJoin('event_status', 'event_status.id', '=', 'events.event_status')
@@ -606,7 +606,7 @@ class ProjectController extends Controller
         $util_controller = new UtilController;
         $data_arr = [];
 
-        // $user_department = auth()->user()->department_assignment_id;
+        // $user_department = Auth::user()->department_assignment_id;
 
         foreach ($eventData as $key => $record) {
 
@@ -683,7 +683,7 @@ class ProjectController extends Controller
 
         $budget_name = BudgetFunctionalAreaMapping::join('functional_areas', 'functional_areas.id', '=', 'budget_fa_mapping.fa_name_id')
             ->join('budget_name', 'budget_name.id', '=', 'budget_fa_mapping.budget_name_id')
-            ->when(auth()->user()->functional_area_id, function ($query, $fa) {
+            ->when(Auth::user()->functional_area_id, function ($query, $fa) {
                 return $query->where('functional_areas.id', $fa);
             })->get(['budget_name.id', 'budget_name.name']);
 

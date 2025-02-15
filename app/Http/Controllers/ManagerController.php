@@ -65,7 +65,7 @@ class ManagerController extends Controller
     public function index()
     {
         //
-        $employee_id = auth()->user()->employee_id;
+        $employee_id = Auth::user()->employee_id;
 
         //$emps = Employee::findOrFail($employee_id);
         // $countries = Country::all();
@@ -211,7 +211,7 @@ class ManagerController extends Controller
     public function getProjectData($id = null)
     {
 
-        // $user_department = auth()->user()->department_assignment_id;
+        // $user_department = Auth::user()->department_assignment_id;
 
         $workspace = session()->get('workspace_id');
         $employee = Employee::findOrFail($id);
@@ -347,7 +347,7 @@ class ManagerController extends Controller
 
         // dd($task->files->count());
 
-        $user_department = auth()->user()->department_assignment_id;
+        $user_department = Auth::user()->department_assignment_id;
 
         $search = request()->search;
         // $search = $request->input('search');
@@ -374,7 +374,7 @@ class ManagerController extends Controller
         // $tasks = Task::when($user_department, function ($query, $user_department) {
         //     return $query->where('tasks.department_assignment_id', $user_department);
         // })
-        //     ->when(auth()->user()->functional_area_id, function ($query, $user_fa) {
+        //     ->when(Auth::user()->functional_area_id, function ($query, $user_fa) {
         //         return $query->where('events.functional_area_id', $user_fa);
         //     });
         // ->first();
@@ -671,7 +671,7 @@ class ManagerController extends Controller
 
     public function list()
     {
-        $user = User::findOrFail(auth()->user()->id);
+        $user = User::findOrFail(Auth::user()->id);
 
         $search = request('search');
         $sort = (request('sort')) ? request('sort') : "id";
@@ -685,7 +685,7 @@ class ManagerController extends Controller
 
         // $user_id = ($user->hasRole('SuperAdmin')||$user->hasRole('HRMSADMIN')) ? 0 : $user->employee_id;
 
-        $employees = $employees->where('reporting_to_id', auth()->user()->employee_id);
+        $employees = $employees->where('reporting_to_id', Auth::user()->employee_id);
 
         if ($search) {
             $employees = $employees->where(function ($query) use ($search) {

@@ -1277,7 +1277,7 @@
                     <div class="col-md-12">
                         <!-- <div class="mb-3 row"> -->
 
-                        @if(Request::is('tracki/employee/profile*')||auth()->user()->hasRole('User'))
+                        @if(Request::is('tracki/employee/profile*')||Auth::user()->hasRole('User'))
 
                         @php
                         $employee_id = null;
@@ -1559,7 +1559,7 @@
                     <div class="col-md-12">
                         <!-- <div class="mb-3 row"> -->
 
-                        @if(Request::is('tracki/employee/profile*')||auth()->user()->hasRole('User'))
+                        @if(Request::is('tracki/employee/profile*')||Auth::user()->hasRole('User'))
                         @php
                         $employee_id = null;
                         @endphp

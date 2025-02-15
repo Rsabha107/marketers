@@ -93,7 +93,7 @@ class ProjectController extends Controller
 
     public function list($id = null)
     {
-        $user = User::findOrFail(auth()->user()->id);
+        $user = User::findOrFail(Auth::user()->id);
 
         $search = request('search');
         $sort = (request('sort')) ? request('sort') : "id";
@@ -296,7 +296,7 @@ class ProjectController extends Controller
 
     public function mlist($id = null)
     {
-        $user = User::findOrFail(auth()->user()->id);
+        $user = User::findOrFail(Auth::user()->id);
 
         $search = request('search');
         $sort = (request('sort')) ? request('sort') : "id";
@@ -377,7 +377,7 @@ class ProjectController extends Controller
 
     public function employeeList($id = null)
     {
-        $user = User::findOrFail(auth()->user()->id);
+        $user = User::findOrFail(Auth::user()->id);
 
         $search = request('search');
         $sort = (request('sort')) ? request('sort') : "id";
@@ -976,13 +976,13 @@ class ProjectController extends Controller
     public function detail(Request $request, $id)
     {
 
-        // $hasit = auth()->user()->hasRole('department restricted');
+        // $hasit = Auth::user()->hasRole('department restricted');
         // Log::alert('TaskController::taskDetails');
 
         // Log::alert('TaskController::workspace' . $workspace);
 
         // Log::info($request->url());
-        // $user_department = auth()->user()->department_assignment_id;
+        // $user_department = Auth::user()->department_assignment_id;
 
         $util_controller = new UtilController;
 
@@ -1017,7 +1017,7 @@ class ProjectController extends Controller
 
         // $util = new UtilController;
         // Log::info($user_department);
-        // $hasit = auth()->user()->hasPermissionTo('project.menu');
+        // $hasit = Auth::user()->hasPermissionTo('project.menu');
         // $hasit = Auth::user()->hasPermissionTo('project.menu');
         // dd($hasit);
 

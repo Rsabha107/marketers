@@ -72,14 +72,14 @@ class ManagerController extends Controller
 
     public function list()
     {
-        $user = User::findOrFail(auth()->user()->id);
+        $user = User::findOrFail(Auth::user()->id);
 
         $search = request('search');
         $sort = (request('sort')) ? request('sort') : "id";
         $order = (request('order')) ? request('order') : "DESC";
 
         $employees = Employee::orderBy($sort, $order);
-        $employees = $employees->where('reporting_to_id', auth()->user()->employee_id);
+        $employees = $employees->where('reporting_to_id', Auth::user()->employee_id);
 
         if ($search) {
             $employees = $employees->where(function ($query) use ($search) {

@@ -9,7 +9,7 @@
         <!-- scrollbar removed-->
         <div class="navbar-vertical-content">
             <ul class="navbar-nav flex-column" id="navbarVerticalNav">
-                <?php if(\Spatie\Permission\PermissionServiceProvider::bladeMethodWrapper('hasAnyRole', 'SuperAdmin|HRMSADMIN')): ?>
+                <?php if (\Illuminate\Support\Facades\Blade::check('hasanyrole', 'SuperAdmin|HRMSADMIN')): ?>
                 <li class="nav-item">
                     <!-- parent pages-->
                     <div class="nav-item-wrapper">
@@ -598,7 +598,7 @@
                                     </div>
                                 </li>
                                 <?php endif; ?>
-                                <?php if(\Spatie\Permission\PermissionServiceProvider::bladeMethodWrapper('hasAnyRole', 'SuperAdmin|HRMSADMIN')): ?>
+                                <?php if (\Illuminate\Support\Facades\Blade::check('hasanyrole', 'SuperAdmin|HRMSADMIN')): ?>
                                 <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('leave.show')): ?>
                                 <li class="nav-item">
                                     <a
@@ -672,7 +672,7 @@
                                     <!-- more inner pages-->
                                 </li>
                                 <?php endif; ?>
-                                <?php if(\Spatie\Permission\PermissionServiceProvider::bladeMethodWrapper('hasAnyRole', 'SuperAdmin|HRMSADMIN')): ?>
+                                <?php if (\Illuminate\Support\Facades\Blade::check('hasanyrole', 'SuperAdmin|HRMSADMIN')): ?>
                                 <li class="nav-item">
                                     <a
                                         class="nav-link dropdown-indicator <?php echo e(Request::is('tracki/employee/letter*') ? '' : 'collapsed'); ?>"
@@ -945,7 +945,7 @@
                                                 <!-- more inner pages-->
                                             </li>
                                             
-                                            <?php if(\Spatie\Permission\PermissionServiceProvider::bladeMethodWrapper('hasAnyRole', 'Payroll|SuperAdmin')): ?>
+                                            <?php if (\Illuminate\Support\Facades\Blade::check('hasanyrole', 'Payroll|SuperAdmin')): ?>
                                             <li class="nav-item">
                                                 <a
                                                     class="nav-link <?php echo e(Request::is('hr/admin/setting/paycycle') ? 'active' : ''); ?>"

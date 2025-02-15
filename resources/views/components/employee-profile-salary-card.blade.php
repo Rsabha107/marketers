@@ -32,7 +32,7 @@
                         <th data-sortable="true" data-field="payroll_period"><?= get_label('payroll_cycle', 'Cycle') ?></th>
                         <th data-sortable="true" data-field="created_at" data-visible="false"><?= get_label('created_at', 'Created at') ?></th>
                         <th data-sortable="true" data-field="updated_at" data-visible="false"><?= get_label('updated_at', 'Updated at') ?></th>
-                        @if(Auth()->user()->hasRole('SuperAdmin'))
+                        @if(Auth::user()->hasRole('SuperAdmin'))
                         <th data-field="actions"><?= get_label('actions', 'Actions') ?></th>
                         @endif
                         <!-- <th data-formatter="actions2Formatter"><?= get_label('actions', 'Actions') ?></th> -->

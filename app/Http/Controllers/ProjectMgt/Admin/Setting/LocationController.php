@@ -5,6 +5,7 @@ namespace App\Http\Controllers\projectMgt\Admin\Setting;
 use App\Http\Controllers\Controller;
 use App\Models\EventLocation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
 class LocationController extends Controller
@@ -101,7 +102,7 @@ class LocationController extends Controller
 
             $op->name = $request->name;
             $op->active_flag = $request->active_flag;
-            $op->creator_id = auth()->user()->id;
+            $op->creator_id = Auth::user()->id;
             $op->save();
         }
 

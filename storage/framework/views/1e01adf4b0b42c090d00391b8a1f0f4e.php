@@ -1,1 +1,0 @@
-components.sidemenu<?php /**PATH C:\xampp\htdocs\laravel\marketers\storage\framework\views/61b9c82d1760b08a9eb5f5b12f8bc7d0.blade.php ENDPATH**/ ?>

@@ -3,7 +3,6 @@
 namespace Tests\Feature\Auth;
 
 use App\Models\User;
-use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Livewire\Volt\Volt;
 use Tests\TestCase;
@@ -17,8 +16,8 @@ class AuthenticationTest extends TestCase
         $response = $this->get('/login');
 
         $response
-            ->assertSeeVolt('pages.auth.login')
-            ->assertOk();
+            ->assertOk()
+            ->assertSeeVolt('pages.auth.login');
     }
 
     public function test_users_can_authenticate_using_the_login_screen(): void
@@ -33,7 +32,7 @@ class AuthenticationTest extends TestCase
 
         $component
             ->assertHasNoErrors()
-            ->assertRedirect(RouteServiceProvider::HOME);
+            ->assertRedirect(route('dashboard', absolute: false));
 
         $this->assertAuthenticated();
     }
@@ -64,8 +63,8 @@ class AuthenticationTest extends TestCase
         $response = $this->get('/dashboard');
 
         $response
-            ->assertSeeVolt('layout.navigation')
-            ->assertOk();
+            ->assertOk()
+            ->assertSeeVolt('layout.navigation');
     }
 
     public function test_users_can_logout(): void

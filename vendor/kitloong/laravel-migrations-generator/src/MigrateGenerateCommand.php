@@ -23,17 +23,13 @@ use KitLoong\MigrationsGenerator\Schema\PgSQLSchema;
 use KitLoong\MigrationsGenerator\Schema\Schema;
 use KitLoong\MigrationsGenerator\Schema\SQLiteSchema;
 use KitLoong\MigrationsGenerator\Schema\SQLSrvSchema;
-use KitLoong\MigrationsGenerator\Support\CheckMigrationMethod;
 
 class MigrateGenerateCommand extends Command
 {
-    use CheckMigrationMethod;
-
     /**
      * The name and signature of the console command.
-     *
-     * @var string
      */
+    // phpcs:ignore
     protected $signature = 'migrate:generate
                             {tables? : A list of tables or views you wish to generate migrations for separated by a comma: users,posts,comments}
                             {--c|connection= : The database connection to use}
@@ -59,81 +55,42 @@ class MigrateGenerateCommand extends Command
 
     /**
      * The console command description.
-     *
-     * @var string
      */
+    // phpcs:ignore
     protected $description = 'Generate migrations from an existing table structure.';
 
-    /**
-     * @var \KitLoong\MigrationsGenerator\Schema\Schema
-     */
-    protected $schema;
+    protected Schema $schema;
 
-    /**
-     * @var bool
-     */
-    protected $shouldLog = false;
+    protected bool $shouldLog = false;
 
-    /**
-     * @var int
-     */
-    protected $nextBatchNumber = 0;
-
-    /**
-     * @var \Illuminate\Database\Migrations\MigrationRepositoryInterface
-     */
-    protected $repository;
-
-    /**
-     * @var \KitLoong\MigrationsGenerator\Migration\Squash
-     */
-    protected $squash;
-
-    /**
-     * @var \KitLoong\MigrationsGenerator\Migration\ForeignKeyMigration
-     */
-    protected $foreignKeyMigration;
-
-    /**
-     * @var \KitLoong\MigrationsGenerator\Migration\ProcedureMigration
-     */
-    protected $procedureMigration;
-
-    /**
-     * @var \KitLoong\MigrationsGenerator\Migration\TableMigration
-     */
-    protected $tableMigration;
-
-    /**
-     * @var \KitLoong\MigrationsGenerator\Migration\ViewMigration
-     */
-    protected $viewMigration;
-
-    public function __construct(
-        MigrationRepositoryInterface $repository,
-        Squash $squash,
-        ForeignKeyMigration $foreignKeyMigration,
-        ProcedureMigration $procedureMigration,
-        TableMigration $tableMigration,
-        ViewMigration $viewMigration
-    ) {
-        parent::__construct();
-
-        $this->squash              = $squash;
-        $this->repository          = $repository;
-        $this->foreignKeyMigration = $foreignKeyMigration;
-        $this->procedureMigration  = $procedureMigration;
-        $this->tableMigration      = $tableMigration;
-        $this->viewMigration       = $viewMigration;
-    }
+    protected int $nextBatchNumber = 0;
+    protected MigrationRepositoryInterface $repository;
+    protected Squash $squash;
+    protected ForeignKeyMigration $foreignKeyMigration;
+    protected ProcedureMigration $procedureMigration;
+    protected ViewMigration $viewMigration;
+    protected TableMigration $tableMigration;
 
     /**
      * Execute the console command.
      *
      * @throws \Exception
      */
-    public function handle(): void
-    {
+    public function handle(
+        MigrationRepositoryInterface $repository,
+        Squash $squash,
+        ForeignKeyMigration $foreignKeyMigration,
+        ProcedureMigration $procedureMigration,
+        TableMigration $tableMigration,
+        ViewMigration $viewMigration,
+    ): void {
+        $this->tableMigration      = $tableMigration;
+        $this->viewMigration       = $viewMigration;
+        $this->procedureMigration  = $procedureMigration;
+        $this->foreignKeyMigration = $foreignKeyMigration;
+        $this->squash              = $squash;
+        $this->repository          = $repository;
+
         $previousConnection = DB::getDefaultConnection();
 
         try {
@@ -159,7 +116,7 @@ class MigrateGenerateCommand extends Command
 
             $this->info("\nFinished!\n");
 
-            if (DB::getDriverName() === Driver::SQLITE()->getValue()) {
+            if (DB::getDriverName() === Driver::SQLITE->value) {
                 $this->warn('SQLite only supports foreign keys upon creation of the table and not when tables are altered.');
                 $this->warn('See https://www.sqlite.org/omitted.html');
                 $this->warn('*_add_foreign_keys_* migrations were generated, however will get omitted if migrate to SQLite type database.');
@@ -187,29 +144,29 @@ class MigrateGenerateCommand extends Command
         $setting->setWithHasTable((bool) $this->option('with-has-table'));
 
         $setting->setPath(
-            $this->option('path') ?? Config::get('migrations-generator.migration_target_path')
+            $this->option('path') ?? Config::get('migrations-generator.migration_target_path'),
         );
 
         $this->setStubPath($setting);
 
         $setting->setDate(
-            $this->option('date') ? Carbon::parse($this->option('date')) : Carbon::now()
+            $this->option('date') ? Carbon::parse($this->option('date')) : Carbon::now(),
         );
 
         $setting->setTableFilename(
-            $this->option('table-filename') ?? Config::get('migrations-generator.filename_pattern.table')
+            $this->option('table-filename') ?? Config::get('migrations-generator.filename_pattern.table'),
         );
 
         $setting->setViewFilename(
-            $this->option('view-filename') ?? Config::get('migrations-generator.filename_pattern.view')
+            $this->option('view-filename') ?? Config::get('migrations-generator.filename_pattern.view'),
         );
 
         $setting->setProcedureFilename(
-            $this->option('proc-filename') ?? Config::get('migrations-generator.filename_pattern.procedure')
+            $this->option('proc-filename') ?? Config::get('migrations-generator.filename_pattern.procedure'),
         );
 
         $setting->setFkFilename(
-            $this->option('fk-filename') ?? Config::get('migrations-generator.filename_pattern.foreign_key')
+            $this->option('fk-filename') ?? Config::get('migrations-generator.filename_pattern.foreign_key'),
         );
     }
 
@@ -218,14 +175,10 @@ class MigrateGenerateCommand extends Command
      */
     protected function setStubPath(Setting $setting): void
     {
-        $defaultStub = Config::get('migrations-generator.migration_anonymous_template_path');
-
-        if (!$this->hasAnonymousMigration()) {
-            $defaultStub = Config::get('migrations-generator.migration_template_path');
-        }
+        $defaultStub = Config::get('migrations-generator.migration_template_path');
 
         $setting->setStubPath(
-            $this->option('template-path') ?? $defaultStub
+            $this->option('template-path') ?? $defaultStub,
         );
     }
 
@@ -295,13 +248,15 @@ class MigrateGenerateCommand extends Command
      */
     protected function getExcludedTables(): array
     {
-        $prefix         = DB::getTablePrefix();
-        $migrationTable = $prefix . Config::get('database.migrations');
+        $prefix = DB::getTablePrefix();
+
+        // https://github.com/laravel/framework/pull/49330
+        $migrationTable = $prefix . (Config::get('database.migrations.table') ?? Config::get('database.migrations'));
 
         $excludes = [$migrationTable];
         $ignore   = (string) $this->option('ignore');
 
-        if (!empty($ignore)) {
+        if ($ignore !== '') {
             $excludes = array_merge($excludes, explode(',', $ignore));
         }
 
@@ -330,13 +285,13 @@ class MigrateGenerateCommand extends Command
             return;
         }
 
-        $this->repository->setSource(DB::getName());
+        $this->repository->setSource(DB::getName() ?? '');
 
         if ($defaultConnection !== DB::getName()) {
             if (
                 !$this->confirm(
                     'Log into current connection: ' . DB::getName() . '? [Y = ' . DB::getName() . ', n = ' . $defaultConnection . ' (default connection)]',
-                    true
+                    true,
                 )
             ) {
                 $this->repository->setSource($defaultConnection);
@@ -349,7 +304,7 @@ class MigrateGenerateCommand extends Command
 
         $this->nextBatchNumber = $this->askInt(
             'Next Batch Number is: ' . $this->repository->getNextBatchNumber() . '. We recommend using Batch Number 0 so that it becomes the "first" migration.',
-            0
+            0,
         );
     }
 
@@ -500,7 +455,7 @@ class MigrateGenerateCommand extends Command
     {
         $tables->each(function (string $table): void {
             $path = $this->tableMigration->write(
-                $this->schema->getTable($table)
+                $this->schema->getTable($table),
             );
 
             $this->info("Created: $path");
@@ -522,7 +477,7 @@ class MigrateGenerateCommand extends Command
     {
         $tables->each(function (string $table): void {
             $this->tableMigration->writeToTemp(
-                $this->schema->getTable($table)
+                $this->schema->getTable($table),
             );
 
             $this->info("Prepared: $table");
@@ -613,7 +568,7 @@ class MigrateGenerateCommand extends Command
     protected function generateForeignKeys(Collection $tables): void
     {
         $tables->each(function (string $table): void {
-            $foreignKeys = $this->schema->getTableForeignKeys($table);
+            $foreignKeys = $this->schema->getForeignKeys($table);
 
             if (!$foreignKeys->isNotEmpty()) {
                 return;
@@ -621,7 +576,7 @@ class MigrateGenerateCommand extends Command
 
             $path = $this->foreignKeyMigration->write(
                 $table,
-                $foreignKeys
+                $foreignKeys,
             );
 
             $this->info("Created: $path");
@@ -642,7 +597,7 @@ class MigrateGenerateCommand extends Command
     protected function generateForeignKeysToTemp(Collection $tables): void
     {
         $tables->each(function (string $table): void {
-            $foreignKeys = $this->schema->getTableForeignKeys($table);
+            $foreignKeys = $this->schema->getForeignKeys($table);
 
             if (!$foreignKeys->isNotEmpty()) {
                 return;
@@ -650,7 +605,7 @@ class MigrateGenerateCommand extends Command
 
             $this->foreignKeyMigration->writeToTemp(
                 $table,
-                $foreignKeys
+                $foreignKeys,
             );
 
             $this->info('Prepared: ' . $table);
@@ -679,21 +634,12 @@ class MigrateGenerateCommand extends Command
             throw new Exception('Failed to find database driver.');
         }
 
-        switch ($driver) {
-            case Driver::MYSQL():
-                return $this->schema = app(MySQLSchema::class);
-
-            case Driver::PGSQL():
-                return $this->schema = app(PgSQLSchema::class);
-
-            case Driver::SQLITE():
-                return $this->schema = app(SQLiteSchema::class);
-
-            case Driver::SQLSRV():
-                return $this->schema = app(SQLSrvSchema::class);
-
-            default:
-                throw new Exception('The database driver in use is not supported.');
-        }
+        return match ($driver) {
+            Driver::MARIADB->value, Driver::MYSQL->value => $this->schema = app(MySQLSchema::class),
+            Driver::PGSQL->value => $this->schema                         = app(PgSQLSchema::class),
+            Driver::SQLITE->value => $this->schema                        = app(SQLiteSchema::class),
+            Driver::SQLSRV->value => $this->schema                        = app(SQLSrvSchema::class),
+            default => throw new Exception('The database driver in use is not supported.'),
+        };
     }
 }

@@ -2,15 +2,14 @@
 
 namespace Tests\Feature\Auth;
 
-use App\Providers\RouteServiceProvider;
 use Livewire\Volt\Volt;
 
 test('registration screen can be rendered', function () {
     $response = $this->get('/register');
 
     $response
-        ->assertSeeVolt('pages.auth.register')
-        ->assertOk();
+        ->assertOk()
+        ->assertSeeVolt('pages.auth.register');
 });
 
 test('new users can register', function () {
@@ -22,7 +21,7 @@ test('new users can register', function () {
 
     $component->call('register');
 
-    $component->assertRedirect(RouteServiceProvider::HOME);
+    $component->assertRedirect(route('dashboard', absolute: false));
 
     $this->assertAuthenticated();
 });

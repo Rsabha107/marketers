@@ -22,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         //
-        Sanctum::ignoreMigrations();
+        // Sanctum::ignoreMigrations();
     }
 
     /**
@@ -55,7 +55,7 @@ class AppServiceProvider extends ServiceProvider
             // The table exists in the database
             $statuses = Status::all();
             $priorities = Priority::all();
-            // $user_workspace = auth()->user()->workspaces;
+            // $user_workspace = Auth::user()->workspaces;
             $workspaces = Workspace::all();
             // $general_settings = get_settings('general_settings');
 

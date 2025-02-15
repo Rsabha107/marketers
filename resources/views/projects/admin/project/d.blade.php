@@ -734,7 +734,7 @@
                             </div>
                         </div>
                         <div class="mb-0">
-                            <x-admin-tasks-card :projectId="$projectData->id" />
+                            <x-projects.admin-tasks-card :projectId="$projectData->id" />
                         </div>
                     </div>
                     <!--======================================

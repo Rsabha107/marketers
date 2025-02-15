@@ -35,21 +35,26 @@
                 </path>
             </svg><!-- <i class="fa fa-times"></i> Font Awesome fontawesome.com --></span>
     </a>
-    <?php if (isset($component)) { $__componentOriginal71c6471fa76ce19017edc287b6f4508c = $component; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.procurement.items.admin-item-drawer','data' => ['id' => '','formAction' => ''.e(route('procurement.items.store')).'','unittypes' => $unit_types,'categories' => $categories,'subcategories' => $sub_categories,'formId' => 'add_item_master']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+    <?php if (isset($component)) { $__componentOriginald8dd40f7b7c97662f61373c238b995a0 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginald8dd40f7b7c97662f61373c238b995a0 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.procurement.items.admin-item-drawer','data' => ['id' => '','formAction' => ''.e(route('procurement.items.store')).'','unittypes' => $unit_types,'categories' => $categories,'subcategories' => $sub_categories,'formId' => 'add_item_master']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
 <?php $component->withName('procurement.items.admin-item-drawer'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
-<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
 <?php endif; ?>
 <?php $component->withAttributes(['id' => '','formAction' => ''.e(route('procurement.items.store')).'','unittypes' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($unit_types),'categories' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($categories),'subcategories' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($sub_categories),'formId' => 'add_item_master']); ?>
 
      <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
-<?php if (isset($__componentOriginal71c6471fa76ce19017edc287b6f4508c)): ?>
-<?php $component = $__componentOriginal71c6471fa76ce19017edc287b6f4508c; ?>
-<?php unset($__componentOriginal71c6471fa76ce19017edc287b6f4508c); ?>
+<?php if (isset($__attributesOriginald8dd40f7b7c97662f61373c238b995a0)): ?>
+<?php $attributes = $__attributesOriginald8dd40f7b7c97662f61373c238b995a0; ?>
+<?php unset($__attributesOriginald8dd40f7b7c97662f61373c238b995a0); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginald8dd40f7b7c97662f61373c238b995a0)): ?>
+<?php $component = $__componentOriginald8dd40f7b7c97662f61373c238b995a0; ?>
+<?php unset($__componentOriginald8dd40f7b7c97662f61373c238b995a0); ?>
 <?php endif; ?>
 
 </div>

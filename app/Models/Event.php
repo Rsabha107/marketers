@@ -14,7 +14,7 @@ class Event extends Model
     protected $table = 'events';
 
     // protected static function booted(){
-    //     // Log::info(auth()->user()->functional_area_id);
+    //     // Log::info(Auth::user()->functional_area_id);
     //     self::addGlobalScope(function(EloquentBuilder $builder){
     //         $builder->when(session()->get('workspace_id'), function ($query, $workspace) {
     //             return $query->where('events.workspace_id', $workspace);

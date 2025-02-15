@@ -5,7 +5,7 @@
 <!-- ===============================================-->
 <!--    Main Content-->
 <!-- ===============================================-->
-@if(auth()->user()->hasRole('SuperAdmin'))
+@if(Auth::user()->hasRole('SuperAdmin'))
 @php
 $data_action = 'manage';
 @endphp

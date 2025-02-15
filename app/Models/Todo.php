@@ -12,7 +12,7 @@ class Todo extends Model
     use HasFactory;
 
     protected static function booted(){
-        // Log::info(auth()->user()->functional_area_id);
+        // Log::info(Auth::user()->functional_area_id);
         self::addGlobalScope(function(EloquentBuilder $builder){
             $builder->when(session()->get('workspace_id'), function ($query, $workspace) {
                 return $query->where('todos.workspace_id', $workspace);
