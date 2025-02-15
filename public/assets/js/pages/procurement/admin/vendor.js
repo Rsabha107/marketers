@@ -1,0 +1,189 @@
+// import Choices from 'phoenix.js'
+
+function checkModelOpen(e) {
+    if (Element.data("bs.modal").isShown) {
+        return true;
+    }
+
+    return false;
+}
+
+$(document).ready(function () {
+    $(".js-select-project-assign-multiple").select2({
+        closeOnSelect: false,
+        placeholder: "Select ...",
+    });
+
+    $(".js-select-project-tags-multiple").select2({
+        closeOnSelect: false,
+        placeholder: "Select ...",
+    });
+
+    $(".js-select-project-member-assign-multiple").select2({
+        closeOnSelect: false,
+        placeholder: "Select ...",
+    });
+
+    // console.log("all tasksJS file");
+
+    // showing the offcanvas for the task creation
+
+    // $("body").on("click", "#add_edit_project", function (event) {
+    //     // console.log("inside add_project_task");
+    //     // event.preventDefault();
+    //     var id = $(this).data("id");
+    //     var table = $(this).data("table");
+
+    //     $("#offcanvasAddEditProject").offcanvas("show");
+
+    //     // var modalID = $(".offcanvas.offcanvas-start.show").attr("id");
+    //     // alert(modalID);
+    // });
+
+    $(document).on("show.bs.modal", ".modal", function (event) {
+        // alert('on show.bs.modal')
+        var zIndex = 1040 + 10 * $(".modal:visible").length;
+        $(this).css("z-index", zIndex);
+        setTimeout(function () {
+            $(".modal-backdrop")
+                .not(".modal-stack")
+                .css("z-index", zIndex - 1)
+                .addClass("modal-stack");
+        }, 0);
+    });
+
+    // $("#change_client").on("change", function (){
+    //     alert(this.value);
+    // })
+    // $("#add_project_assigned_to").select2();
+    // $(".js-select-tags-multiple").select2();
+
+    // $("#projectCards").html("project cards projectCards");
+
+    $("#offcanvas-add-vendor-modal").on("hidden.bs.offcanvas", function (e) {
+        $(this)
+            .find("input,textarea,select")
+            .val("")
+            .end()
+            .find("input[type=checkbox], input[type=radio]")
+            .prop("checked", "")
+            .end();
+
+        $(".js-select-project-assign-multiple").val(null).trigger("change");
+        $(".js-select-project-tags-multiple").val(null).trigger("change");
+    });
+
+    $("body").on("click", "#offcanvas-add-vendor", function () {
+        console.log("inside #offcanvas-add-vendor");
+        // $("#add_edit_form").get(0).reset()
+        // console.log(window.choices.removeActiveItems())
+        $("#cover-spin").show();
+        $("#offcanvas-add-vendor-modal").offcanvas("show");
+        $("#cover-spin").hide();
+    });
+
+    // this is using the blade and modal  -- not used for now.
+    // $("body").on("click", "#add_project_offcanv", function () {
+    //     console.log("inside #add_project_offcanv");
+    //     $("#cover-spin").show();
+
+    //     $.ajax({
+    //         url: "/projects/admin/project/mv/create/",
+    //         method: "GET",
+    //         async: true,
+    //         success: function (response) {
+    //             g_response = response.view;
+    //             $("#global-add-project-content").empty("").append(g_response);
+
+    //             $("#offcanvas-add-project-modal").offcanvas("show");
+    //             $("#cover-spin").hide();
+    //         },
+    //         error: function (xhr, ajaxOptions, thrownError) {
+    //             console.log(xhr.status);
+    //             console.log(thrownError);
+    //             $("#cover-spin").hide();
+    //         },
+    //     });
+    // });
+
+    $("body").on("click", "#edit_vendor_offcanv", function () {
+        console.log("inside #edit_vendor_offcanv");
+        $("#cover-spin").show();
+        var id = $(this).data("id");
+        console.log("id", id);
+        $.ajax({
+            url: "/procurement/admin/vendor/mv/get/" + id,
+            method: "GET",
+            async: true,
+            success: function (response) {
+                g_response = response.view;
+                $("#global-edit-vendor-content").empty("").append(g_response);
+
+                $("#offcanvas-edit-vendor-modal").offcanvas("show");
+                $("#cover-spin").hide();
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                console.log(xhr.status);
+                console.log(thrownError);
+                $("#cover-spin").hide();
+            },
+        });
+    });
+
+    // delete vendor
+    $("body").on("click", "#delete_vendor", function (e) {
+        var id = $(this).data("id");
+        var tableID = $(this).data("table");
+        e.preventDefault();
+        // alert("tableID: "+tableID);
+        var link = $(this).attr("href");
+        Swal.fire({
+            title: "Are you sure?",
+            text: "Delete This Data?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    url: "/procurement/admin/vendor/delete/" + id,
+                    type: "DELETE",
+                    headers: {
+                        "X-CSRF-TOKEN": $('input[name="_token"]').attr("value"), // Replace with your method of getting the CSRF token
+                    },
+                    dataType: "json",
+                    success: function (result) {
+                        if (!result["error"]) {
+                            toastr.success(result["message"]);
+                            // divToRemove.remove();
+                            // $("#fileCount").html("File ("+result["count"]+")");
+                            // console.log('before table refrest for #'+tableID);
+                            $("#" + tableID).bootstrapTable("refresh");
+                            // Swal.fire(
+                            //     'Deleted!',
+                            //     'Your file has been deleted.',
+                            //     'success'
+                            //   )
+                        }
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        console.log(xhr.status);
+                        console.log(thrownError);
+                        // $("#cover-spin").hide();
+                        toastr.error(thrownError);
+                    },
+                });
+            }
+        });
+    });
+});
+
+("use strict");
+
+$("#add_project_tag").on("select2:close", function (e) {
+    e.preventDefault();
+    console.log("projects.js on change of add_project_tag");
+    console.log($("#add_project_tag").val());
+});
