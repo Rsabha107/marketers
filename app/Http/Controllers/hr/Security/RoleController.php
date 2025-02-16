@@ -504,14 +504,12 @@ class RoleController extends Controller
 
         $user = User::find($request->user_id);
 
-        if ($request->usertype == 'admin') {
-            $user->workspace_id = null;
-            $user->department_assignment_id = null;
-        } else {
-            $user->department_assignment_id = $request->department_id;
-            $user->workspace_id = $request->workspace_id;
-        };
+        // $user->assignRole($request->roles);
+        
+        // dd(auth()->user(), $user->roles(), $request->roles, $user->getRoleNames());
 
+        $user->workspace_id = null;
+        $user->department_assignment_id = null;
         $user->username = $request->username;
         $user->name = $request->name;
         $user->email = $request->email;

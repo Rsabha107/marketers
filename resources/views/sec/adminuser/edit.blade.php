@@ -192,7 +192,7 @@
                     @foreach ($roles as $key => $item)
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" id="inlineCheckbox{{ $item->id }}" type="checkbox"
-                                name="roles[]" value="{{ $item->id }}"
+                                name="roles[]" value="{{ $item->name }}"
                                 {{ $user->hasRole($item->name) ? 'checked' : '' }}>
                             <label class="form-check-label"
                                 for="inlineCheckbox{{ $item->id }}">{{ $item->name }}</label>
