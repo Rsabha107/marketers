@@ -1,0 +1,1 @@
+<?php /**PATH C:\xampp\htdocs\laravel\marketers\resources\views\tracki\auth\sign-out.blade.php ENDPATH**/ ?>

@@ -200,11 +200,12 @@ Route::group(['middleware' => 'prevent-back-history', 'XssSanitizer'], function 
             Route::get('/procurement/admin/purchase/list/{id?}', 'list')->name('procurement.admin.purchase.list')->middleware('permission:purchase.show');
             Route::post('/procurement/purchase/store', 'store')->name('procurement.purchase.store');
             Route::post('/procurement/purchase/update', 'update')->name('procurement.purchase.update');
-            Route::get('/procurement/admin/purchase/mv/get/{id}', 'get')->name('procurement.admin.purchase.mv.get');
+            Route::get('/procurement/admin/purchase/mv/edit/{id}', 'get')->name('procurement.admin.purchase.mv.get');
             Route::delete('/procurement/admin/purchase/delete/{id}', 'destroy')->name('procurement.admin.purchase.delete');
             Route::get('/procurement/admin/item/get/{id}', 'getItem')->name('procurement.admin.item.get');
             Route::get('/procurement/admin/purchase-order/{id}', 'viewPo')->name('procurement.admin.purchase.order');
             Route::get('/procurement/admin/purchase/po/pdf/{id?}', 'purchasePDF')->name('procurement.admin.purchase.po.pdf')->middleware('permission:purchase.show');
+            Route::get('/procurement/admin/purchase/po/pdf/download/{id?}', 'downloadPurchasePDF')->name('procurement.admin.purchase.po.pdf.download')->middleware('permission:purchase.show');
         });
 
         Route::controller(AdminItemMasterController::class)->group(function () {

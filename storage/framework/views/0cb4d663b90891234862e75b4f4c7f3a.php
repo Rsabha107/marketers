@@ -24,7 +24,7 @@
                                         <div class="invalid-feedback">
                                             Please enter Purchase Order Number.
                                         </div>
-                                        <label for="floatingInputGrid">Order Bumber generated Automatically</label>
+                                        <label for="floatingInputGrid">Order Number generated Automatically</label>
                                     </div>
                                 </div>
                             </div>

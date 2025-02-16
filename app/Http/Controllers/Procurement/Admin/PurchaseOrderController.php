@@ -75,6 +75,8 @@ class PurchaseOrderController extends Controller
             // dd($salary);
 
             $duplicate_project = route('projects.admin.project.duplicate', $op->id);
+            $pdf_route = route("procurement.admin.purchase.po.pdf", $op->id);
+            $pdf_download = route("procurement.admin.purchase.po.pdf.download", $op->id);
 
             $div_action = '<div class="font-sans-serif btn-reveal-trigger position-static">';
             $profile_action =
@@ -82,6 +84,16 @@ class PurchaseOrderController extends Controller
                 $op->id .
                 '" data-table="purchase_table" data-bs-toggle="tooltip" data-bs-placement="right" title="View Purchase Order">' .
                 '<i class="fa-solid far fa-lightbulb text-warning"></i></a>';
+            $actions_pdf =
+                '<a href="' . $pdf_route . '" class="btn btn-sm" id="bookingDetails" target="_blank" data-id="' . $op->id .
+                '" data-table="purchase_table" data-bs-toggle="tooltip" data-bs-placement="right" title="Purchase Order Pdf">' .
+                '<i class="fa-solid fa-file-invoice text-success"></i></a>';
+
+            $actions_download_pdf =
+                '<a href="' . $pdf_download . '" class="btn btn-sm" id="bookingDetails" data-id="' . $op->id .
+                '" data-table="purchase_table" data-bs-toggle="tooltip" data-bs-placement="right" title="Download Purchase Order Pdf">' .
+                '<i class="fa-solid fa-download text-dark"></i></a>';
+
             $update_action =
                 '<a href="javascript:void(0)" class="btn btn-sm" id="edit_purchase_offcanv" data-id=' . $op->id .
                 ' data-table="purchase_table" data-bs-toggle="tooltip" data-bs-placement="right" title="Update">' .
@@ -95,7 +107,7 @@ class PurchaseOrderController extends Controller
 
             $actions = $div_action;
 
-            ($user->can('purchase.edit')) ? $actions = $actions . $profile_action . $update_action . $delete_action : $actions = $actions;
+            ($user->can('purchase.edit')) ? $actions = $actions . $profile_action . $actions_pdf . $actions_download_pdf . $update_action . $delete_action : $actions = $actions;
 
 
             return [
@@ -122,8 +134,19 @@ class PurchaseOrderController extends Controller
     public function get($id)
     {
         $purchase = PurchaseOrderHeader::findOrFail($id);
-        $view = view('/procurement/admin/purcahse/mv/edit', [
+        $vendors = Vendor::all();
+        $projects = Project::all();
+        $items = ItemMater::all();
+        $currency = Currency::all();
+        $addresses = CompanyAddress::all();
+
+        $view = view('/procurement/admin/purchase/mv/edit', [
             'purchase' => $purchase,
+            'vendors' => $vendors,
+            'projects' => $projects,
+            'items' => $items,
+            'currency' => $currency,
+            'addresses' => $addresses,
         ])->render();
 
         return response()->json(['view' => $view]);
@@ -367,25 +390,24 @@ class PurchaseOrderController extends Controller
             // ],
         ]);
 
-        // $lines = array();
+        $lines = array();
         // $note = InvoiceNote::first();
         foreach ($po->lines as $key => $line) {
             // dd($line);
-            $items = 
+            $items = [
                 InvoiceItem::make($line->line_description)
                     ->pricePerUnit($line->unit_price)
                     ->quantity($line->quantity)
                     ->subTotalPrice($line->line_total)
-                // ->discount(3)
-                // ->days_worked($line->days_worked)
-                // ->leave_days_taken($line->leave_taken)
-                // ->unpaid_leaves($line->unpaid_leave_taken)
-                // ->total_days_eligible($line->total_days_eligible_for_payment)
-                // ->daily_rate($line->daily_rate)
-                // ->salary($line->salary)
-                // ->payment($line->total_payment),
-
-            ;
+            ];
+            // ->discount(3)
+            // ->days_worked($line->days_worked)
+            // ->leave_days_taken($line->leave_taken)
+            // ->unpaid_leaves($line->unpaid_leave_taken)
+            // ->total_days_eligible($line->total_days_eligible_for_payment)
+            // ->daily_rate($line->daily_rate)
+            // ->salary($line->salary)
+            // ->payment($line->total_payment),]
         }
 
 
@@ -407,9 +429,90 @@ class PurchaseOrderController extends Controller
             // ->discountByPercent(10)
             // ->taxRate(15)
             // ->shipping(1.99)
-            ->addItem($items);
+            ->addItems($items);
 
         return $invoice->stream();
         // return $invoice->stream();
     }
+
+        // generate a PO
+        public function downloadPurchasePDF($id)
+        {
+            $po = PurchaseOrderHeader::findOrFail($id);
+            $company = Company::all()->first();
+    
+            // $customer = new Buyer([
+            //     'name'          => 'John Doe',
+            //     'custom_fields' => [
+            //         'email' => 'test@example.com',
+            //     ],
+            // ]);
+    
+            $customer = new Buyer([]);
+    
+            $client = new Party([
+                'name'          => $po->vendor->name,
+                'phone'         => $po->vendor->phone_number,
+                'address'       => $po->vendor->billing_address,
+                // 'custom_fields' => [
+                //     'note'        => 'IDDQD',
+                //     'business id' => '365#GG',
+                // ],
+            ]);
+    
+            $bill_to = new Party([
+                'name'          => $company->name,
+                // 'phone'         => $timesheet->employees->phone_number,
+                'address'       => '36th Floor, Al Bidda Tower',
+                'address2'       => 'Corniche Street, PO Box 5333',
+                // 'custom_fields' => [
+                //     'note'        => 'IDDQD',
+                //     'business id' => '365#GG',
+                // ],
+            ]);
+    
+            $lines = array();
+            // $note = InvoiceNote::first();
+            foreach ($po->lines as $key => $line) {
+                // dd($line);
+                $items = [
+                    InvoiceItem::make($line->line_description)
+                        ->pricePerUnit($line->unit_price)
+                        ->quantity($line->quantity)
+                        ->subTotalPrice($line->line_total)
+                ];
+                // ->discount(3)
+                // ->days_worked($line->days_worked)
+                // ->leave_days_taken($line->leave_taken)
+                // ->unpaid_leaves($line->unpaid_leave_taken)
+                // ->total_days_eligible($line->total_days_eligible_for_payment)
+                // ->daily_rate($line->daily_rate)
+                // ->salary($line->salary)
+                // ->payment($line->total_payment),]
+            }
+    
+    
+            $invoice = Invoice::make()->template('po')
+                ->buyer($bill_to)
+                ->seller($client)
+                ->status('approved')
+                ->currencyCode('QAR')
+                ->currencySymbol('')
+                ->notes($po->note_to_vendor)
+                // ->notes2($timesheet->note_2)
+                ->approvedBy('myself')
+                ->totalAmount($po->lines->sum('line_total'))
+                // ->series(str_pad((string) $timesheet->month_selected_id, 2, 0, STR_PAD_LEFT) . '' . $timesheet->year_selected)
+                ->dateFormat('d/m/Y')
+                // ->sequence($timesheet->employees->id)
+                ->currencyThousandsSeparator(',')
+                ->filename($po->po_number)
+                // ->discountByPercent(10)
+                // ->taxRate(15)
+                // ->shipping(1.99)
+                ->addItems($items);
+    
+            return $invoice->download();
+            // return $invoice->stream();
+        }
 }

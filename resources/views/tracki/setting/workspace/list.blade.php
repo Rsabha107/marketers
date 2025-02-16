@@ -25,7 +25,7 @@
                 <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#create_workspace_modal"><button type="button" class="btn btn-sm btn-primary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title=" <?= get_label('create_workspace', 'Create Workspace') ?>"><i class="bx bx-plus"></i></button></a>
             </div>
         </div>
-        <x-workspace-card :workspaces="$workspaces" :employees="$employees" />
+        {{-- <x-workspace-card :workspaces="$workspaces" :employees="$employees" /> --}}
     </div>
 
     <script>

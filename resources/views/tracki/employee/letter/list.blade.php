@@ -57,7 +57,7 @@
 
 
         <!-- </div> -->
-        <x-letter-template-card employeeid="" />
+        {{-- <x-letter-template-card employeeid="" /> --}}
     </div>
 
     <div class="offcanvas offcanvas-end w-70" data-bs-backdrop="static" id="view_template_modal" tabindex="-1" aria-labelledby="offcanvasWithBackdropLabel">

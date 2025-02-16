@@ -62,7 +62,7 @@
         </div>
     </div>
 
-    <x-admin-projects-card/>
+    <x-projects.admin-projects-card/>
 @endsection
 
 @push('script')

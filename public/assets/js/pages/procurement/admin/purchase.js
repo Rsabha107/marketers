@@ -89,7 +89,7 @@ $(document).ready(function () {
         var id = $(this).data("id");
         console.log("id", id);
         $.ajax({
-            url: "/procurement/admin/purchase/mv/get/" + id,
+            url: "/procurement/admin/purchase/mv/edit/" + id,
             method: "GET",
             async: true,
             success: function (response) {

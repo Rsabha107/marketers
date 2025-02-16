@@ -59,7 +59,7 @@
         </a>
     </div> -->
     <!-- </div> -->
-    <x-manager-timesheet-entry-card :employeetimesheetentries='$employee_timesheet_entries' timesheetId="{{$employee_timesheets->id}}" />
+    {{-- <x-manager-timesheet-entry-card :employeetimesheetentries='$employee_timesheet_entries' timesheetId="{{$employee_timesheets->id}}" /> --}}
 </div>
 
 <script src="{{asset('assets/js/pages/employees_timesheet_entry.js')}}"></script>

@@ -389,7 +389,7 @@
                 <div class="tab-pane fade" id="tab-activity" role="tabpanel" aria-labelledby="activity-tab">
                     <!-- <div class="card"> -->
                     <div class="mb-0">
-                        <x-admin-tasks-card :users="$users" :projectId="$projectData->id" :statuses="$statuses" :departments="$departments"
+                        <x-projects.admin-tasks-card :users="$users" :projectId="$projectData->id" :statuses="$statuses" :departments="$departments"
                             source="list" showpage="list" showpageid="list_{{ $projectData->id }}" />
                     </div>
                     <!-- </div> -->

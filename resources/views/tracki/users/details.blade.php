@@ -96,7 +96,7 @@
                     <div class="scrollspy-example rounded-2" data-bs-spy="scroll" data-bs-offset="0" data-bs-target="#navbar-deals-detail" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
                         <div class="mb-8">
                             <h2 class="mb-4" id="scrollspyTask">Tasks</h2>
-                            <x-tasks-card :users="$user" :projects="$projects" :statuses="$statuses" :departments="$departments" source="list" showpage="user_profile" showpageid="user_{{$user->id}}" />
+                            {{-- <x-tasks-card :users="$user" :projects="$projects" :statuses="$statuses" :departments="$departments" source="list" showpage="user_profile" showpageid="user_{{$user->id}}" /> --}}
                         </div>
 
 

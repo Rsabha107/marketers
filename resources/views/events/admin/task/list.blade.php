@@ -95,7 +95,7 @@
                 </div>
             </div>
         </div>
-        <x-admin-tasks-card projectId=""/>
+        <x-projects.admin-tasks-card projectId=""/>
     </div>
 
     <script src="{{asset('assets/js/pages/project/admin/tasks.js')}}"></script>

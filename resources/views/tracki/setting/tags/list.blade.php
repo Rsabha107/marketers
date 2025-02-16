@@ -29,7 +29,7 @@
                 <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#create_tags_modal"><button type="button" class="btn btn-sm btn-primary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title=" <?= get_label('create_tag', 'Create tag') ?>"><i class="bx bx-plus"></i></button></a>
             </div>
         </div>
-        <x-tags-card :tags='$tags'/>
+        {{-- <x-tags-card :tags='$tags'/> --}}
     </div>
     <script>
         var label_update = '<?= get_label('update', 'Update') ?>';

@@ -13,8 +13,8 @@
     <div class="d-flex justify-content-between align-items-end mb-4">
         <h2 class="mb-0">Purchase Order</h2>
         <div>
+            <a href="{{ route("procurement.admin.purchase.po.pdf.download", $header->id) }}" class="btn btn-phoenix-secondary me-2"><span class="fa-solid fa-download me-sm-2"></span><span class="d-none d-sm-inline-block">Download Invoice</span></a>
             <button class="btn btn-phoenix-secondary me-2"><span class="fa-solid fa-download me-sm-2"></span><span class="d-none d-sm-inline-block">Download Invoice</span></button>
-            <button class="btn btn-phoenix-secondary"><span class="fa-solid fa-print me-sm-2"></span><span class="d-none d-sm-inline-block">Print</span></button>
             <button class="btn btn-phoenix-secondary"><span class="fa-solid fa-print me-sm-2"></span><span class="d-none d-sm-inline-block">Edit</span></button>
         </div>
     </div>
@@ -174,7 +174,8 @@
         {{-- <button class="btn btn-primary"><span class="fa-solid fa-bag-shopping me-2"></span>Browse more items</button> --}}
         <div>
             <button class="btn btn-phoenix-secondary me-2"><span class="fa-solid fa-download me-sm-2"></span><span class="d-none d-sm-inline-block">Download Invoice</span></button>
-            <button class="btn btn-phoenix-secondary"><span class="fa-solid fa-print me-sm-2"></span><span class="d-none d-sm-inline-block">Print</span></button>
+            {{-- <button class="btn btn-phoenix-secondary"><span class="fa-solid fa-print me-sm-2"></span><span class="d-none d-sm-inline-block">Print</span></button> --}}
+            <button class="btn btn-phoenix-secondary"><span class="fa-solid fa-print me-sm-2"></span><span class="d-none d-sm-inline-block">Edit</span></button>
         </div>
     </div>
 </div>

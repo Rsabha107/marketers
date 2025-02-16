@@ -57,7 +57,7 @@
 
 
         <!-- </div> -->
-        <x-generated-letter-template-card employeeid="" />
+        {{-- <x-generated-letter-template-card employeeid="" /> --}}
     </div>
 
 
