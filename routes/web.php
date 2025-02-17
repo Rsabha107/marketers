@@ -21,6 +21,7 @@ use App\Http\Controllers\EmployeeTimeSheetController;
 use App\Http\Controllers\EmployeeTimeSheetEntryController;
 use App\Http\Controllers\EmployeeTimeSheetInvoice;
 use App\Http\Controllers\GanttController;
+use App\Http\Controllers\GeneralSettings\AttachmentController;
 use App\Http\Controllers\GeneralSettings\CompanyAddressController;
 use App\Http\Controllers\GeneralSettings\CompanyController;
 use App\Http\Controllers\GeneralSettings\CurrencyController;
@@ -148,6 +149,17 @@ Route::group(['middleware' => 'prevent-back-history', 'XssSanitizer'], function 
             Route::get('/sec/rolesetup/add', 'addRolePermission')->name('sec.rolesetup.add');
         });  //
     });  //
+
+    // file manager routes
+    Route::middleware(['auth', 'otp', 'XssSanitizer', 'role:SuperAdmin|Procurement', 'roles:admin', 'prevent-back-history', 'auth.session'])->group(function () {
+        Route::controller(AttachmentController::class)->group(function () {
+            Route::post('file/store', 'store')->name('file.store');
+            Route::get('/global/files/list/{id?}', 'list')->name('global.files.list')->middleware('permission:employee.file.list');
+            Route::get('/global/file/serve/{file}', 'serve')->name('global.file.serve');
+            Route::delete('/global/files/delete/{id}', 'delete')->name('global.files.delete');
+        });
+
+    });
 
     // General Settings MANAGEMENT ******************************************************************** Admin All Route
     Route::middleware(['auth', 'otp', 'XssSanitizer', 'role:SuperAdmin|Procurement', 'roles:admin', 'prevent-back-history', 'auth.session'])->group(function () {

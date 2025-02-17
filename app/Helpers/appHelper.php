@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\Log;
 use Carbon\Carbon;
 
 if (!function_exists('get_label')) {
-
     function get_label($label, $default, $locale = '')
     {
         if (Lang::has('labels.' . $label, $locale)) {
@@ -22,8 +21,28 @@ if (!function_exists('get_label')) {
     }
 }
 
-if (!function_exists('get_settings')) {
+if (!function_exists('formatSizeUnits')) {
+    function formatSizeUnits($bytes)
+    {
+        if ($bytes >= 1073741824) {
+            $bytes = number_format($bytes / 1073741824, 2) . ' GB';
+        } elseif ($bytes >= 1048576) {
+            $bytes = number_format($bytes / 1048576, 2) . ' MB';
+        } elseif ($bytes >= 1024) {
+            $bytes = number_format($bytes / 1024, 2) . ' KB';
+        } elseif ($bytes > 1) {
+            $bytes = $bytes . ' bytes';
+        } elseif ($bytes == 1) {
+            $bytes = $bytes . ' byte';
+        } else {
+            $bytes = '0 bytes';
+        }
 
+        return $bytes;
+    }
+}
+
+if (!function_exists('get_settings')) {
     function get_settings($variable)
     {
         return null;
@@ -47,15 +66,11 @@ if (!function_exists('generate')) {
     function generateInitials($name)
     {
         if (!$name) {
-            return "null";
+            return 'null';
         }
         $words = explode(' ', $name);
         if (count($words) >= 2) {
-            return mb_strtoupper(
-                mb_substr($words[0], 0, 1, 'UTF-8') .
-                    mb_substr(end($words), 0, 1, 'UTF-8'),
-                'UTF-8'
-            );
+            return mb_strtoupper(mb_substr($words[0], 0, 1, 'UTF-8') . mb_substr(end($words), 0, 1, 'UTF-8'), 'UTF-8');
         }
         return makeInitialsFromSingleWord($name);
     }
@@ -77,7 +92,6 @@ if (!function_exists('makeInitialsFromSingleWord')) {
         return mb_strtoupper(mb_substr($name, 0, 2, 'UTF-8'), 'UTF-8');
     }
 }
-
 
 if (!function_exists('format_date')) {
     function format_date($date, $time = null, $format = null, $apply_timezone = true)
@@ -123,7 +137,6 @@ if (!function_exists('get_php_date_format')) {
 if (!function_exists('getDaysInMonth')) {
     function getDaysInMonth($month, $monthName = true): int
     {
-
         // Usage:
         // return getDaysInMonth('March');
         // return getDaysInMonth(3, false);
@@ -145,9 +158,9 @@ if (!function_exists('getDaysInMonth')) {
             'December' => 12,
         ];
 
-        if ($monthName)
-
+        if ($monthName) {
             return $today->month($monthNames[$month])->daysInMonth;
+        }
 
         return $today->month($month)->daysInMonth;
     }
@@ -156,7 +169,6 @@ if (!function_exists('getDaysInMonth')) {
 if (!function_exists('getDaysInMonthOfYear')) {
     function getDaysInMonthOfYear($month_year): int
     {
-
         // Usage:
         // return getDaysInMonthOfYear('March-2022');
 
@@ -168,17 +180,13 @@ if (!function_exists('getDaysInMonthOfYear')) {
 if (!function_exists('hasApprovedLeave')) {
     function hasApprovedLeave($year, $month, $day, $employee_id)
     {
-
         // Usage:
         // hasApprovedLeave('2022','03','29');
         // return true or false
 
         $ret_value = false;
         $contructed_date = Carbon::parse($year . '-' . $month . '-' . $day)->format('Y-m-d');
-        $get_leave = EmployeeLeave::where('date_from', '<=', $contructed_date)
-            ->where('date_to', '>=', $contructed_date)
-            ->where('employee_id', $employee_id)
-            ->first();
+        $get_leave = EmployeeLeave::where('date_from', '<=', $contructed_date)->where('date_to', '>=', $contructed_date)->where('employee_id', $employee_id)->first();
 
         if ($get_leave) {
             $ret_value = true;
@@ -201,7 +209,6 @@ if (!function_exists('is_manager')) {
 }
 
 if (!function_exists('get_settings')) {
-
     // function get_settings($variable)
     // {
     //     $fetched_data = Setting::all()->where('variable', $variable)->values();
@@ -215,7 +222,6 @@ if (!function_exists('get_settings')) {
 }
 
 if (!function_exists('get_leave_on_date')) {
-
     function get_leave_on_date($date)
     {
         $project = EmployeeLeave::findOrFail($date);
@@ -225,7 +231,7 @@ if (!function_exists('get_leave_on_date')) {
         $task_progress_sum = $project->tasks->sum('progress');
 
         if ($task_count) {
-            $progress_value = round(($task_progress_sum / $task_count), 2);
+            $progress_value = round($task_progress_sum / $task_count, 2);
         }
 
         // Log::info('Helper::appHelper $task_count: '.$task_count);
@@ -237,7 +243,6 @@ if (!function_exists('get_leave_on_date')) {
 }
 
 if (!function_exists('get_project_progress')) {
-
     function get_project_progress($id)
     {
         $project = Project::findOrFail($id);
@@ -247,7 +252,7 @@ if (!function_exists('get_project_progress')) {
         $task_progress_sum = $project->tasks->sum('progress');
 
         if ($task_count) {
-            $progress_value = round(($task_progress_sum / $task_count), 2);
+            $progress_value = round($task_progress_sum / $task_count, 2);
         }
 
         // Log::info('Helper::appHelper $task_count: '.$task_count);

@@ -34,8 +34,7 @@
                         @endif
                         <li class="nav-item">
                             <a class="{{ $done_flag }} nav-link fw-semibold" data-toggle="tooltip"
-                                title="{{ $milestone_task->name }}" href="../../../apps/travel-agency/flight/homepage.html"
-                                data-wizard-step="1">
+                                title="{{ $milestone_task->name }}" href="javascript:void(0);" data-wizard-step="1">
                                 <div class="d-inline-block text-center">
                                     <span class="nav-item-circle-parent">
                                         <span class="d-block nav-item-circle">
@@ -74,77 +73,77 @@
                         </a>
                     </li> --}}
                     <!--  <li class="nav-item">
-                            <a class="nav-link fw-semibold" href="../../../apps/travel-agency/flight/homepage.html" data-wizard-step="1">
-                                <div class="d-inline-block text-center">
-                                    <span class="nav-item-circle-parent">
-                                        <span class="d-block nav-item-circle">
-                                            <span class="fas fa-user"></span>
-                                        </span>
-                                    </span>
-                                    <span class="mt-1 fs-9">Flight</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-semibold" href="../../../apps/travel-agency/flight/booking.html" data-wizard-step="2">
-                                <div class="d-inline-block text-center">
-                                    <span class="nav-item-circle-parent">
-                                        <span class="d-block nav-item-circle">
-                                            <span class="fas fa-check"></span>
-                                        </span>
-                                    </span>
-                                    <span class="mt-1 fs-9">Booking</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-semibold" href="../../../apps/travel-agency/flight/payment.html" data-wizard-step="3">
-                                <div class="d-inline-block text-center">
-                                    <span class="nav-item-circle-parent">
-                                        <span class="d-block nav-item-circle">
-                                            <span class="fas fa-money-bill"></span>
-                                        </span>
-                                    </span>
-                                    <span class="mt-1 fs-9">Payment</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-semibold" href="../../../apps/travel-agency/flight/homepage.html" data-wizard-step="1">
-                                <div class="d-inline-block text-center">
-                                    <span class="nav-item-circle-parent">
-                                        <span class="d-block nav-item-circle">
-                                            <span class="fas fa-user"></span>
-                                        </span>
-                                    </span>
-                                    <span class="mt-1 fs-9">Flight</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-semibold" href="../../../apps/travel-agency/flight/booking.html" data-wizard-step="2">
-                                <div class="d-inline-block text-center">
-                                    <span class="nav-item-circle-parent">
-                                        <span class="d-block nav-item-circle">
-                                            <span class="fas fa-check"></span>
-                                        </span>
-                                    </span>
-                                    <span class="mt-1 fs-9">Booking</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-semibold" href="../../../apps/travel-agency/flight/payment.html" data-wizard-step="3">
-                                <div class="d-inline-block text-center">
-                                    <span class="nav-item-circle-parent">
-                                        <span class="d-block nav-item-circle">
-                                            <span class="fas fa-money-bill"></span>
-                                        </span>
-                                    </span>
-                                    <span class="mt-1 fs-9">Payment</span>
-                                </div>
-                            </a>
-                        </li> -->
+                                    <a class="nav-link fw-semibold" href="../../../apps/travel-agency/flight/homepage.html" data-wizard-step="1">
+                                        <div class="d-inline-block text-center">
+                                            <span class="nav-item-circle-parent">
+                                                <span class="d-block nav-item-circle">
+                                                    <span class="fas fa-user"></span>
+                                                </span>
+                                            </span>
+                                            <span class="mt-1 fs-9">Flight</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fw-semibold" href="../../../apps/travel-agency/flight/booking.html" data-wizard-step="2">
+                                        <div class="d-inline-block text-center">
+                                            <span class="nav-item-circle-parent">
+                                                <span class="d-block nav-item-circle">
+                                                    <span class="fas fa-check"></span>
+                                                </span>
+                                            </span>
+                                            <span class="mt-1 fs-9">Booking</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fw-semibold" href="../../../apps/travel-agency/flight/payment.html" data-wizard-step="3">
+                                        <div class="d-inline-block text-center">
+                                            <span class="nav-item-circle-parent">
+                                                <span class="d-block nav-item-circle">
+                                                    <span class="fas fa-money-bill"></span>
+                                                </span>
+                                            </span>
+                                            <span class="mt-1 fs-9">Payment</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fw-semibold" href="../../../apps/travel-agency/flight/homepage.html" data-wizard-step="1">
+                                        <div class="d-inline-block text-center">
+                                            <span class="nav-item-circle-parent">
+                                                <span class="d-block nav-item-circle">
+                                                    <span class="fas fa-user"></span>
+                                                </span>
+                                            </span>
+                                            <span class="mt-1 fs-9">Flight</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fw-semibold" href="../../../apps/travel-agency/flight/booking.html" data-wizard-step="2">
+                                        <div class="d-inline-block text-center">
+                                            <span class="nav-item-circle-parent">
+                                                <span class="d-block nav-item-circle">
+                                                    <span class="fas fa-check"></span>
+                                                </span>
+                                            </span>
+                                            <span class="mt-1 fs-9">Booking</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fw-semibold" href="../../../apps/travel-agency/flight/payment.html" data-wizard-step="3">
+                                        <div class="d-inline-block text-center">
+                                            <span class="nav-item-circle-parent">
+                                                <span class="d-block nav-item-circle">
+                                                    <span class="fas fa-money-bill"></span>
+                                                </span>
+                                            </span>
+                                            <span class="mt-1 fs-9">Payment</span>
+                                        </div>
+                                    </a>
+                                </li> -->
                 </ul>
             </div>
         </div>
@@ -163,16 +162,16 @@
                 <button class="btn btn-phoenix-danger me-2"><span class="fa-solid fa-trash me-2"></span><span>Delete
                         Project</span></button>
                 <!-- <div>
-                        <button class="btn px-3 btn-phoenix-secondary" type="button" data-bs-toggle="dropdown"
-                            data-boundary="window" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><span
-                                class="fa-solid fa-ellipsis"></span></button>
-                        <ul class="dropdown-menu dropdown-menu-end p-0" style="z-index: 9999;">
-                            <li><a class="dropdown-item" href="#!">View profile</a></li>
-                            <li><a class="dropdown-item" href="#!">Report</a></li>
-                            <li><a class="dropdown-item" href="#!">Manage notifications</a></li>
-                            <li><a class="dropdown-item text-danger" href="#!">Delete Lead</a></li>
-                        </ul>
-                    </div> -->
+                                <button class="btn px-3 btn-phoenix-secondary" type="button" data-bs-toggle="dropdown"
+                                    data-boundary="window" aria-haspopup="true" aria-expanded="false" data-bs-reference="parent"><span
+                                        class="fa-solid fa-ellipsis"></span></button>
+                                <ul class="dropdown-menu dropdown-menu-end p-0" style="z-index: 9999;">
+                                    <li><a class="dropdown-item" href="#!">View profile</a></li>
+                                    <li><a class="dropdown-item" href="#!">Report</a></li>
+                                    <li><a class="dropdown-item" href="#!">Manage notifications</a></li>
+                                    <li><a class="dropdown-item text-danger" href="#!">Delete Lead</a></li>
+                                </ul>
+                            </div> -->
             </div>
         </div>
 
@@ -238,7 +237,7 @@
                         xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" class="fa-solid fa-paperclip me-2 tab-icon-color">
-                    </svg><span class="d-none d-sm-inline">Files</span>
+                    </svg><span class="d-none d-sm-inline">Files ({{ $projectData->attachments->count() }})</span>
                 </a>
                 <a class="nav-link text-center text-sm-start border-bottom-sm cursor-pointer outline-none d-sm-flex align-items-sm-center"
                     id="advancedTab" data-bs-toggle="tab" data-bs-target="#advancedTabContent" role="tab"
@@ -254,8 +253,8 @@
             <div class="col-sm-12 mt-1">
                 <div class="tab-content py-3 h-100">
                     <!--======================================
-                                OVERVIEW TAB AREA
-                            ======================================-->
+                                        OVERVIEW TAB AREA
+                                    ======================================-->
                     <div class="tab-pane fade active show" id="overviewTabContent" role="tabpanel"
                         aria-labelledby="overviewTab">
                         <h4 class="mb-3 d-sm-none">Overview</h4>
@@ -398,8 +397,8 @@
                                                                         style="background-color:{{ $item->color }};">{{ $item->title }}</span>
                                                                 @endforeach
                                                                 <!-- <span class="badge badge-phoenix badge-phoenix-success me-2">Success</span>
-                                                                                    <span class="badge badge-phoenix badge-phoenix-danger me-2">Lost</span>
-                                                                                    <span class="badge badge-phoenix badge-phoenix-secondary">Close</span> -->
+                                                                                            <span class="badge badge-phoenix badge-phoenix-danger me-2">Lost</span>
+                                                                                            <span class="badge badge-phoenix badge-phoenix-secondary">Close</span> -->
                                                             </div>
                                                         </div>
                                                         <div
@@ -565,12 +564,12 @@
                                                                     </td>
                                                                 </tr>
                                                                 <!-- <tr>
-                                                                                        <td>
-                                                                                            <div class="d-flex align-items-center mt-3"><span class="fa-solid fa-list-check me-2 text-body-tertiary fs-9"></span>
-                                                                                                <h5 class="text-body-emphasis mb-0 me-2">{{ $projectData->tasks->count() }}<span class="text-body fw-normal ms-2">tasks</span></h5>
-                                                                                            </div>
-                                                                                        </td>
-                                                                                    </tr> -->
+                                                                                                <td>
+                                                                                                    <div class="d-flex align-items-center mt-3"><span class="fa-solid fa-list-check me-2 text-body-tertiary fs-9"></span>
+                                                                                                        <h5 class="text-body-emphasis mb-0 me-2">{{ $projectData->tasks->count() }}<span class="text-body fw-normal ms-2">tasks</span></h5>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr> -->
                                                             </tbody>
                                                         </table>
                                                     </div>
@@ -644,10 +643,10 @@
                                                             </h6>
                                                         </div>
                                                         <!-- <div class="d-flex align-items-center">
-                                                                        <div class="bullet-item bg-primary-subtle me-2"></div>
-                                                                        <h6 class="text-body fw-semibold flex-1 mb-0">Non-paying customer</h6>
-                                                                        <h6 class="text-body fw-semibold mb-0">70%</h6>
-                                                                    </div> -->
+                                                                                <div class="bullet-item bg-primary-subtle me-2"></div>
+                                                                                <h6 class="text-body fw-semibold flex-1 mb-0">Non-paying customer</h6>
+                                                                                <h6 class="text-body fw-semibold mb-0">70%</h6>
+                                                                            </div> -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -659,23 +658,23 @@
                         </div>
                     </div>
                     <!--======================================
-                                END OVERVIEW TAB AREA
-                            ======================================-->
+                                        END OVERVIEW TAB AREA
+                                    ======================================-->
 
                     <!--======================================
-                                TASKS AREA
-                            ======================================-->
+                                        TASKS AREA
+                                    ======================================-->
                     <div class="tab-pane fade h-100" id="taskTabContent" role="tabpanel" aria-labelledby="taskTab">
                         <h5 class="mb-3 text-body-highlight">Tasks</h5>
                         <div class="mb-4 mt-4">
                             <div class="d-flex flex-wrap gap-3">
                                 <!-- <div class="search-box">
-                                                    <form class="position-relative">
-                                                        <input class="form-control search-input search" type="search" placeholder="Search products" aria-label="Search" />
-                                                        <span class="fas fa-search search-box-icon"></span>
-                    
-                                                    </form>
-                                                </div> -->
+                                                            <form class="position-relative">
+                                                                <input class="form-control search-input search" type="search" placeholder="Search products" aria-label="Search" />
+                                                                <span class="fas fa-search search-box-icon"></span>
+                            
+                                                            </form>
+                                                        </div> -->
                                 <div>
                                     <select class="form-select select-appearance" id="tasks_department_filter"
                                         aria-label="Default select example">
@@ -710,12 +709,12 @@
                                     </select>
                                 </div>
                                 <!-- <div >
-                                                    <select class="form-select select-appearance" id="active_archived_filter" aria-label="Default select example">
-                                                        <option value=""><?= get_label('active_archived', 'Select Active or Archived') ?></option>
-                                                        <option value="N" $selected>Active</option>
-                                                        <option value="Y" >Archived</option>
-                                                    </select>
-                                                </div> -->
+                                                            <select class="form-select select-appearance" id="active_archived_filter" aria-label="Default select example">
+                                                                <option value=""><?= get_label('active_archived', 'Select Active or Archived') ?></option>
+                                                                <option value="N" $selected>Active</option>
+                                                                <option value="Y" >Archived</option>
+                                                            </select>
+                                                        </div> -->
 
                                 <div class="ms-xxl-auto">
                                     <!-- <button class="btn btn-link text-body me-4 px-0"><span class="fa-solid fa-file-export fs-9 me-2"></span>Export</button> -->
@@ -738,12 +737,12 @@
                         </div>
                     </div>
                     <!--======================================
-                                END TASKS AREA
-                            ======================================-->
+                                        END TASKS AREA
+                                    ======================================-->
 
                     <!--======================================
-                                GANTT AREA
-                            ======================================-->
+                                        GANTT AREA
+                                    ======================================-->
                     <div class="tab-pane fade h-100" id="ganttTabContent" role="tabpanel" aria-labelledby="ganttTab">
                         {{-- <h5 class="mb-3 text-body-highlight">gantts</h5> --}}
                         {{-- <div class="d-xl-flex justify-content-between mb-3">
@@ -760,12 +759,12 @@
                         </div>
                     </div>
                     <!--======================================
-                                End GANTT AREA
-                            ======================================-->
+                                        End GANTT AREA
+                                    ======================================-->
 
                     <!--======================================
-                                Kanban AREA
-                            ======================================-->
+                                        Kanban AREA
+                                    ======================================-->
                     <div class="tab-pane fade h-100" id="kanbanTabContent" role="tabpanel" aria-labelledby="kanbanTab">
                         {{-- <h5 class="mb-3 text-body-highlight">kanbans</h5> --}}
                         <div>
@@ -773,12 +772,12 @@
                         </div>
                     </div>
                     <!--======================================
-                            End Kanban AREA
-                        ======================================-->
+                                    End Kanban AREA
+                                ======================================-->
 
                     <!--======================================
-                                MEMEBER AREA
-                            ======================================-->
+                                        MEMEBER AREA
+                                    ======================================-->
                     <div class="tab-pane fade h-100" id="memeberTabContent" role="tabpanel"
                         aria-labelledby="memeberTab">
                         <div class="d-flex flex-column h-100">
@@ -800,12 +799,12 @@
                         </div>
                     </div>
                     <!--======================================
-                                End Member Memebers
-                            ======================================-->
+                                        End Member Memebers
+                                    ======================================-->
 
                     <!--======================================
-                                Notes AREA
-                            ======================================-->
+                                        Notes AREA
+                                    ======================================-->
                     <div class="tab-pane fade" id="notesTabContent" role="tabpanel" aria-labelledby="notesTab">
                         <h5 class="mb-3 text-body-highlight">Notes</h5>
                         <div class="card mb-5">
@@ -859,11 +858,11 @@
                         </div>
                     </div>
                     <!--======================================
-                                End Notes AREA
-                            ======================================-->
+                                        End Notes AREA
+                                    ======================================-->
                     <!--======================================
-                                Files AREA
-                            ======================================-->
+                                        Files AREA
+                                    ======================================-->
                     <div class="tab-pane fade" id="filesTabContent" role="tabpanel" aria-labelledby="filesTab">
                         <h5 class="mb-3 text-body-highlight">Files</h5>
                         <div class="card mb-5">
@@ -871,9 +870,9 @@
                                 <div class="row align-items-center justify-content-between g-3 mt-2 ms-2">
                                     <div class="col-12 col-md-auto d-flex">
                                         @if (Auth::user()->can('project.file.create'))
-                                            <a href="#!" data-id="{{ $projectData->id }}"
+                                            <a href="#!" data-id="{{ $projectData->id }}" data-table="global_file_table"
                                                 class="btn btn-phoenix-primary px-3 px-sm-5 me-2" data-bs-toggle="modal"
-                                                data-bs-target="#addAttachementModal" aria-haspopup="true"
+                                                data-bs-target="#addProjectAttachementModal" aria-haspopup="true"
                                                 aria-expanded="false" data-bs-reference="parent"><span
                                                     class="fas fa-file-upload me-sm-2"></span><span
                                                     class="d-none d-sm-inline">Upload a new file</span></a>
@@ -881,13 +880,15 @@
                                     </div>
                                 </div>
                             </div>
-                            @foreach ($fileName as $key => $item)
+                            <x-global.attachment-card :projectId="$projectData->id" />
+
+                            {{-- @foreach ($fileName as $key => $item)
                                 <div class="border-top border-dashed border-300 px-3 pt-3 pb-4">
                                     <div class="d-flex flex-between-center">
                                         <div class="d-flex mb-1"><span
                                                 class="fa-solid fa-file-lines me-2 text-700 fs--1"></span>
                                             <p class="text-1000 mb-0 lh-1"><a
-                                                    href="../../../upload/event_files/{{ $item->file_name }}"
+                                                    href="{{ $item->file_path }}{{ $item->file_name }}"
                                                     target="_blank">{{ $item->original_file_name }}</a></p>
                                         </div>
                                         @if (Auth::user()->can('project.file.delete'))
@@ -910,19 +911,19 @@
                                         </a><span class="text-400 mx-1">| </span><span
                                             class="text-nowrap">{{ $item->created_at }}</span></p>
                                 </div>
-                            @endforeach
+                            @endforeach --}}
                         </div>
                     </div>
                     <!--======================================
-                                End Files AREA
-                            ======================================-->
+                                        End Files AREA
+                                    ======================================-->
                     <!--======================================
-                                Advanced AREA
-                            ======================================-->
+                                        Advanced AREA
+                                    ======================================-->
                     <div class="tab-pane fade" id="advancedTabContent" role="tabpanel" aria-labelledby="advancedTab">
 
                         {{-- <div> --}}
-                            {{-- <div class="px-4 px-lg-6">
+                        {{-- <div class="px-4 px-lg-6">
                                 <div class="d-xl-flex justify-content-between">
                                     <div class="mb-3">
                                         <button class="btn btn-primary me-4" type="button" data-bs-toggle="modal"
@@ -952,342 +953,334 @@
                                     </div>
                                 </div>
                             </div> --}}
-                            <div class="px-4 px-lg-6 scrollbar">
-                                <div class="deals">
-                                    <div class="deals-col me-4">
-                                        <div
-                                            class="d-flex align-items-center justify-content-between position-sticky top-0 z-1 bg-body">
-                                            <div>
-                                                <h5 class="mb-2">New</h5>
-                                                <p class="fs-9 text-body-tertiary mb-1">Forecast Revenue:</p>
-                                                <h4 class="mb-3">$37,000.00</h4>
-                                            </div>
-                                            <div class="d-flex gap-3">
-                                                <button class="btn p-0" type="button" data-bs-toggle="modal"
-                                                    data-bs-target="#addDealModal" aria-haspopup="true"
-                                                    aria-expanded="false" data-bs-reference="parent"><span
-                                                        class="fa-solid fa-plus"></span></button>
-                                                <button class="btn p-0" type="button" data-bs-toggle="dropdown"
-                                                    data-boundary="window" aria-haspopup="true" aria-expanded="false"
-                                                    data-bs-reference="parent"><span
-                                                        class="fas fa-ellipsis-h fs-10"></span></button>
-                                                <ul class="dropdown-menu dropdown-menu-end">
-                                                    <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                    <li><a class="dropdown-item" href="#">Add meeting</a></li>
-                                                    <li><a class="dropdown-item" href="#">See all connected
-                                                            contacts</a></li>
-                                                    <li><a class="dropdown-item" href="#">Clone</a></li>
-                                                    <li><a class="dropdown-item" href="#">Delete</a></li>
-                                                    <li><a class="dropdown-item" href="#">Display only bad deals</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                        <div class="px-4 px-lg-6 scrollbar">
+                            <div class="deals">
+                                <div class="deals-col me-4">
+                                    <div
+                                        class="d-flex align-items-center justify-content-between position-sticky top-0 z-1 bg-body">
+                                        <div>
+                                            <h5 class="mb-2">New</h5>
+                                            <p class="fs-9 text-body-tertiary mb-1">Forecast Revenue:</p>
+                                            <h4 class="mb-3">$37,000.00</h4>
                                         </div>
-                                        <div class="scrollbar deals-items-container">
-                                            <div class="w-100 min-vh-50" data-sortable="data-sortable">
-                                                <div>
-                                                    <div class="card mb-3">
-                                                        <div class="card-body"><a
-                                                                class="dropdown-indicator-icon position-absolute text-body-tertiary"
-                                                                href="#collapseWidthDeals-1" role="button"
-                                                                data-bs-toggle="collapse" aria-expanded="false"
-                                                                aria-controls="collapseWidthDeals-1"><span
-                                                                    class="fa-solid fa-angle-down"></span></a>
-                                                            <div
-                                                                class="d-flex align-items-center justify-content-between mb-3">
-                                                                <div class="d-flex"><span class="me-2"
-                                                                        data-feather="clock"
-                                                                        style="stroke-width:2;"></span>
-                                                                    <p
-                                                                        class="mb-0 fs-9 fw-semibold text-body-tertiary date">
-                                                                        Dec 30, 2022<span class="text-body-quaternary"> .
-                                                                            2:15 PM</span></p>
-                                                                </div>
+                                        <div class="d-flex gap-3">
+                                            <button class="btn p-0" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#addDealModal" aria-haspopup="true" aria-expanded="false"
+                                                data-bs-reference="parent"><span class="fa-solid fa-plus"></span></button>
+                                            <button class="btn p-0" type="button" data-bs-toggle="dropdown"
+                                                data-boundary="window" aria-haspopup="true" aria-expanded="false"
+                                                data-bs-reference="parent"><span
+                                                    class="fas fa-ellipsis-h fs-10"></span></button>
+                                            <ul class="dropdown-menu dropdown-menu-end">
+                                                <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                <li><a class="dropdown-item" href="#">Add meeting</a></li>
+                                                <li><a class="dropdown-item" href="#">See all connected
+                                                        contacts</a></li>
+                                                <li><a class="dropdown-item" href="#">Clone</a></li>
+                                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                <li><a class="dropdown-item" href="#">Display only bad deals</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="scrollbar deals-items-container">
+                                        <div class="w-100 min-vh-50" data-sortable="data-sortable">
+                                            <div>
+                                                <div class="card mb-3">
+                                                    <div class="card-body"><a
+                                                            class="dropdown-indicator-icon position-absolute text-body-tertiary"
+                                                            href="#collapseWidthDeals-1" role="button"
+                                                            data-bs-toggle="collapse" aria-expanded="false"
+                                                            aria-controls="collapseWidthDeals-1"><span
+                                                                class="fa-solid fa-angle-down"></span></a>
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between mb-3">
+                                                            <div class="d-flex"><span class="me-2" data-feather="clock"
+                                                                    style="stroke-width:2;"></span>
+                                                                <p class="mb-0 fs-9 fw-semibold text-body-tertiary date">
+                                                                    Dec 30, 2022<span class="text-body-quaternary"> .
+                                                                        2:15 PM</span></p>
                                                             </div>
-                                                            <div class="deals-items-head d-flex align-items-center mb-2"><a
-                                                                    class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7"
-                                                                    href="../../apps/crm/deal-details.html">Jo_Td01</a>
-                                                                <p class="deals-category fs-10 mb-0 mt-1 d-none"><span
-                                                                        class="me-1 text-body-quaternary"
-                                                                        data-feather="grid"
-                                                                        style="stroke-width:2; height: 12px; width: 12px"></span>Financial
-                                                                </p>
-                                                                <p
-                                                                    class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">
-                                                                    $14,000.00</p>
+                                                        </div>
+                                                        <div class="deals-items-head d-flex align-items-center mb-2"><a
+                                                                class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7"
+                                                                href="../../apps/crm/deal-details.html">Jo_Td01</a>
+                                                            <p class="deals-category fs-10 mb-0 mt-1 d-none"><span
+                                                                    class="me-1 text-body-quaternary" data-feather="grid"
+                                                                    style="stroke-width:2; height: 12px; width: 12px"></span>Financial
+                                                            </p>
+                                                            <p
+                                                                class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">
+                                                                $14,000.00</p>
+                                                        </div>
+                                                        <div class="deals-company-agent d-flex flex-between-center">
+                                                            <div class="d-flex align-items-center"><span
+                                                                    class="uil uil-user me-2"></span>
+                                                                <p class="text-body-secondary fw-bold fs-9 mb-0">
+                                                                    Knitkake.inc</p>
                                                             </div>
-                                                            <div class="deals-company-agent d-flex flex-between-center">
-                                                                <div class="d-flex align-items-center"><span
-                                                                        class="uil uil-user me-2"></span>
-                                                                    <p class="text-body-secondary fw-bold fs-9 mb-0">
-                                                                        Knitkake.inc</p>
-                                                                </div>
-                                                                <div class="d-flex align-items-center"><span
-                                                                        class="uil uil-headphones me-2"></span>
-                                                                    <p class="text-body-secondary fw-bold fs-9 mb-0">Ally
-                                                                        Aagaard</p>
-                                                                </div>
+                                                            <div class="d-flex align-items-center"><span
+                                                                    class="uil uil-headphones me-2"></span>
+                                                                <p class="text-body-secondary fw-bold fs-9 mb-0">Ally
+                                                                    Aagaard</p>
                                                             </div>
-                                                            <div class="collapse" id="collapseWidthDeals-1">
-                                                                <div class="d-flex gap-2 mb-5"><span
-                                                                        class="badge badge-phoenix badge-phoenix-info">new</span><span
-                                                                        class="badge badge-phoenix badge-phoenix-danger">Urgent</span>
-                                                                </div>
-                                                                <table class="mb-4 w-100 table-stats table-stats">
-                                                                    <tr>
-                                                                        <th></th>
-                                                                        <th></th>
-                                                                        <th></th>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="dollar-sign"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Expected Revenue</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                        </div>
+                                                        <div class="collapse" id="collapseWidthDeals-1">
+                                                            <div class="d-flex gap-2 mb-5"><span
+                                                                    class="badge badge-phoenix badge-phoenix-info">new</span><span
+                                                                    class="badge badge-phoenix badge-phoenix-danger">Urgent</span>
+                                                            </div>
+                                                            <table class="mb-4 w-100 table-stats table-stats">
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="dollar-sign"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
-                                                                                $14,000.00</p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="user"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Company Name</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Expected Revenue</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
+                                                                            $14,000.00</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="user"
+                                                                                style="width:16px; height:16px"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">
-                                                                                Knitkake.inc<a href="#!"> <span
-                                                                                        class="fa-solid fa-square-phone text-body-tertiary"></span></a><a
-                                                                                    href="#!"> <span
-                                                                                        class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a
-                                                                                    href="#!"> <span
-                                                                                        class="fab fa-whatsapp-square text-body-tertiary"></span></a>
-                                                                            </p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="calendar"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Closing Date &amp; Time</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Company Name</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">
+                                                                            Knitkake.inc<a href="#!"> <span
+                                                                                    class="fa-solid fa-square-phone text-body-tertiary"></span></a><a
+                                                                                href="#!"> <span
+                                                                                    class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a
+                                                                                href="#!"> <span
+                                                                                    class="fab fa-whatsapp-square text-body-tertiary"></span></a>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="calendar"
+                                                                                style="width:16px; height:16px"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
-                                                                                27-12-2022<span> . 11:19 PM</span></p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="headphones"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Assigned Agent </p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
-                                                                            <select
-                                                                                class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
-                                                                                <option selected="selected">Ally Aagaard
-                                                                                </option>
-                                                                                <option>Lonnie Kub</option>
-                                                                                <option>Aida Moen</option>
-                                                                                <option>Niko Koss</option>
-                                                                                <option>Alec Haag</option>
-                                                                                <option>Ola Smith</option>
-                                                                                <option>Leif Walsh</option>
-                                                                                <option>Brain Cole</option>
-                                                                                <option>Reese Mann</option>
-                                                                            </select>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                                <p class="fs-9 mb-1"> Probability:</p>
-                                                                <div class="progress" style="height:8px">
-                                                                    <div class="progress-bar rounded-pill bg-info"
-                                                                        role="progressbar" style="width: 20%"
-                                                                        aria-valuenow="20" aria-valuemin="0"
-                                                                        aria-valuemax="100"></div>
-                                                                </div>
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Closing Date &amp; Time</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
+                                                                            27-12-2022<span> . 11:19 PM</span></p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="headphones"
+                                                                                style="width:16px; height:16px"></span>
+                                                                            <p
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Assigned Agent </p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <select
+                                                                            class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
+                                                                            <option selected="selected">Ally Aagaard
+                                                                            </option>
+                                                                            <option>Lonnie Kub</option>
+                                                                            <option>Aida Moen</option>
+                                                                            <option>Niko Koss</option>
+                                                                            <option>Alec Haag</option>
+                                                                            <option>Ola Smith</option>
+                                                                            <option>Leif Walsh</option>
+                                                                            <option>Brain Cole</option>
+                                                                            <option>Reese Mann</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <p class="fs-9 mb-1"> Probability:</p>
+                                                            <div class="progress" style="height:8px">
+                                                                <div class="progress-bar rounded-pill bg-info"
+                                                                    role="progressbar" style="width: 20%"
+                                                                    aria-valuenow="20" aria-valuemin="0"
+                                                                    aria-valuemax="100"></div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div>
-                                                    <div class="card mb-3">
-                                                        <div class="card-body"><a
-                                                                class="dropdown-indicator-icon position-absolute text-body-tertiary"
-                                                                href="#collapseWidthDeals-2" role="button"
-                                                                data-bs-toggle="collapse" aria-expanded="false"
-                                                                aria-controls="collapseWidthDeals-2"><span
-                                                                    class="fa-solid fa-angle-down"></span></a>
-                                                            <div
-                                                                class="d-flex align-items-center justify-content-between mb-3">
-                                                                <div class="d-flex"><span class="me-2"
-                                                                        data-feather="clock"
-                                                                        style="stroke-width:2;"></span>
-                                                                    <p
-                                                                        class="mb-0 fs-9 fw-semibold text-body-tertiary date">
-                                                                        Dec 29, 2022<span class="text-body-quaternary"> .
-                                                                            12:15 PM</span></p>
-                                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="card mb-3">
+                                                    <div class="card-body"><a
+                                                            class="dropdown-indicator-icon position-absolute text-body-tertiary"
+                                                            href="#collapseWidthDeals-2" role="button"
+                                                            data-bs-toggle="collapse" aria-expanded="false"
+                                                            aria-controls="collapseWidthDeals-2"><span
+                                                                class="fa-solid fa-angle-down"></span></a>
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between mb-3">
+                                                            <div class="d-flex"><span class="me-2" data-feather="clock"
+                                                                    style="stroke-width:2;"></span>
+                                                                <p class="mb-0 fs-9 fw-semibold text-body-tertiary date">
+                                                                    Dec 29, 2022<span class="text-body-quaternary"> .
+                                                                        12:15 PM</span></p>
                                                             </div>
-                                                            <div class="deals-items-head d-flex align-items-center mb-2"><a
-                                                                    class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7"
-                                                                    href="../../apps/crm/deal-details.html">Dimensions for
-                                                                    Printing</a>
-                                                                <p class="deals-category fs-10 mb-0 mt-1 d-none"><span
-                                                                        class="me-1 text-body-quaternary"
-                                                                        data-feather="grid"
-                                                                        style="stroke-width:2; height: 12px; width: 12px"></span>Marketplace
-                                                                </p>
-                                                                <p
-                                                                    class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">
-                                                                    $23,000.00</p>
+                                                        </div>
+                                                        <div class="deals-items-head d-flex align-items-center mb-2"><a
+                                                                class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7"
+                                                                href="../../apps/crm/deal-details.html">Dimensions for
+                                                                Printing</a>
+                                                            <p class="deals-category fs-10 mb-0 mt-1 d-none"><span
+                                                                    class="me-1 text-body-quaternary" data-feather="grid"
+                                                                    style="stroke-width:2; height: 12px; width: 12px"></span>Marketplace
+                                                            </p>
+                                                            <p
+                                                                class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">
+                                                                $23,000.00</p>
+                                                        </div>
+                                                        <div class="deals-company-agent d-flex flex-between-center">
+                                                            <div class="d-flex align-items-center"><span
+                                                                    class="uil uil-user me-2"></span>
+                                                                <p class="text-body-secondary fw-bold fs-9 mb-0">
+                                                                    Kibikaba Clothings</p>
                                                             </div>
-                                                            <div class="deals-company-agent d-flex flex-between-center">
-                                                                <div class="d-flex align-items-center"><span
-                                                                        class="uil uil-user me-2"></span>
-                                                                    <p class="text-body-secondary fw-bold fs-9 mb-0">
-                                                                        Kibikaba Clothings</p>
-                                                                </div>
-                                                                <div class="d-flex align-items-center"><span
-                                                                        class="uil uil-headphones me-2"></span>
-                                                                    <p class="text-body-secondary fw-bold fs-9 mb-0">Lonnie
-                                                                        Kub</p>
-                                                                </div>
+                                                            <div class="d-flex align-items-center"><span
+                                                                    class="uil uil-headphones me-2"></span>
+                                                                <p class="text-body-secondary fw-bold fs-9 mb-0">Lonnie
+                                                                    Kub</p>
                                                             </div>
-                                                            <div class="collapse" id="collapseWidthDeals-2">
-                                                                <div class="d-flex gap-2 mb-5"><span
-                                                                        class="badge badge-phoenix badge-phoenix-info">New</span><span
-                                                                        class="badge badge-phoenix badge-phoenix-success">Medium</span>
-                                                                </div>
-                                                                <table class="mb-4 w-100 table-stats table-stats">
-                                                                    <tr>
-                                                                        <th></th>
-                                                                        <th></th>
-                                                                        <th></th>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="dollar-sign"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Expected Revenue</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                        </div>
+                                                        <div class="collapse" id="collapseWidthDeals-2">
+                                                            <div class="d-flex gap-2 mb-5"><span
+                                                                    class="badge badge-phoenix badge-phoenix-info">New</span><span
+                                                                    class="badge badge-phoenix badge-phoenix-success">Medium</span>
+                                                            </div>
+                                                            <table class="mb-4 w-100 table-stats table-stats">
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="dollar-sign"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
-                                                                                $23,000.00</p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="user"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Company Name</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Expected Revenue</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
+                                                                            $23,000.00</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="user"
+                                                                                style="width:16px; height:16px"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">
-                                                                                Kibikaba Clothings<a href="#!"> <span
-                                                                                        class="fa-solid fa-square-phone text-body-tertiary"></span></a><a
-                                                                                    href="#!"> <span
-                                                                                        class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a
-                                                                                    href="#!"> <span
-                                                                                        class="fab fa-whatsapp-square text-body-tertiary"></span></a>
-                                                                            </p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="calendar"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Closing Date &amp; Time</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Company Name</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">
+                                                                            Kibikaba Clothings<a href="#!"> <span
+                                                                                    class="fa-solid fa-square-phone text-body-tertiary"></span></a><a
+                                                                                href="#!"> <span
+                                                                                    class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a
+                                                                                href="#!"> <span
+                                                                                    class="fab fa-whatsapp-square text-body-tertiary"></span></a>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="calendar"
+                                                                                style="width:16px; height:16px"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
-                                                                                25-12-2022<span> . 2:00 PM</span></p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="headphones"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Assigned Agent </p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
-                                                                            <select
-                                                                                class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
-                                                                                <option>Ally Aagaard</option>
-                                                                                <option selected="selected">Lonnie Kub
-                                                                                </option>
-                                                                                <option>Aida Moen</option>
-                                                                                <option>Niko Koss</option>
-                                                                                <option>Alec Haag</option>
-                                                                                <option>Ola Smith</option>
-                                                                                <option>Leif Walsh</option>
-                                                                                <option>Brain Cole</option>
-                                                                                <option>Reese Mann</option>
-                                                                            </select>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                                <p class="fs-9 mb-1"> Probability:</p>
-                                                                <div class="progress" style="height:8px">
-                                                                    <div class="progress-bar rounded-pill bg-info"
-                                                                        role="progressbar" style="width: 20%"
-                                                                        aria-valuenow="20" aria-valuemin="0"
-                                                                        aria-valuemax="100"></div>
-                                                                </div>
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Closing Date &amp; Time</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
+                                                                            25-12-2022<span> . 2:00 PM</span></p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="headphones"
+                                                                                style="width:16px; height:16px"></span>
+                                                                            <p
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Assigned Agent </p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <select
+                                                                            class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
+                                                                            <option>Ally Aagaard</option>
+                                                                            <option selected="selected">Lonnie Kub
+                                                                            </option>
+                                                                            <option>Aida Moen</option>
+                                                                            <option>Niko Koss</option>
+                                                                            <option>Alec Haag</option>
+                                                                            <option>Ola Smith</option>
+                                                                            <option>Leif Walsh</option>
+                                                                            <option>Brain Cole</option>
+                                                                            <option>Reese Mann</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <p class="fs-9 mb-1"> Probability:</p>
+                                                            <div class="progress" style="height:8px">
+                                                                <div class="progress-bar rounded-pill bg-info"
+                                                                    role="progressbar" style="width: 20%"
+                                                                    aria-valuenow="20" aria-valuemin="0"
+                                                                    aria-valuemax="100"></div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1295,498 +1288,490 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="deals-col me-4">
-                                        <div
-                                            class="d-flex align-items-center justify-content-between position-sticky top-0 z-1 bg-body">
-                                            <div>
-                                                <h5 class="mb-2">In Progress</h5>
-                                                <p class="fs-9 text-body-tertiary mb-1">Forecast Revenue:</p>
-                                                <h4 class="mb-3">$101,300.00</h4>
-                                            </div>
-                                            <div class="d-flex gap-3">
-                                                <button class="btn p-0" type="button" data-bs-toggle="modal"
-                                                    data-bs-target="#addDealModal" aria-haspopup="true"
-                                                    aria-expanded="false" data-bs-reference="parent"><span
-                                                        class="fa-solid fa-plus"></span></button>
-                                                <button class="btn p-0" type="button" data-bs-toggle="dropdown"
-                                                    data-boundary="window" aria-haspopup="true" aria-expanded="false"
-                                                    data-bs-reference="parent"><span
-                                                        class="fas fa-ellipsis-h fs-10"></span></button>
-                                                <ul class="dropdown-menu dropdown-menu-end">
-                                                    <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                    <li><a class="dropdown-item" href="#">Add meeting</a></li>
-                                                    <li><a class="dropdown-item" href="#">See all connected
-                                                            contacts</a></li>
-                                                    <li><a class="dropdown-item" href="#">Clone</a></li>
-                                                    <li><a class="dropdown-item" href="#">Delete</a></li>
-                                                    <li><a class="dropdown-item" href="#">Display only bad deals</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                </div>
+                                <div class="deals-col me-4">
+                                    <div
+                                        class="d-flex align-items-center justify-content-between position-sticky top-0 z-1 bg-body">
+                                        <div>
+                                            <h5 class="mb-2">In Progress</h5>
+                                            <p class="fs-9 text-body-tertiary mb-1">Forecast Revenue:</p>
+                                            <h4 class="mb-3">$101,300.00</h4>
                                         </div>
-                                        <div class="scrollbar deals-items-container">
-                                            <div class="w-100 min-vh-50" data-sortable="data-sortable">
-                                                <div>
-                                                    <div class="card mb-3">
-                                                        <div class="card-body"><a
-                                                                class="dropdown-indicator-icon position-absolute text-body-tertiary"
-                                                                href="#collapseWidthDeals-3" role="button"
-                                                                data-bs-toggle="collapse" aria-expanded="false"
-                                                                aria-controls="collapseWidthDeals-3"><span
-                                                                    class="fa-solid fa-angle-down"></span></a>
-                                                            <div
-                                                                class="d-flex align-items-center justify-content-between mb-3">
-                                                                <div class="d-flex"><span class="me-2"
-                                                                        data-feather="clock"
-                                                                        style="stroke-width:2;"></span>
-                                                                    <p
-                                                                        class="mb-0 fs-9 fw-semibold text-body-tertiary date">
-                                                                        Dec 30, 2022<span class="text-body-quaternary"> .
-                                                                            06:15 PM</span></p>
-                                                                </div>
+                                        <div class="d-flex gap-3">
+                                            <button class="btn p-0" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#addDealModal" aria-haspopup="true" aria-expanded="false"
+                                                data-bs-reference="parent"><span class="fa-solid fa-plus"></span></button>
+                                            <button class="btn p-0" type="button" data-bs-toggle="dropdown"
+                                                data-boundary="window" aria-haspopup="true" aria-expanded="false"
+                                                data-bs-reference="parent"><span
+                                                    class="fas fa-ellipsis-h fs-10"></span></button>
+                                            <ul class="dropdown-menu dropdown-menu-end">
+                                                <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                <li><a class="dropdown-item" href="#">Add meeting</a></li>
+                                                <li><a class="dropdown-item" href="#">See all connected
+                                                        contacts</a></li>
+                                                <li><a class="dropdown-item" href="#">Clone</a></li>
+                                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                <li><a class="dropdown-item" href="#">Display only bad deals</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="scrollbar deals-items-container">
+                                        <div class="w-100 min-vh-50" data-sortable="data-sortable">
+                                            <div>
+                                                <div class="card mb-3">
+                                                    <div class="card-body"><a
+                                                            class="dropdown-indicator-icon position-absolute text-body-tertiary"
+                                                            href="#collapseWidthDeals-3" role="button"
+                                                            data-bs-toggle="collapse" aria-expanded="false"
+                                                            aria-controls="collapseWidthDeals-3"><span
+                                                                class="fa-solid fa-angle-down"></span></a>
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between mb-3">
+                                                            <div class="d-flex"><span class="me-2" data-feather="clock"
+                                                                    style="stroke-width:2;"></span>
+                                                                <p class="mb-0 fs-9 fw-semibold text-body-tertiary date">
+                                                                    Dec 30, 2022<span class="text-body-quaternary"> .
+                                                                        06:15 PM</span></p>
                                                             </div>
-                                                            <div class="deals-items-head d-flex align-items-center mb-2">
-                                                                <a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7"
-                                                                    href="../../apps/crm/deal-details.html">True and True
-                                                                    Attorneys</a>
-                                                                <p class="deals-category fs-10 mb-0 mt-1 d-none"><span
-                                                                        class="me-1 text-body-quaternary"
-                                                                        data-feather="grid"
-                                                                        style="stroke-width:2; height: 12px; width: 12px"></span>Financial
-                                                                </p>
-                                                                <p
-                                                                    class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">
-                                                                    $33,000.00</p>
+                                                        </div>
+                                                        <div class="deals-items-head d-flex align-items-center mb-2">
+                                                            <a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7"
+                                                                href="../../apps/crm/deal-details.html">True and True
+                                                                Attorneys</a>
+                                                            <p class="deals-category fs-10 mb-0 mt-1 d-none"><span
+                                                                    class="me-1 text-body-quaternary" data-feather="grid"
+                                                                    style="stroke-width:2; height: 12px; width: 12px"></span>Financial
+                                                            </p>
+                                                            <p
+                                                                class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">
+                                                                $33,000.00</p>
+                                                        </div>
+                                                        <div class="deals-company-agent d-flex flex-between-center">
+                                                            <div class="d-flex align-items-center"><span
+                                                                    class="uil uil-user me-2"></span>
+                                                                <p class="text-body-secondary fw-bold fs-9 mb-0">PBR
+                                                                    Holdings</p>
                                                             </div>
-                                                            <div class="deals-company-agent d-flex flex-between-center">
-                                                                <div class="d-flex align-items-center"><span
-                                                                        class="uil uil-user me-2"></span>
-                                                                    <p class="text-body-secondary fw-bold fs-9 mb-0">PBR
-                                                                        Holdings</p>
-                                                                </div>
-                                                                <div class="d-flex align-items-center"><span
-                                                                        class="uil uil-headphones me-2"></span>
-                                                                    <p class="text-body-secondary fw-bold fs-9 mb-0">Aida
-                                                                        Moen</p>
-                                                                </div>
+                                                            <div class="d-flex align-items-center"><span
+                                                                    class="uil uil-headphones me-2"></span>
+                                                                <p class="text-body-secondary fw-bold fs-9 mb-0">Aida
+                                                                    Moen</p>
                                                             </div>
-                                                            <div class="collapse" id="collapseWidthDeals-3">
-                                                                <div class="d-flex gap-2 mb-5"><span
-                                                                        class="badge badge-phoenix badge-phoenix-primary">In
-                                                                        Progress</span><span
-                                                                        class="badge badge-phoenix badge-phoenix-warning">High</span>
-                                                                </div>
-                                                                <table class="mb-4 w-100 table-stats table-stats">
-                                                                    <tr>
-                                                                        <th></th>
-                                                                        <th></th>
-                                                                        <th></th>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="dollar-sign"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Expected Revenue</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                        </div>
+                                                        <div class="collapse" id="collapseWidthDeals-3">
+                                                            <div class="d-flex gap-2 mb-5"><span
+                                                                    class="badge badge-phoenix badge-phoenix-primary">In
+                                                                    Progress</span><span
+                                                                    class="badge badge-phoenix badge-phoenix-warning">High</span>
+                                                            </div>
+                                                            <table class="mb-4 w-100 table-stats table-stats">
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="dollar-sign"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
-                                                                                $33,000.00</p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="user"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Company Name</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Expected Revenue</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
+                                                                            $33,000.00</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="user"
+                                                                                style="width:16px; height:16px"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">
-                                                                                PBR Holdings<a href="#!"> <span
-                                                                                        class="fa-solid fa-square-phone text-body-tertiary"></span></a><a
-                                                                                    href="#!"> <span
-                                                                                        class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a
-                                                                                    href="#!"> <span
-                                                                                        class="fab fa-whatsapp-square text-body-tertiary"></span></a>
-                                                                            </p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="calendar"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Closing Date &amp; Time</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Company Name</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">
+                                                                            PBR Holdings<a href="#!"> <span
+                                                                                    class="fa-solid fa-square-phone text-body-tertiary"></span></a><a
+                                                                                href="#!"> <span
+                                                                                    class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a
+                                                                                href="#!"> <span
+                                                                                    class="fab fa-whatsapp-square text-body-tertiary"></span></a>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="calendar"
+                                                                                style="width:16px; height:16px"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
-                                                                                27-12-2022<span> . 11:19 PM</span></p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="headphones"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Assigned Agent </p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
-                                                                            <select
-                                                                                class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
-                                                                                <option>Ally Aagaard</option>
-                                                                                <option>Lonnie Kub</option>
-                                                                                <option selected="selected">Aida Moen
-                                                                                </option>
-                                                                                <option>Niko Koss</option>
-                                                                                <option>Alec Haag</option>
-                                                                                <option>Ola Smith</option>
-                                                                                <option>Leif Walsh</option>
-                                                                                <option>Brain Cole</option>
-                                                                                <option>Reese Mann</option>
-                                                                            </select>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                                <p class="fs-9 mb-1"> Probability:</p>
-                                                                <div class="progress" style="height:8px">
-                                                                    <div class="progress-bar rounded-pill bg-primary"
-                                                                        role="progressbar" style="width: 40%"
-                                                                        aria-valuenow="40" aria-valuemin="0"
-                                                                        aria-valuemax="100"></div>
-                                                                </div>
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Closing Date &amp; Time</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
+                                                                            27-12-2022<span> . 11:19 PM</span></p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="headphones"
+                                                                                style="width:16px; height:16px"></span>
+                                                                            <p
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Assigned Agent </p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <select
+                                                                            class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
+                                                                            <option>Ally Aagaard</option>
+                                                                            <option>Lonnie Kub</option>
+                                                                            <option selected="selected">Aida Moen
+                                                                            </option>
+                                                                            <option>Niko Koss</option>
+                                                                            <option>Alec Haag</option>
+                                                                            <option>Ola Smith</option>
+                                                                            <option>Leif Walsh</option>
+                                                                            <option>Brain Cole</option>
+                                                                            <option>Reese Mann</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <p class="fs-9 mb-1"> Probability:</p>
+                                                            <div class="progress" style="height:8px">
+                                                                <div class="progress-bar rounded-pill bg-primary"
+                                                                    role="progressbar" style="width: 40%"
+                                                                    aria-valuenow="40" aria-valuemin="0"
+                                                                    aria-valuemax="100"></div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div>
-                                                    <div class="card mb-3">
-                                                        <div class="card-body"><a
-                                                                class="dropdown-indicator-icon position-absolute text-body-tertiary"
-                                                                href="#collapseWidthDeals-4" role="button"
-                                                                data-bs-toggle="collapse" aria-expanded="false"
-                                                                aria-controls="collapseWidthDeals-4"><span
-                                                                    class="fa-solid fa-angle-down"></span></a>
-                                                            <div
-                                                                class="d-flex align-items-center justify-content-between mb-3">
-                                                                <div class="d-flex"><span class="me-2"
-                                                                        data-feather="clock"
-                                                                        style="stroke-width:2;"></span>
-                                                                    <p
-                                                                        class="mb-0 fs-9 fw-semibold text-body-tertiary date">
-                                                                        Dec 30, 2022<span class="text-body-quaternary"> .
-                                                                            08:20 PM</span></p>
-                                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="card mb-3">
+                                                    <div class="card-body"><a
+                                                            class="dropdown-indicator-icon position-absolute text-body-tertiary"
+                                                            href="#collapseWidthDeals-4" role="button"
+                                                            data-bs-toggle="collapse" aria-expanded="false"
+                                                            aria-controls="collapseWidthDeals-4"><span
+                                                                class="fa-solid fa-angle-down"></span></a>
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between mb-3">
+                                                            <div class="d-flex"><span class="me-2"
+                                                                    data-feather="clock" style="stroke-width:2;"></span>
+                                                                <p class="mb-0 fs-9 fw-semibold text-body-tertiary date">
+                                                                    Dec 30, 2022<span class="text-body-quaternary"> .
+                                                                        08:20 PM</span></p>
                                                             </div>
-                                                            <div class="deals-items-head d-flex align-items-center mb-2">
-                                                                <a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7"
-                                                                    href="../../apps/crm/deal-details.html">The Morlong
-                                                                    Corporation</a>
-                                                                <p class="deals-category fs-10 mb-0 mt-1 d-none"><span
-                                                                        class="me-1 text-body-quaternary"
-                                                                        data-feather="grid"
-                                                                        style="stroke-width:2; height: 12px; width: 12px"></span>Marketplace
-                                                                </p>
-                                                                <p
-                                                                    class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">
-                                                                    $45,300.00</p>
+                                                        </div>
+                                                        <div class="deals-items-head d-flex align-items-center mb-2">
+                                                            <a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7"
+                                                                href="../../apps/crm/deal-details.html">The Morlong
+                                                                Corporation</a>
+                                                            <p class="deals-category fs-10 mb-0 mt-1 d-none"><span
+                                                                    class="me-1 text-body-quaternary"
+                                                                    data-feather="grid"
+                                                                    style="stroke-width:2; height: 12px; width: 12px"></span>Marketplace
+                                                            </p>
+                                                            <p
+                                                                class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">
+                                                                $45,300.00</p>
+                                                        </div>
+                                                        <div class="deals-company-agent d-flex flex-between-center">
+                                                            <div class="d-flex align-items-center"><span
+                                                                    class="uil uil-user me-2"></span>
+                                                                <p class="text-body-secondary fw-bold fs-9 mb-0">
+                                                                    Giraffes Studio</p>
                                                             </div>
-                                                            <div class="deals-company-agent d-flex flex-between-center">
-                                                                <div class="d-flex align-items-center"><span
-                                                                        class="uil uil-user me-2"></span>
-                                                                    <p class="text-body-secondary fw-bold fs-9 mb-0">
-                                                                        Giraffes Studio</p>
-                                                                </div>
-                                                                <div class="d-flex align-items-center"><span
-                                                                        class="uil uil-headphones me-2"></span>
-                                                                    <p class="text-body-secondary fw-bold fs-9 mb-0">Niko
-                                                                        Koss</p>
-                                                                </div>
+                                                            <div class="d-flex align-items-center"><span
+                                                                    class="uil uil-headphones me-2"></span>
+                                                                <p class="text-body-secondary fw-bold fs-9 mb-0">Niko
+                                                                    Koss</p>
                                                             </div>
-                                                            <div class="collapse" id="collapseWidthDeals-4">
-                                                                <div class="d-flex gap-2 mb-5"><span
-                                                                        class="badge badge-phoenix badge-phoenix-primary">In
-                                                                        Progress</span><span
-                                                                        class="badge badge-phoenix badge-phoenix-info">Low</span>
-                                                                </div>
-                                                                <table class="mb-4 w-100 table-stats table-stats">
-                                                                    <tr>
-                                                                        <th></th>
-                                                                        <th></th>
-                                                                        <th></th>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="dollar-sign"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Expected Revenue</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                        </div>
+                                                        <div class="collapse" id="collapseWidthDeals-4">
+                                                            <div class="d-flex gap-2 mb-5"><span
+                                                                    class="badge badge-phoenix badge-phoenix-primary">In
+                                                                    Progress</span><span
+                                                                    class="badge badge-phoenix badge-phoenix-info">Low</span>
+                                                            </div>
+                                                            <table class="mb-4 w-100 table-stats table-stats">
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="dollar-sign"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
-                                                                                $45,300.00</p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="user"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Company Name</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Expected Revenue</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
+                                                                            $45,300.00</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="user"
+                                                                                style="width:16px; height:16px"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">
-                                                                                Giraffes Studio<a href="#!"> <span
-                                                                                        class="fa-solid fa-square-phone text-body-tertiary"></span></a><a
-                                                                                    href="#!"> <span
-                                                                                        class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a
-                                                                                    href="#!"> <span
-                                                                                        class="fab fa-whatsapp-square text-body-tertiary"></span></a>
-                                                                            </p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="calendar"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Closing Date &amp; Time</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Company Name</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">
+                                                                            Giraffes Studio<a href="#!"> <span
+                                                                                    class="fa-solid fa-square-phone text-body-tertiary"></span></a><a
+                                                                                href="#!"> <span
+                                                                                    class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a
+                                                                                href="#!"> <span
+                                                                                    class="fab fa-whatsapp-square text-body-tertiary"></span></a>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="calendar"
+                                                                                style="width:16px; height:16px"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
-                                                                                26-12-2022<span> . 12:10 PM</span></p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="headphones"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Assigned Agent </p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
-                                                                            <select
-                                                                                class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
-                                                                                <option>Ally Aagaard</option>
-                                                                                <option>Lonnie Kub</option>
-                                                                                <option>Aida Moen</option>
-                                                                                <option selected="selected">Niko Koss
-                                                                                </option>
-                                                                                <option>Alec Haag</option>
-                                                                                <option>Ola Smith</option>
-                                                                                <option>Leif Walsh</option>
-                                                                                <option>Brain Cole</option>
-                                                                                <option>Reese Mann</option>
-                                                                            </select>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                                <p class="fs-9 mb-1"> Probability:</p>
-                                                                <div class="progress" style="height:8px">
-                                                                    <div class="progress-bar rounded-pill bg-primary"
-                                                                        role="progressbar" style="width: 40%"
-                                                                        aria-valuenow="40" aria-valuemin="0"
-                                                                        aria-valuemax="100"></div>
-                                                                </div>
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Closing Date &amp; Time</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
+                                                                            26-12-2022<span> . 12:10 PM</span></p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="headphones"
+                                                                                style="width:16px; height:16px"></span>
+                                                                            <p
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Assigned Agent </p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <select
+                                                                            class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
+                                                                            <option>Ally Aagaard</option>
+                                                                            <option>Lonnie Kub</option>
+                                                                            <option>Aida Moen</option>
+                                                                            <option selected="selected">Niko Koss
+                                                                            </option>
+                                                                            <option>Alec Haag</option>
+                                                                            <option>Ola Smith</option>
+                                                                            <option>Leif Walsh</option>
+                                                                            <option>Brain Cole</option>
+                                                                            <option>Reese Mann</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <p class="fs-9 mb-1"> Probability:</p>
+                                                            <div class="progress" style="height:8px">
+                                                                <div class="progress-bar rounded-pill bg-primary"
+                                                                    role="progressbar" style="width: 40%"
+                                                                    aria-valuenow="40" aria-valuemin="0"
+                                                                    aria-valuemax="100"></div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div>
-                                                    <div class="card mb-3">
-                                                        <div class="card-body"><a
-                                                                class="dropdown-indicator-icon position-absolute text-body-tertiary"
-                                                                href="#collapseWidthDeals-5" role="button"
-                                                                data-bs-toggle="collapse" aria-expanded="false"
-                                                                aria-controls="collapseWidthDeals-5"><span
-                                                                    class="fa-solid fa-angle-down"></span></a>
-                                                            <div
-                                                                class="d-flex align-items-center justify-content-between mb-3">
-                                                                <div class="d-flex"><span class="me-2"
-                                                                        data-feather="clock"
-                                                                        style="stroke-width:2;"></span>
-                                                                    <p
-                                                                        class="mb-0 fs-9 fw-semibold text-body-tertiary date">
-                                                                        Dec 30, 2022<span class="text-body-quaternary"> .
-                                                                            3:25 PM</span></p>
-                                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="card mb-3">
+                                                    <div class="card-body"><a
+                                                            class="dropdown-indicator-icon position-absolute text-body-tertiary"
+                                                            href="#collapseWidthDeals-5" role="button"
+                                                            data-bs-toggle="collapse" aria-expanded="false"
+                                                            aria-controls="collapseWidthDeals-5"><span
+                                                                class="fa-solid fa-angle-down"></span></a>
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between mb-3">
+                                                            <div class="d-flex"><span class="me-2"
+                                                                    data-feather="clock" style="stroke-width:2;"></span>
+                                                                <p class="mb-0 fs-9 fw-semibold text-body-tertiary date">
+                                                                    Dec 30, 2022<span class="text-body-quaternary"> .
+                                                                        3:25 PM</span></p>
                                                             </div>
-                                                            <div class="deals-items-head d-flex align-items-center mb-2">
-                                                                <a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7"
-                                                                    href="../../apps/crm/deal-details.html">Product
-                                                                    List</a>
-                                                                <p class="deals-category fs-10 mb-0 mt-1 d-none"><span
-                                                                        class="me-1 text-body-quaternary"
-                                                                        data-feather="grid"
-                                                                        style="stroke-width:2; height: 12px; width: 12px"></span>Marketplace
-                                                                </p>
-                                                                <p
-                                                                    class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">
-                                                                    $23,000.00</p>
+                                                        </div>
+                                                        <div class="deals-items-head d-flex align-items-center mb-2">
+                                                            <a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7"
+                                                                href="../../apps/crm/deal-details.html">Product
+                                                                List</a>
+                                                            <p class="deals-category fs-10 mb-0 mt-1 d-none"><span
+                                                                    class="me-1 text-body-quaternary"
+                                                                    data-feather="grid"
+                                                                    style="stroke-width:2; height: 12px; width: 12px"></span>Marketplace
+                                                            </p>
+                                                            <p
+                                                                class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">
+                                                                $23,000.00</p>
+                                                        </div>
+                                                        <div class="deals-company-agent d-flex flex-between-center">
+                                                            <div class="d-flex align-items-center"><span
+                                                                    class="uil uil-user me-2"></span>
+                                                                <p class="text-body-secondary fw-bold fs-9 mb-0">Birds
+                                                                    eye</p>
                                                             </div>
-                                                            <div class="deals-company-agent d-flex flex-between-center">
-                                                                <div class="d-flex align-items-center"><span
-                                                                        class="uil uil-user me-2"></span>
-                                                                    <p class="text-body-secondary fw-bold fs-9 mb-0">Birds
-                                                                        eye</p>
-                                                                </div>
-                                                                <div class="d-flex align-items-center"><span
-                                                                        class="uil uil-headphones me-2"></span>
-                                                                    <p class="text-body-secondary fw-bold fs-9 mb-0">Alec
-                                                                        Haag</p>
-                                                                </div>
+                                                            <div class="d-flex align-items-center"><span
+                                                                    class="uil uil-headphones me-2"></span>
+                                                                <p class="text-body-secondary fw-bold fs-9 mb-0">Alec
+                                                                    Haag</p>
                                                             </div>
-                                                            <div class="collapse" id="collapseWidthDeals-5">
-                                                                <div class="d-flex gap-2 mb-5"><span
-                                                                        class="badge badge-phoenix badge-phoenix-primary">In
-                                                                        Progress</span><span
-                                                                        class="badge badge-phoenix badge-phoenix-danger">Urgent</span>
-                                                                </div>
-                                                                <table class="mb-4 w-100 table-stats table-stats">
-                                                                    <tr>
-                                                                        <th></th>
-                                                                        <th></th>
-                                                                        <th></th>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="dollar-sign"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Expected Revenue</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                        </div>
+                                                        <div class="collapse" id="collapseWidthDeals-5">
+                                                            <div class="d-flex gap-2 mb-5"><span
+                                                                    class="badge badge-phoenix badge-phoenix-primary">In
+                                                                    Progress</span><span
+                                                                    class="badge badge-phoenix badge-phoenix-danger">Urgent</span>
+                                                            </div>
+                                                            <table class="mb-4 w-100 table-stats table-stats">
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="dollar-sign"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
-                                                                                $23,000.00</p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="user"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Company Name</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Expected Revenue</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
+                                                                            $23,000.00</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="user"
+                                                                                style="width:16px; height:16px"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">
-                                                                                Birds eye<a href="#!"> <span
-                                                                                        class="fa-solid fa-square-phone text-body-tertiary"></span></a><a
-                                                                                    href="#!"> <span
-                                                                                        class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a
-                                                                                    href="#!"> <span
-                                                                                        class="fab fa-whatsapp-square text-body-tertiary"></span></a>
-                                                                            </p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="calendar"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Closing Date &amp; Time</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Company Name</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">
+                                                                            Birds eye<a href="#!"> <span
+                                                                                    class="fa-solid fa-square-phone text-body-tertiary"></span></a><a
+                                                                                href="#!"> <span
+                                                                                    class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a
+                                                                                href="#!"> <span
+                                                                                    class="fab fa-whatsapp-square text-body-tertiary"></span></a>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="calendar"
+                                                                                style="width:16px; height:16px"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
-                                                                                27-12-2022<span> . 11:19 PM</span></p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="headphones"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Assigned Agent </p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
-                                                                            <select
-                                                                                class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
-                                                                                <option>Ally Aagaard</option>
-                                                                                <option>Lonnie Kub</option>
-                                                                                <option>Aida Moen</option>
-                                                                                <option>Niko Koss</option>
-                                                                                <option selected="selected">Alec Haag
-                                                                                </option>
-                                                                                <option>Ola Smith</option>
-                                                                                <option>Leif Walsh</option>
-                                                                                <option>Brain Cole</option>
-                                                                                <option>Reese Mann</option>
-                                                                            </select>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                                <p class="fs-9 mb-1"> Probability:</p>
-                                                                <div class="progress" style="height:8px">
-                                                                    <div class="progress-bar rounded-pill bg-primary"
-                                                                        role="progressbar" style="width: 40%"
-                                                                        aria-valuenow="40" aria-valuemin="0"
-                                                                        aria-valuemax="100"></div>
-                                                                </div>
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Closing Date &amp; Time</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
+                                                                            27-12-2022<span> . 11:19 PM</span></p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="headphones"
+                                                                                style="width:16px; height:16px"></span>
+                                                                            <p
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Assigned Agent </p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <select
+                                                                            class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
+                                                                            <option>Ally Aagaard</option>
+                                                                            <option>Lonnie Kub</option>
+                                                                            <option>Aida Moen</option>
+                                                                            <option>Niko Koss</option>
+                                                                            <option selected="selected">Alec Haag
+                                                                            </option>
+                                                                            <option>Ola Smith</option>
+                                                                            <option>Leif Walsh</option>
+                                                                            <option>Brain Cole</option>
+                                                                            <option>Reese Mann</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <p class="fs-9 mb-1"> Probability:</p>
+                                                            <div class="progress" style="height:8px">
+                                                                <div class="progress-bar rounded-pill bg-primary"
+                                                                    role="progressbar" style="width: 40%"
+                                                                    aria-valuenow="40" aria-valuemin="0"
+                                                                    aria-valuemax="100"></div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1794,187 +1779,185 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="deals-col me-4">
-                                        <div
-                                            class="d-flex align-items-center justify-content-between position-sticky top-0 z-1 bg-body">
-                                            <div>
-                                                <h5 class="mb-2">Pending</h5>
-                                                <p class="fs-9 text-body-tertiary mb-1">Forecast Revenue:</p>
-                                                <h4 class="mb-3">$23,400.00</h4>
-                                            </div>
-                                            <div class="d-flex gap-3">
-                                                <button class="btn p-0" type="button" data-bs-toggle="modal"
-                                                    data-bs-target="#addDealModal" aria-haspopup="true"
-                                                    aria-expanded="false" data-bs-reference="parent"><span
-                                                        class="fa-solid fa-plus"></span></button>
-                                                <button class="btn p-0" type="button" data-bs-toggle="dropdown"
-                                                    data-boundary="window" aria-haspopup="true" aria-expanded="false"
-                                                    data-bs-reference="parent"><span
-                                                        class="fas fa-ellipsis-h fs-10"></span></button>
-                                                <ul class="dropdown-menu dropdown-menu-end">
-                                                    <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                    <li><a class="dropdown-item" href="#">Add meeting</a></li>
-                                                    <li><a class="dropdown-item" href="#">See all connected
-                                                            contacts</a></li>
-                                                    <li><a class="dropdown-item" href="#">Clone</a></li>
-                                                    <li><a class="dropdown-item" href="#">Delete</a></li>
-                                                    <li><a class="dropdown-item" href="#">Display only bad
-                                                            deals</a></li>
-                                                </ul>
-                                            </div>
+                                </div>
+                                <div class="deals-col me-4">
+                                    <div
+                                        class="d-flex align-items-center justify-content-between position-sticky top-0 z-1 bg-body">
+                                        <div>
+                                            <h5 class="mb-2">Pending</h5>
+                                            <p class="fs-9 text-body-tertiary mb-1">Forecast Revenue:</p>
+                                            <h4 class="mb-3">$23,400.00</h4>
                                         </div>
-                                        <div class="scrollbar deals-items-container">
-                                            <div class="w-100 min-vh-50" data-sortable="data-sortable">
-                                                <div>
-                                                    <div class="card mb-3">
-                                                        <div class="card-body"><a
-                                                                class="dropdown-indicator-icon position-absolute text-body-tertiary"
-                                                                href="#collapseWidthDeals-6" role="button"
-                                                                data-bs-toggle="collapse" aria-expanded="false"
-                                                                aria-controls="collapseWidthDeals-6"><span
-                                                                    class="fa-solid fa-angle-down"></span></a>
-                                                            <div
-                                                                class="d-flex align-items-center justify-content-between mb-3">
-                                                                <div class="d-flex"><span class="me-2"
-                                                                        data-feather="clock"
-                                                                        style="stroke-width:2;"></span>
-                                                                    <p
-                                                                        class="mb-0 fs-9 fw-semibold text-body-tertiary date">
-                                                                        Dec 30, 2022<span class="text-body-quaternary"> .
-                                                                            3:15 PM</span></p>
-                                                                </div>
+                                        <div class="d-flex gap-3">
+                                            <button class="btn p-0" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#addDealModal" aria-haspopup="true"
+                                                aria-expanded="false" data-bs-reference="parent"><span
+                                                    class="fa-solid fa-plus"></span></button>
+                                            <button class="btn p-0" type="button" data-bs-toggle="dropdown"
+                                                data-boundary="window" aria-haspopup="true" aria-expanded="false"
+                                                data-bs-reference="parent"><span
+                                                    class="fas fa-ellipsis-h fs-10"></span></button>
+                                            <ul class="dropdown-menu dropdown-menu-end">
+                                                <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                <li><a class="dropdown-item" href="#">Add meeting</a></li>
+                                                <li><a class="dropdown-item" href="#">See all connected
+                                                        contacts</a></li>
+                                                <li><a class="dropdown-item" href="#">Clone</a></li>
+                                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                <li><a class="dropdown-item" href="#">Display only bad
+                                                        deals</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="scrollbar deals-items-container">
+                                        <div class="w-100 min-vh-50" data-sortable="data-sortable">
+                                            <div>
+                                                <div class="card mb-3">
+                                                    <div class="card-body"><a
+                                                            class="dropdown-indicator-icon position-absolute text-body-tertiary"
+                                                            href="#collapseWidthDeals-6" role="button"
+                                                            data-bs-toggle="collapse" aria-expanded="false"
+                                                            aria-controls="collapseWidthDeals-6"><span
+                                                                class="fa-solid fa-angle-down"></span></a>
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between mb-3">
+                                                            <div class="d-flex"><span class="me-2"
+                                                                    data-feather="clock" style="stroke-width:2;"></span>
+                                                                <p class="mb-0 fs-9 fw-semibold text-body-tertiary date">
+                                                                    Dec 30, 2022<span class="text-body-quaternary"> .
+                                                                        3:15 PM</span></p>
                                                             </div>
-                                                            <div class="deals-items-head d-flex align-items-center mb-2">
-                                                                <a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7"
-                                                                    href="../../apps/crm/deal-details.html">Printing
-                                                                    Services by Feltz</a>
-                                                                <p class="deals-category fs-10 mb-0 mt-1 d-none"><span
-                                                                        class="me-1 text-body-quaternary"
-                                                                        data-feather="grid"
-                                                                        style="stroke-width:2; height: 12px; width: 12px"></span>Marketplace
-                                                                </p>
-                                                                <p
-                                                                    class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">
-                                                                    $23,400.00</p>
+                                                        </div>
+                                                        <div class="deals-items-head d-flex align-items-center mb-2">
+                                                            <a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7"
+                                                                href="../../apps/crm/deal-details.html">Printing
+                                                                Services by Feltz</a>
+                                                            <p class="deals-category fs-10 mb-0 mt-1 d-none"><span
+                                                                    class="me-1 text-body-quaternary"
+                                                                    data-feather="grid"
+                                                                    style="stroke-width:2; height: 12px; width: 12px"></span>Marketplace
+                                                            </p>
+                                                            <p
+                                                                class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">
+                                                                $23,400.00</p>
+                                                        </div>
+                                                        <div class="deals-company-agent d-flex flex-between-center">
+                                                            <div class="d-flex align-items-center"><span
+                                                                    class="uil uil-user me-2"></span>
+                                                                <p class="text-body-secondary fw-bold fs-9 mb-0">Ant
+                                                                    Family</p>
                                                             </div>
-                                                            <div class="deals-company-agent d-flex flex-between-center">
-                                                                <div class="d-flex align-items-center"><span
-                                                                        class="uil uil-user me-2"></span>
-                                                                    <p class="text-body-secondary fw-bold fs-9 mb-0">Ant
-                                                                        Family</p>
-                                                                </div>
-                                                                <div class="d-flex align-items-center"><span
-                                                                        class="uil uil-headphones me-2"></span>
-                                                                    <p class="text-body-secondary fw-bold fs-9 mb-0">Ally
-                                                                        Aagaard</p>
-                                                                </div>
+                                                            <div class="d-flex align-items-center"><span
+                                                                    class="uil uil-headphones me-2"></span>
+                                                                <p class="text-body-secondary fw-bold fs-9 mb-0">Ally
+                                                                    Aagaard</p>
                                                             </div>
-                                                            <div class="collapse" id="collapseWidthDeals-6">
-                                                                <div class="d-flex gap-2 mb-5"><span
-                                                                        class="badge badge-phoenix badge-phoenix-warning">Pending</span><span
-                                                                        class="badge badge-phoenix badge-phoenix-warning">High</span>
-                                                                </div>
-                                                                <table class="mb-4 w-100 table-stats table-stats">
-                                                                    <tr>
-                                                                        <th></th>
-                                                                        <th></th>
-                                                                        <th></th>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="dollar-sign"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Expected Revenue</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                        </div>
+                                                        <div class="collapse" id="collapseWidthDeals-6">
+                                                            <div class="d-flex gap-2 mb-5"><span
+                                                                    class="badge badge-phoenix badge-phoenix-warning">Pending</span><span
+                                                                    class="badge badge-phoenix badge-phoenix-warning">High</span>
+                                                            </div>
+                                                            <table class="mb-4 w-100 table-stats table-stats">
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="dollar-sign"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
-                                                                                $23,400.00</p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="user"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Company Name</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Expected Revenue</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
+                                                                            $23,400.00</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="user"
+                                                                                style="width:16px; height:16px"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">
-                                                                                Ant Family<a href="#!"> <span
-                                                                                        class="fa-solid fa-square-phone text-body-tertiary"></span></a><a
-                                                                                    href="#!"> <span
-                                                                                        class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a
-                                                                                    href="#!"> <span
-                                                                                        class="fab fa-whatsapp-square text-body-tertiary"></span></a>
-                                                                            </p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="calendar"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Closing Date &amp; Time</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Company Name</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">
+                                                                            Ant Family<a href="#!"> <span
+                                                                                    class="fa-solid fa-square-phone text-body-tertiary"></span></a><a
+                                                                                href="#!"> <span
+                                                                                    class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a
+                                                                                href="#!"> <span
+                                                                                    class="fab fa-whatsapp-square text-body-tertiary"></span></a>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="calendar"
+                                                                                style="width:16px; height:16px"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
-                                                                                27-12-2022<span> . 11:19 PM</span></p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="headphones"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Assigned Agent </p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
-                                                                            <select
-                                                                                class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
-                                                                                <option selected="selected">Ally Aagaard
-                                                                                </option>
-                                                                                <option>Lonnie Kub</option>
-                                                                                <option>Aida Moen</option>
-                                                                                <option>Niko Koss</option>
-                                                                                <option>Alec Haag</option>
-                                                                                <option>Ola Smith</option>
-                                                                                <option>Leif Walsh</option>
-                                                                                <option>Brain Cole</option>
-                                                                                <option>Reese Mann</option>
-                                                                            </select>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                                <p class="fs-9 mb-1"> Probability:</p>
-                                                                <div class="progress" style="height:8px">
-                                                                    <div class="progress-bar rounded-pill bg-warning"
-                                                                        role="progressbar" style="width: 60%"
-                                                                        aria-valuenow="60" aria-valuemin="0"
-                                                                        aria-valuemax="100"></div>
-                                                                </div>
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Closing Date &amp; Time</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
+                                                                            27-12-2022<span> . 11:19 PM</span></p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="headphones"
+                                                                                style="width:16px; height:16px"></span>
+                                                                            <p
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Assigned Agent </p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <select
+                                                                            class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
+                                                                            <option selected="selected">Ally Aagaard
+                                                                            </option>
+                                                                            <option>Lonnie Kub</option>
+                                                                            <option>Aida Moen</option>
+                                                                            <option>Niko Koss</option>
+                                                                            <option>Alec Haag</option>
+                                                                            <option>Ola Smith</option>
+                                                                            <option>Leif Walsh</option>
+                                                                            <option>Brain Cole</option>
+                                                                            <option>Reese Mann</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <p class="fs-9 mb-1"> Probability:</p>
+                                                            <div class="progress" style="height:8px">
+                                                                <div class="progress-bar rounded-pill bg-warning"
+                                                                    role="progressbar" style="width: 60%"
+                                                                    aria-valuenow="60" aria-valuemin="0"
+                                                                    aria-valuemax="100"></div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1982,341 +1965,337 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="deals-col me-4">
-                                        <div
-                                            class="d-flex align-items-center justify-content-between position-sticky top-0 z-1 bg-body">
-                                            <div>
-                                                <h5 class="mb-2">Canceled</h5>
-                                                <p class="fs-9 text-body-tertiary mb-1">Forecast Revenue:</p>
-                                                <h4 class="mb-3">$260.00</h4>
-                                            </div>
-                                            <div class="d-flex gap-3">
-                                                <button class="btn p-0" type="button" data-bs-toggle="modal"
-                                                    data-bs-target="#addDealModal" aria-haspopup="true"
-                                                    aria-expanded="false" data-bs-reference="parent"><span
-                                                        class="fa-solid fa-plus"></span></button>
-                                                <button class="btn p-0" type="button" data-bs-toggle="dropdown"
-                                                    data-boundary="window" aria-haspopup="true" aria-expanded="false"
-                                                    data-bs-reference="parent"><span
-                                                        class="fas fa-ellipsis-h fs-10"></span></button>
-                                                <ul class="dropdown-menu dropdown-menu-end">
-                                                    <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                    <li><a class="dropdown-item" href="#">Add meeting</a></li>
-                                                    <li><a class="dropdown-item" href="#">See all connected
-                                                            contacts</a></li>
-                                                    <li><a class="dropdown-item" href="#">Clone</a></li>
-                                                    <li><a class="dropdown-item" href="#">Delete</a></li>
-                                                    <li><a class="dropdown-item" href="#">Display only bad
-                                                            deals</a></li>
-                                                </ul>
-                                            </div>
+                                </div>
+                                <div class="deals-col me-4">
+                                    <div
+                                        class="d-flex align-items-center justify-content-between position-sticky top-0 z-1 bg-body">
+                                        <div>
+                                            <h5 class="mb-2">Canceled</h5>
+                                            <p class="fs-9 text-body-tertiary mb-1">Forecast Revenue:</p>
+                                            <h4 class="mb-3">$260.00</h4>
                                         </div>
-                                        <div class="scrollbar deals-items-container">
-                                            <div class="w-100 min-vh-50" data-sortable="data-sortable">
-                                                <div>
-                                                    <div class="card mb-3">
-                                                        <div class="card-body"><a
-                                                                class="dropdown-indicator-icon position-absolute text-body-tertiary"
-                                                                href="#collapseWidthDeals-7" role="button"
-                                                                data-bs-toggle="collapse" aria-expanded="false"
-                                                                aria-controls="collapseWidthDeals-7"><span
-                                                                    class="fa-solid fa-angle-down"></span></a>
-                                                            <div
-                                                                class="d-flex align-items-center justify-content-between mb-3">
-                                                                <div class="d-flex"><span class="me-2"
-                                                                        data-feather="clock"
-                                                                        style="stroke-width:2;"></span>
-                                                                    <p
-                                                                        class="mb-0 fs-9 fw-semibold text-body-tertiary date">
-                                                                        Dec 31, 2022<span class="text-body-quaternary"> .
-                                                                            01:30 PM</span></p>
-                                                                </div>
+                                        <div class="d-flex gap-3">
+                                            <button class="btn p-0" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#addDealModal" aria-haspopup="true"
+                                                aria-expanded="false" data-bs-reference="parent"><span
+                                                    class="fa-solid fa-plus"></span></button>
+                                            <button class="btn p-0" type="button" data-bs-toggle="dropdown"
+                                                data-boundary="window" aria-haspopup="true" aria-expanded="false"
+                                                data-bs-reference="parent"><span
+                                                    class="fas fa-ellipsis-h fs-10"></span></button>
+                                            <ul class="dropdown-menu dropdown-menu-end">
+                                                <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                <li><a class="dropdown-item" href="#">Add meeting</a></li>
+                                                <li><a class="dropdown-item" href="#">See all connected
+                                                        contacts</a></li>
+                                                <li><a class="dropdown-item" href="#">Clone</a></li>
+                                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                <li><a class="dropdown-item" href="#">Display only bad
+                                                        deals</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="scrollbar deals-items-container">
+                                        <div class="w-100 min-vh-50" data-sortable="data-sortable">
+                                            <div>
+                                                <div class="card mb-3">
+                                                    <div class="card-body"><a
+                                                            class="dropdown-indicator-icon position-absolute text-body-tertiary"
+                                                            href="#collapseWidthDeals-7" role="button"
+                                                            data-bs-toggle="collapse" aria-expanded="false"
+                                                            aria-controls="collapseWidthDeals-7"><span
+                                                                class="fa-solid fa-angle-down"></span></a>
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between mb-3">
+                                                            <div class="d-flex"><span class="me-2"
+                                                                    data-feather="clock" style="stroke-width:2;"></span>
+                                                                <p class="mb-0 fs-9 fw-semibold text-body-tertiary date">
+                                                                    Dec 31, 2022<span class="text-body-quaternary"> .
+                                                                        01:30 PM</span></p>
                                                             </div>
-                                                            <div class="deals-items-head d-flex align-items-center mb-2">
-                                                                <a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7"
-                                                                    href="../../apps/crm/deal-details.html">SP Flat
-                                                                    Plate</a>
-                                                                <p class="deals-category fs-10 mb-0 mt-1 d-none"><span
-                                                                        class="me-1 text-body-quaternary"
-                                                                        data-feather="grid"
-                                                                        style="stroke-width:2; height: 12px; width: 12px"></span>Financial
-                                                                </p>
-                                                                <p
-                                                                    class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">
-                                                                    $14,000.00</p>
+                                                        </div>
+                                                        <div class="deals-items-head d-flex align-items-center mb-2">
+                                                            <a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7"
+                                                                href="../../apps/crm/deal-details.html">SP Flat
+                                                                Plate</a>
+                                                            <p class="deals-category fs-10 mb-0 mt-1 d-none"><span
+                                                                    class="me-1 text-body-quaternary"
+                                                                    data-feather="grid"
+                                                                    style="stroke-width:2; height: 12px; width: 12px"></span>Financial
+                                                            </p>
+                                                            <p
+                                                                class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">
+                                                                $14,000.00</p>
+                                                        </div>
+                                                        <div class="deals-company-agent d-flex flex-between-center">
+                                                            <div class="d-flex align-items-center"><span
+                                                                    class="uil uil-user me-2"></span>
+                                                                <p class="text-body-secondary fw-bold fs-9 mb-0">Ant
+                                                                    Family</p>
                                                             </div>
-                                                            <div class="deals-company-agent d-flex flex-between-center">
-                                                                <div class="d-flex align-items-center"><span
-                                                                        class="uil uil-user me-2"></span>
-                                                                    <p class="text-body-secondary fw-bold fs-9 mb-0">Ant
-                                                                        Family</p>
-                                                                </div>
-                                                                <div class="d-flex align-items-center"><span
-                                                                        class="uil uil-headphones me-2"></span>
-                                                                    <p class="text-body-secondary fw-bold fs-9 mb-0">Ola
-                                                                        Smith</p>
-                                                                </div>
+                                                            <div class="d-flex align-items-center"><span
+                                                                    class="uil uil-headphones me-2"></span>
+                                                                <p class="text-body-secondary fw-bold fs-9 mb-0">Ola
+                                                                    Smith</p>
                                                             </div>
-                                                            <div class="collapse" id="collapseWidthDeals-7">
-                                                                <div class="d-flex gap-2 mb-5"><span
-                                                                        class="badge badge-phoenix badge-phoenix-secondary">Canceled</span><span
-                                                                        class="badge badge-phoenix badge-phoenix-success">Medium</span>
-                                                                </div>
-                                                                <table class="mb-4 w-100 table-stats table-stats">
-                                                                    <tr>
-                                                                        <th></th>
-                                                                        <th></th>
-                                                                        <th></th>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="dollar-sign"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Expected Revenue</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                        </div>
+                                                        <div class="collapse" id="collapseWidthDeals-7">
+                                                            <div class="d-flex gap-2 mb-5"><span
+                                                                    class="badge badge-phoenix badge-phoenix-secondary">Canceled</span><span
+                                                                    class="badge badge-phoenix badge-phoenix-success">Medium</span>
+                                                            </div>
+                                                            <table class="mb-4 w-100 table-stats table-stats">
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="dollar-sign"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
-                                                                                $14,000.00</p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="user"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Company Name</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Expected Revenue</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
+                                                                            $14,000.00</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="user"
+                                                                                style="width:16px; height:16px"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">
-                                                                                Ant Family<a href="#!"> <span
-                                                                                        class="fa-solid fa-square-phone text-body-tertiary"></span></a><a
-                                                                                    href="#!"> <span
-                                                                                        class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a
-                                                                                    href="#!"> <span
-                                                                                        class="fab fa-whatsapp-square text-body-tertiary"></span></a>
-                                                                            </p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="calendar"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Closing Date &amp; Time</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Company Name</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">
+                                                                            Ant Family<a href="#!"> <span
+                                                                                    class="fa-solid fa-square-phone text-body-tertiary"></span></a><a
+                                                                                href="#!"> <span
+                                                                                    class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a
+                                                                                href="#!"> <span
+                                                                                    class="fab fa-whatsapp-square text-body-tertiary"></span></a>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="calendar"
+                                                                                style="width:16px; height:16px"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
-                                                                                29-12-2022<span> . 01:30 PM</span></p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="headphones"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Assigned Agent </p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
-                                                                            <select
-                                                                                class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
-                                                                                <option>Ally Aagaard</option>
-                                                                                <option>Lonnie Kub</option>
-                                                                                <option>Aida Moen</option>
-                                                                                <option>Niko Koss</option>
-                                                                                <option>Alec Haag</option>
-                                                                                <option selected="selected">Ola Smith
-                                                                                </option>
-                                                                                <option>Leif Walsh</option>
-                                                                                <option>Brain Cole</option>
-                                                                                <option>Reese Mann</option>
-                                                                            </select>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                                <p class="fs-9 mb-1"> Probability:</p>
-                                                                <div class="progress" style="height:8px">
-                                                                    <div class="progress-bar rounded-pill bg-300"
-                                                                        role="progressbar" style="width: 80%"
-                                                                        aria-valuenow="80" aria-valuemin="0"
-                                                                        aria-valuemax="100"></div>
-                                                                </div>
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Closing Date &amp; Time</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
+                                                                            29-12-2022<span> . 01:30 PM</span></p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="headphones"
+                                                                                style="width:16px; height:16px"></span>
+                                                                            <p
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Assigned Agent </p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <select
+                                                                            class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
+                                                                            <option>Ally Aagaard</option>
+                                                                            <option>Lonnie Kub</option>
+                                                                            <option>Aida Moen</option>
+                                                                            <option>Niko Koss</option>
+                                                                            <option>Alec Haag</option>
+                                                                            <option selected="selected">Ola Smith
+                                                                            </option>
+                                                                            <option>Leif Walsh</option>
+                                                                            <option>Brain Cole</option>
+                                                                            <option>Reese Mann</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <p class="fs-9 mb-1"> Probability:</p>
+                                                            <div class="progress" style="height:8px">
+                                                                <div class="progress-bar rounded-pill bg-300"
+                                                                    role="progressbar" style="width: 80%"
+                                                                    aria-valuenow="80" aria-valuemin="0"
+                                                                    aria-valuemax="100"></div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div>
-                                                    <div class="card mb-3">
-                                                        <div class="card-body"><a
-                                                                class="dropdown-indicator-icon position-absolute text-body-tertiary"
-                                                                href="#collapseWidthDeals-8" role="button"
-                                                                data-bs-toggle="collapse" aria-expanded="false"
-                                                                aria-controls="collapseWidthDeals-8"><span
-                                                                    class="fa-solid fa-angle-down"></span></a>
-                                                            <div
-                                                                class="d-flex align-items-center justify-content-between mb-3">
-                                                                <div class="d-flex"><span class="me-2"
-                                                                        data-feather="clock"
-                                                                        style="stroke-width:2;"></span>
-                                                                    <p
-                                                                        class="mb-0 fs-9 fw-semibold text-body-tertiary date">
-                                                                        Dec 31, 2022<span class="text-body-quaternary"> .
-                                                                            2:15 PM</span></p>
-                                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="card mb-3">
+                                                    <div class="card-body"><a
+                                                            class="dropdown-indicator-icon position-absolute text-body-tertiary"
+                                                            href="#collapseWidthDeals-8" role="button"
+                                                            data-bs-toggle="collapse" aria-expanded="false"
+                                                            aria-controls="collapseWidthDeals-8"><span
+                                                                class="fa-solid fa-angle-down"></span></a>
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between mb-3">
+                                                            <div class="d-flex"><span class="me-2"
+                                                                    data-feather="clock" style="stroke-width:2;"></span>
+                                                                <p class="mb-0 fs-9 fw-semibold text-body-tertiary date">
+                                                                    Dec 31, 2022<span class="text-body-quaternary"> .
+                                                                        2:15 PM</span></p>
                                                             </div>
-                                                            <div class="deals-items-head d-flex align-items-center mb-2">
-                                                                <a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7"
-                                                                    href="../../apps/crm/deal-details.html">Ventilated
-                                                                    Pipe</a>
-                                                                <p class="deals-category fs-10 mb-0 mt-1 d-none"><span
-                                                                        class="me-1 text-body-quaternary"
-                                                                        data-feather="grid"
-                                                                        style="stroke-width:2; height: 12px; width: 12px"></span>Marketplace
-                                                                </p>
-                                                                <p
-                                                                    class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">
-                                                                    $14,000.00</p>
+                                                        </div>
+                                                        <div class="deals-items-head d-flex align-items-center mb-2">
+                                                            <a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7"
+                                                                href="../../apps/crm/deal-details.html">Ventilated
+                                                                Pipe</a>
+                                                            <p class="deals-category fs-10 mb-0 mt-1 d-none"><span
+                                                                    class="me-1 text-body-quaternary"
+                                                                    data-feather="grid"
+                                                                    style="stroke-width:2; height: 12px; width: 12px"></span>Marketplace
+                                                            </p>
+                                                            <p
+                                                                class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">
+                                                                $14,000.00</p>
+                                                        </div>
+                                                        <div class="deals-company-agent d-flex flex-between-center">
+                                                            <div class="d-flex align-items-center"><span
+                                                                    class="uil uil-user me-2"></span>
+                                                                <p class="text-body-secondary fw-bold fs-9 mb-0">
+                                                                    Giraffes Studio</p>
                                                             </div>
-                                                            <div class="deals-company-agent d-flex flex-between-center">
-                                                                <div class="d-flex align-items-center"><span
-                                                                        class="uil uil-user me-2"></span>
-                                                                    <p class="text-body-secondary fw-bold fs-9 mb-0">
-                                                                        Giraffes Studio</p>
-                                                                </div>
-                                                                <div class="d-flex align-items-center"><span
-                                                                        class="uil uil-headphones me-2"></span>
-                                                                    <p class="text-body-secondary fw-bold fs-9 mb-0">Leif
-                                                                        Walsh</p>
-                                                                </div>
+                                                            <div class="d-flex align-items-center"><span
+                                                                    class="uil uil-headphones me-2"></span>
+                                                                <p class="text-body-secondary fw-bold fs-9 mb-0">Leif
+                                                                    Walsh</p>
                                                             </div>
-                                                            <div class="collapse" id="collapseWidthDeals-8">
-                                                                <div class="d-flex gap-2 mb-5"><span
-                                                                        class="badge badge-phoenix badge-phoenix-secondary">Canceled</span><span
-                                                                        class="badge badge-phoenix badge-phoenix-info">Low</span>
-                                                                </div>
-                                                                <table class="mb-4 w-100 table-stats table-stats">
-                                                                    <tr>
-                                                                        <th></th>
-                                                                        <th></th>
-                                                                        <th></th>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="dollar-sign"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Expected Revenue</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                        </div>
+                                                        <div class="collapse" id="collapseWidthDeals-8">
+                                                            <div class="d-flex gap-2 mb-5"><span
+                                                                    class="badge badge-phoenix badge-phoenix-secondary">Canceled</span><span
+                                                                    class="badge badge-phoenix badge-phoenix-info">Low</span>
+                                                            </div>
+                                                            <table class="mb-4 w-100 table-stats table-stats">
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="dollar-sign"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
-                                                                                $14,000.00</p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="user"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Company Name</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Expected Revenue</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
+                                                                            $14,000.00</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="user"
+                                                                                style="width:16px; height:16px"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">
-                                                                                Giraffes Studio<a href="#!"> <span
-                                                                                        class="fa-solid fa-square-phone text-body-tertiary"></span></a><a
-                                                                                    href="#!"> <span
-                                                                                        class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a
-                                                                                    href="#!"> <span
-                                                                                        class="fab fa-whatsapp-square text-body-tertiary"></span></a>
-                                                                            </p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="calendar"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Closing Date &amp; Time</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Company Name</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">
+                                                                            Giraffes Studio<a href="#!"> <span
+                                                                                    class="fa-solid fa-square-phone text-body-tertiary"></span></a><a
+                                                                                href="#!"> <span
+                                                                                    class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a
+                                                                                href="#!"> <span
+                                                                                    class="fab fa-whatsapp-square text-body-tertiary"></span></a>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="calendar"
+                                                                                style="width:16px; height:16px"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
-                                                                                29-12-2022<span> . 02:15 PM</span></p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="headphones"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Assigned Agent </p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
-                                                                            <select
-                                                                                class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
-                                                                                <option>Ally Aagaard</option>
-                                                                                <option>Lonnie Kub</option>
-                                                                                <option>Aida Moen</option>
-                                                                                <option>Niko Koss</option>
-                                                                                <option>Alec Haag</option>
-                                                                                <option>Ola Smith</option>
-                                                                                <option selected="selected">Leif Walsh
-                                                                                </option>
-                                                                                <option>Brain Cole</option>
-                                                                                <option>Reese Mann</option>
-                                                                            </select>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                                <p class="fs-9 mb-1"> Probability:</p>
-                                                                <div class="progress" style="height:8px">
-                                                                    <div class="progress-bar rounded-pill bg-300"
-                                                                        role="progressbar" style="width: 80%"
-                                                                        aria-valuenow="80" aria-valuemin="0"
-                                                                        aria-valuemax="100"></div>
-                                                                </div>
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Closing Date &amp; Time</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
+                                                                            29-12-2022<span> . 02:15 PM</span></p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="headphones"
+                                                                                style="width:16px; height:16px"></span>
+                                                                            <p
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Assigned Agent </p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <select
+                                                                            class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
+                                                                            <option>Ally Aagaard</option>
+                                                                            <option>Lonnie Kub</option>
+                                                                            <option>Aida Moen</option>
+                                                                            <option>Niko Koss</option>
+                                                                            <option>Alec Haag</option>
+                                                                            <option>Ola Smith</option>
+                                                                            <option selected="selected">Leif Walsh
+                                                                            </option>
+                                                                            <option>Brain Cole</option>
+                                                                            <option>Reese Mann</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <p class="fs-9 mb-1"> Probability:</p>
+                                                            <div class="progress" style="height:8px">
+                                                                <div class="progress-bar rounded-pill bg-300"
+                                                                    role="progressbar" style="width: 80%"
+                                                                    aria-valuenow="80" aria-valuemin="0"
+                                                                    aria-valuemax="100"></div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -2324,495 +2303,489 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="deals-col me-4">
-                                        <div
-                                            class="d-flex align-items-center justify-content-between position-sticky top-0 z-1 bg-body">
-                                            <div>
-                                                <h5 class="mb-2">Completed</h5>
-                                                <p class="fs-9 text-body-tertiary mb-1">Forecast Revenue:</p>
-                                                <h4 class="mb-3">$1,650.00</h4>
-                                            </div>
-                                            <div class="d-flex gap-3">
-                                                <button class="btn p-0" type="button" data-bs-toggle="modal"
-                                                    data-bs-target="#addDealModal" aria-haspopup="true"
-                                                    aria-expanded="false" data-bs-reference="parent"><span
-                                                        class="fa-solid fa-plus"></span></button>
-                                                <button class="btn p-0" type="button" data-bs-toggle="dropdown"
-                                                    data-boundary="window" aria-haspopup="true" aria-expanded="false"
-                                                    data-bs-reference="parent"><span
-                                                        class="fas fa-ellipsis-h fs-10"></span></button>
-                                                <ul class="dropdown-menu dropdown-menu-end">
-                                                    <li><a class="dropdown-item" href="#">Edit</a></li>
-                                                    <li><a class="dropdown-item" href="#">Add meeting</a></li>
-                                                    <li><a class="dropdown-item" href="#">See all connected
-                                                            contacts</a></li>
-                                                    <li><a class="dropdown-item" href="#">Clone</a></li>
-                                                    <li><a class="dropdown-item" href="#">Delete</a></li>
-                                                    <li><a class="dropdown-item" href="#">Display only bad
-                                                            deals</a></li>
-                                                </ul>
-                                            </div>
+                                </div>
+                                <div class="deals-col me-4">
+                                    <div
+                                        class="d-flex align-items-center justify-content-between position-sticky top-0 z-1 bg-body">
+                                        <div>
+                                            <h5 class="mb-2">Completed</h5>
+                                            <p class="fs-9 text-body-tertiary mb-1">Forecast Revenue:</p>
+                                            <h4 class="mb-3">$1,650.00</h4>
                                         </div>
-                                        <div class="scrollbar deals-items-container">
-                                            <div class="w-100 min-vh-50" data-sortable="data-sortable">
-                                                <div>
-                                                    <div class="card mb-3">
-                                                        <div class="card-body"><a
-                                                                class="dropdown-indicator-icon position-absolute text-body-tertiary"
-                                                                href="#collapseWidthDeals-9" role="button"
-                                                                data-bs-toggle="collapse" aria-expanded="false"
-                                                                aria-controls="collapseWidthDeals-9"><span
-                                                                    class="fa-solid fa-angle-down"></span></a>
-                                                            <div
-                                                                class="d-flex align-items-center justify-content-between mb-3">
-                                                                <div class="d-flex"><span class="me-2"
-                                                                        data-feather="clock"
-                                                                        style="stroke-width:2;"></span>
-                                                                    <p
-                                                                        class="mb-0 fs-9 fw-semibold text-body-tertiary date">
-                                                                        Dec 29, 2022<span class="text-body-quaternary"> .
-                                                                            03:12 PM</span></p>
-                                                                </div>
+                                        <div class="d-flex gap-3">
+                                            <button class="btn p-0" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#addDealModal" aria-haspopup="true"
+                                                aria-expanded="false" data-bs-reference="parent"><span
+                                                    class="fa-solid fa-plus"></span></button>
+                                            <button class="btn p-0" type="button" data-bs-toggle="dropdown"
+                                                data-boundary="window" aria-haspopup="true" aria-expanded="false"
+                                                data-bs-reference="parent"><span
+                                                    class="fas fa-ellipsis-h fs-10"></span></button>
+                                            <ul class="dropdown-menu dropdown-menu-end">
+                                                <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                <li><a class="dropdown-item" href="#">Add meeting</a></li>
+                                                <li><a class="dropdown-item" href="#">See all connected
+                                                        contacts</a></li>
+                                                <li><a class="dropdown-item" href="#">Clone</a></li>
+                                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                <li><a class="dropdown-item" href="#">Display only bad
+                                                        deals</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="scrollbar deals-items-container">
+                                        <div class="w-100 min-vh-50" data-sortable="data-sortable">
+                                            <div>
+                                                <div class="card mb-3">
+                                                    <div class="card-body"><a
+                                                            class="dropdown-indicator-icon position-absolute text-body-tertiary"
+                                                            href="#collapseWidthDeals-9" role="button"
+                                                            data-bs-toggle="collapse" aria-expanded="false"
+                                                            aria-controls="collapseWidthDeals-9"><span
+                                                                class="fa-solid fa-angle-down"></span></a>
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between mb-3">
+                                                            <div class="d-flex"><span class="me-2"
+                                                                    data-feather="clock" style="stroke-width:2;"></span>
+                                                                <p class="mb-0 fs-9 fw-semibold text-body-tertiary date">
+                                                                    Dec 29, 2022<span class="text-body-quaternary"> .
+                                                                        03:12 PM</span></p>
                                                             </div>
-                                                            <div class="deals-items-head d-flex align-items-center mb-2">
-                                                                <a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7"
-                                                                    href="../../apps/crm/deal-details.html">Product
-                                                                    Shipping</a>
-                                                                <p class="deals-category fs-10 mb-0 mt-1 d-none"><span
-                                                                        class="me-1 text-body-quaternary"
-                                                                        data-feather="grid"
-                                                                        style="stroke-width:2; height: 12px; width: 12px"></span>Financial
-                                                                </p>
-                                                                <p
-                                                                    class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">
-                                                                    $15,000.00</p>
+                                                        </div>
+                                                        <div class="deals-items-head d-flex align-items-center mb-2">
+                                                            <a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7"
+                                                                href="../../apps/crm/deal-details.html">Product
+                                                                Shipping</a>
+                                                            <p class="deals-category fs-10 mb-0 mt-1 d-none"><span
+                                                                    class="me-1 text-body-quaternary"
+                                                                    data-feather="grid"
+                                                                    style="stroke-width:2; height: 12px; width: 12px"></span>Financial
+                                                            </p>
+                                                            <p
+                                                                class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">
+                                                                $15,000.00</p>
+                                                        </div>
+                                                        <div class="deals-company-agent d-flex flex-between-center">
+                                                            <div class="d-flex align-items-center"><span
+                                                                    class="uil uil-user me-2"></span>
+                                                                <p class="text-body-secondary fw-bold fs-9 mb-0">Birds
+                                                                    eye</p>
                                                             </div>
-                                                            <div class="deals-company-agent d-flex flex-between-center">
-                                                                <div class="d-flex align-items-center"><span
-                                                                        class="uil uil-user me-2"></span>
-                                                                    <p class="text-body-secondary fw-bold fs-9 mb-0">Birds
-                                                                        eye</p>
-                                                                </div>
-                                                                <div class="d-flex align-items-center"><span
-                                                                        class="uil uil-headphones me-2"></span>
-                                                                    <p class="text-body-secondary fw-bold fs-9 mb-0">Brain
-                                                                        Cole</p>
-                                                                </div>
+                                                            <div class="d-flex align-items-center"><span
+                                                                    class="uil uil-headphones me-2"></span>
+                                                                <p class="text-body-secondary fw-bold fs-9 mb-0">Brain
+                                                                    Cole</p>
                                                             </div>
-                                                            <div class="collapse" id="collapseWidthDeals-9">
-                                                                <div class="d-flex gap-2 mb-5"><span
-                                                                        class="badge badge-phoenix badge-phoenix-success">Completed</span><span
-                                                                        class="badge badge-phoenix badge-phoenix-danger">Urgent</span>
-                                                                </div>
-                                                                <table class="mb-4 w-100 table-stats table-stats">
-                                                                    <tr>
-                                                                        <th></th>
-                                                                        <th></th>
-                                                                        <th></th>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="dollar-sign"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Expected Revenue</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                        </div>
+                                                        <div class="collapse" id="collapseWidthDeals-9">
+                                                            <div class="d-flex gap-2 mb-5"><span
+                                                                    class="badge badge-phoenix badge-phoenix-success">Completed</span><span
+                                                                    class="badge badge-phoenix badge-phoenix-danger">Urgent</span>
+                                                            </div>
+                                                            <table class="mb-4 w-100 table-stats table-stats">
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="dollar-sign"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
-                                                                                $15,000.00</p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="user"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Company Name</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Expected Revenue</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
+                                                                            $15,000.00</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="user"
+                                                                                style="width:16px; height:16px"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">
-                                                                                Birds eye<a href="#!"> <span
-                                                                                        class="fa-solid fa-square-phone text-body-tertiary"></span></a><a
-                                                                                    href="#!"> <span
-                                                                                        class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a
-                                                                                    href="#!"> <span
-                                                                                        class="fab fa-whatsapp-square text-body-tertiary"></span></a>
-                                                                            </p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="calendar"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Closing Date &amp; Time</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Company Name</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">
+                                                                            Birds eye<a href="#!"> <span
+                                                                                    class="fa-solid fa-square-phone text-body-tertiary"></span></a><a
+                                                                                href="#!"> <span
+                                                                                    class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a
+                                                                                href="#!"> <span
+                                                                                    class="fab fa-whatsapp-square text-body-tertiary"></span></a>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="calendar"
+                                                                                style="width:16px; height:16px"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
-                                                                                27-12-2022<span> . 11:19 PM</span></p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="headphones"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Assigned Agent </p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
-                                                                            <select
-                                                                                class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
-                                                                                <option>Ally Aagaard</option>
-                                                                                <option>Lonnie Kub</option>
-                                                                                <option>Aida Moen</option>
-                                                                                <option>Niko Koss</option>
-                                                                                <option>Alec Haag</option>
-                                                                                <option>Ola Smith</option>
-                                                                                <option>Leif Walsh</option>
-                                                                                <option selected="selected">Brain Cole
-                                                                                </option>
-                                                                                <option>Reese Mann</option>
-                                                                            </select>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                                <p class="fs-9 mb-1"> Probability:</p>
-                                                                <div class="progress" style="height:8px">
-                                                                    <div class="progress-bar rounded-pill bg-success"
-                                                                        role="progressbar" style="width: 100%"
-                                                                        aria-valuenow="100" aria-valuemin="0"
-                                                                        aria-valuemax="100"></div>
-                                                                </div>
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Closing Date &amp; Time</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
+                                                                            27-12-2022<span> . 11:19 PM</span></p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="headphones"
+                                                                                style="width:16px; height:16px"></span>
+                                                                            <p
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Assigned Agent </p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <select
+                                                                            class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
+                                                                            <option>Ally Aagaard</option>
+                                                                            <option>Lonnie Kub</option>
+                                                                            <option>Aida Moen</option>
+                                                                            <option>Niko Koss</option>
+                                                                            <option>Alec Haag</option>
+                                                                            <option>Ola Smith</option>
+                                                                            <option>Leif Walsh</option>
+                                                                            <option selected="selected">Brain Cole
+                                                                            </option>
+                                                                            <option>Reese Mann</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <p class="fs-9 mb-1"> Probability:</p>
+                                                            <div class="progress" style="height:8px">
+                                                                <div class="progress-bar rounded-pill bg-success"
+                                                                    role="progressbar" style="width: 100%"
+                                                                    aria-valuenow="100" aria-valuemin="0"
+                                                                    aria-valuemax="100"></div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div>
-                                                    <div class="card mb-3">
-                                                        <div class="card-body"><a
-                                                                class="dropdown-indicator-icon position-absolute text-body-tertiary"
-                                                                href="#collapseWidthDeals-10" role="button"
-                                                                data-bs-toggle="collapse" aria-expanded="false"
-                                                                aria-controls="collapseWidthDeals-10"><span
-                                                                    class="fa-solid fa-angle-down"></span></a>
-                                                            <div
-                                                                class="d-flex align-items-center justify-content-between mb-3">
-                                                                <div class="d-flex"><span class="me-2"
-                                                                        data-feather="clock"
-                                                                        style="stroke-width:2;"></span>
-                                                                    <p
-                                                                        class="mb-0 fs-9 fw-semibold text-body-tertiary date">
-                                                                        Dec 29, 2022<span class="text-body-quaternary"> .
-                                                                            06:15 PM</span></p>
-                                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="card mb-3">
+                                                    <div class="card-body"><a
+                                                            class="dropdown-indicator-icon position-absolute text-body-tertiary"
+                                                            href="#collapseWidthDeals-10" role="button"
+                                                            data-bs-toggle="collapse" aria-expanded="false"
+                                                            aria-controls="collapseWidthDeals-10"><span
+                                                                class="fa-solid fa-angle-down"></span></a>
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between mb-3">
+                                                            <div class="d-flex"><span class="me-2"
+                                                                    data-feather="clock" style="stroke-width:2;"></span>
+                                                                <p class="mb-0 fs-9 fw-semibold text-body-tertiary date">
+                                                                    Dec 29, 2022<span class="text-body-quaternary"> .
+                                                                        06:15 PM</span></p>
                                                             </div>
-                                                            <div class="deals-items-head d-flex align-items-center mb-2">
-                                                                <a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7"
-                                                                    href="../../apps/crm/deal-details.html">Product
-                                                                    List</a>
-                                                                <p class="deals-category fs-10 mb-0 mt-1 d-none"><span
-                                                                        class="me-1 text-body-quaternary"
-                                                                        data-feather="grid"
-                                                                        style="stroke-width:2; height: 12px; width: 12px"></span>Financial
-                                                                </p>
-                                                                <p
-                                                                    class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">
-                                                                    $33,00.00</p>
+                                                        </div>
+                                                        <div class="deals-items-head d-flex align-items-center mb-2">
+                                                            <a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7"
+                                                                href="../../apps/crm/deal-details.html">Product
+                                                                List</a>
+                                                            <p class="deals-category fs-10 mb-0 mt-1 d-none"><span
+                                                                    class="me-1 text-body-quaternary"
+                                                                    data-feather="grid"
+                                                                    style="stroke-width:2; height: 12px; width: 12px"></span>Financial
+                                                            </p>
+                                                            <p
+                                                                class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">
+                                                                $33,00.00</p>
+                                                        </div>
+                                                        <div class="deals-company-agent d-flex flex-between-center">
+                                                            <div class="d-flex align-items-center"><span
+                                                                    class="uil uil-user me-2"></span>
+                                                                <p class="text-body-secondary fw-bold fs-9 mb-0">Ink
+                                                                    Incorporated</p>
                                                             </div>
-                                                            <div class="deals-company-agent d-flex flex-between-center">
-                                                                <div class="d-flex align-items-center"><span
-                                                                        class="uil uil-user me-2"></span>
-                                                                    <p class="text-body-secondary fw-bold fs-9 mb-0">Ink
-                                                                        Incorporated</p>
-                                                                </div>
-                                                                <div class="d-flex align-items-center"><span
-                                                                        class="uil uil-headphones me-2"></span>
-                                                                    <p class="text-body-secondary fw-bold fs-9 mb-0">Reese
-                                                                        Mann</p>
-                                                                </div>
+                                                            <div class="d-flex align-items-center"><span
+                                                                    class="uil uil-headphones me-2"></span>
+                                                                <p class="text-body-secondary fw-bold fs-9 mb-0">Reese
+                                                                    Mann</p>
                                                             </div>
-                                                            <div class="collapse" id="collapseWidthDeals-10">
-                                                                <div class="d-flex gap-2 mb-5"><span
-                                                                        class="badge badge-phoenix badge-phoenix-success">Completed</span><span
-                                                                        class="badge badge-phoenix badge-phoenix-info">Low</span>
-                                                                </div>
-                                                                <table class="mb-4 w-100 table-stats table-stats">
-                                                                    <tr>
-                                                                        <th></th>
-                                                                        <th></th>
-                                                                        <th></th>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="dollar-sign"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Expected Revenue</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                        </div>
+                                                        <div class="collapse" id="collapseWidthDeals-10">
+                                                            <div class="d-flex gap-2 mb-5"><span
+                                                                    class="badge badge-phoenix badge-phoenix-success">Completed</span><span
+                                                                    class="badge badge-phoenix badge-phoenix-info">Low</span>
+                                                            </div>
+                                                            <table class="mb-4 w-100 table-stats table-stats">
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="dollar-sign"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
-                                                                                $33,00.00</p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="user"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Company Name</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Expected Revenue</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
+                                                                            $33,00.00</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="user"
+                                                                                style="width:16px; height:16px"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">
-                                                                                Ink Incorporated<a href="#!"> <span
-                                                                                        class="fa-solid fa-square-phone text-body-tertiary"></span></a><a
-                                                                                    href="#!"> <span
-                                                                                        class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a
-                                                                                    href="#!"> <span
-                                                                                        class="fab fa-whatsapp-square text-body-tertiary"></span></a>
-                                                                            </p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="calendar"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Closing Date &amp; Time</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Company Name</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">
+                                                                            Ink Incorporated<a href="#!"> <span
+                                                                                    class="fa-solid fa-square-phone text-body-tertiary"></span></a><a
+                                                                                href="#!"> <span
+                                                                                    class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a
+                                                                                href="#!"> <span
+                                                                                    class="fab fa-whatsapp-square text-body-tertiary"></span></a>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="calendar"
+                                                                                style="width:16px; height:16px"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
-                                                                                28-12-2022<span> . 12:20 PM</span></p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="headphones"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Assigned Agent </p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
-                                                                            <select
-                                                                                class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
-                                                                                <option>Ally Aagaard</option>
-                                                                                <option>Lonnie Kub</option>
-                                                                                <option>Aida Moen</option>
-                                                                                <option>Niko Koss</option>
-                                                                                <option>Alec Haag</option>
-                                                                                <option>Ola Smith</option>
-                                                                                <option>Leif Walsh</option>
-                                                                                <option>Brain Cole</option>
-                                                                                <option selected="selected">Reese Mann
-                                                                                </option>
-                                                                            </select>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                                <p class="fs-9 mb-1"> Probability:</p>
-                                                                <div class="progress" style="height:8px">
-                                                                    <div class="progress-bar rounded-pill bg-success"
-                                                                        role="progressbar" style="width: 100%"
-                                                                        aria-valuenow="100" aria-valuemin="0"
-                                                                        aria-valuemax="100"></div>
-                                                                </div>
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Closing Date &amp; Time</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
+                                                                            28-12-2022<span> . 12:20 PM</span></p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="headphones"
+                                                                                style="width:16px; height:16px"></span>
+                                                                            <p
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Assigned Agent </p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <select
+                                                                            class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
+                                                                            <option>Ally Aagaard</option>
+                                                                            <option>Lonnie Kub</option>
+                                                                            <option>Aida Moen</option>
+                                                                            <option>Niko Koss</option>
+                                                                            <option>Alec Haag</option>
+                                                                            <option>Ola Smith</option>
+                                                                            <option>Leif Walsh</option>
+                                                                            <option>Brain Cole</option>
+                                                                            <option selected="selected">Reese Mann
+                                                                            </option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <p class="fs-9 mb-1"> Probability:</p>
+                                                            <div class="progress" style="height:8px">
+                                                                <div class="progress-bar rounded-pill bg-success"
+                                                                    role="progressbar" style="width: 100%"
+                                                                    aria-valuenow="100" aria-valuemin="0"
+                                                                    aria-valuemax="100"></div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div>
-                                                    <div class="card mb-3">
-                                                        <div class="card-body"><a
-                                                                class="dropdown-indicator-icon position-absolute text-body-tertiary"
-                                                                href="#collapseWidthDeals-11" role="button"
-                                                                data-bs-toggle="collapse" aria-expanded="false"
-                                                                aria-controls="collapseWidthDeals-11"><span
-                                                                    class="fa-solid fa-angle-down"></span></a>
-                                                            <div
-                                                                class="d-flex align-items-center justify-content-between mb-3">
-                                                                <div class="d-flex"><span class="me-2"
-                                                                        data-feather="clock"
-                                                                        style="stroke-width:2;"></span>
-                                                                    <p
-                                                                        class="mb-0 fs-9 fw-semibold text-body-tertiary date">
-                                                                        Dec 29, 2022<span class="text-body-quaternary"> .
-                                                                            2:15 PM</span></p>
-                                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="card mb-3">
+                                                    <div class="card-body"><a
+                                                            class="dropdown-indicator-icon position-absolute text-body-tertiary"
+                                                            href="#collapseWidthDeals-11" role="button"
+                                                            data-bs-toggle="collapse" aria-expanded="false"
+                                                            aria-controls="collapseWidthDeals-11"><span
+                                                                class="fa-solid fa-angle-down"></span></a>
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between mb-3">
+                                                            <div class="d-flex"><span class="me-2"
+                                                                    data-feather="clock" style="stroke-width:2;"></span>
+                                                                <p class="mb-0 fs-9 fw-semibold text-body-tertiary date">
+                                                                    Dec 29, 2022<span class="text-body-quaternary"> .
+                                                                        2:15 PM</span></p>
                                                             </div>
-                                                            <div class="deals-items-head d-flex align-items-center mb-2">
-                                                                <a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7"
-                                                                    href="../../apps/crm/deal-details.html">Dimensions for
-                                                                    Printing</a>
-                                                                <p class="deals-category fs-10 mb-0 mt-1 d-none"><span
-                                                                        class="me-1 text-body-quaternary"
-                                                                        data-feather="grid"
-                                                                        style="stroke-width:2; height: 12px; width: 12px"></span>Marketplace
-                                                                </p>
-                                                                <p
-                                                                    class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">
-                                                                    $23,400.00</p>
+                                                        </div>
+                                                        <div class="deals-items-head d-flex align-items-center mb-2">
+                                                            <a class="text-primary fw-bold line-clamp-1 me-3 mb-0 fs-7"
+                                                                href="../../apps/crm/deal-details.html">Dimensions for
+                                                                Printing</a>
+                                                            <p class="deals-category fs-10 mb-0 mt-1 d-none"><span
+                                                                    class="me-1 text-body-quaternary"
+                                                                    data-feather="grid"
+                                                                    style="stroke-width:2; height: 12px; width: 12px"></span>Marketplace
+                                                            </p>
+                                                            <p
+                                                                class="ms-auto fs-9 text-body-emphasis fw-semibold mb-0 deals-revenue">
+                                                                $23,400.00</p>
+                                                        </div>
+                                                        <div class="deals-company-agent d-flex flex-between-center">
+                                                            <div class="d-flex align-items-center"><span
+                                                                    class="uil uil-user me-2"></span>
+                                                                <p class="text-body-secondary fw-bold fs-9 mb-0">Slim
+                                                                    Apes</p>
                                                             </div>
-                                                            <div class="deals-company-agent d-flex flex-between-center">
-                                                                <div class="d-flex align-items-center"><span
-                                                                        class="uil uil-user me-2"></span>
-                                                                    <p class="text-body-secondary fw-bold fs-9 mb-0">Slim
-                                                                        Apes</p>
-                                                                </div>
-                                                                <div class="d-flex align-items-center"><span
-                                                                        class="uil uil-headphones me-2"></span>
-                                                                    <p class="text-body-secondary fw-bold fs-9 mb-0">Ally
-                                                                        Aagaard</p>
-                                                                </div>
+                                                            <div class="d-flex align-items-center"><span
+                                                                    class="uil uil-headphones me-2"></span>
+                                                                <p class="text-body-secondary fw-bold fs-9 mb-0">Ally
+                                                                    Aagaard</p>
                                                             </div>
-                                                            <div class="collapse" id="collapseWidthDeals-11">
-                                                                <div class="d-flex gap-2 mb-5"><span
-                                                                        class="badge badge-phoenix badge-phoenix-success">Completed</span><span
-                                                                        class="badge badge-phoenix badge-phoenix-danger">Urgent</span>
-                                                                </div>
-                                                                <table class="mb-4 w-100 table-stats table-stats">
-                                                                    <tr>
-                                                                        <th></th>
-                                                                        <th></th>
-                                                                        <th></th>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="dollar-sign"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Expected Revenue</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                        </div>
+                                                        <div class="collapse" id="collapseWidthDeals-11">
+                                                            <div class="d-flex gap-2 mb-5"><span
+                                                                    class="badge badge-phoenix badge-phoenix-success">Completed</span><span
+                                                                    class="badge badge-phoenix badge-phoenix-danger">Urgent</span>
+                                                            </div>
+                                                            <table class="mb-4 w-100 table-stats table-stats">
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="dollar-sign"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
-                                                                                $23,400.00</p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="user"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Company Name</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Expected Revenue</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
+                                                                            $23,400.00</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="user"
+                                                                                style="width:16px; height:16px"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">
-                                                                                Slim Apes<a href="#!"> <span
-                                                                                        class="fa-solid fa-square-phone text-body-tertiary"></span></a><a
-                                                                                    href="#!"> <span
-                                                                                        class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a
-                                                                                    href="#!"> <span
-                                                                                        class="fab fa-whatsapp-square text-body-tertiary"></span></a>
-                                                                            </p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="calendar"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Closing Date &amp; Time</p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Company Name</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis d-flex align-items-center gap-2">
+                                                                            Slim Apes<a href="#!"> <span
+                                                                                    class="fa-solid fa-square-phone text-body-tertiary"></span></a><a
+                                                                                href="#!"> <span
+                                                                                    class="fa-solid fa-square-envelope text-body-tertiary"></span></a><a
+                                                                                href="#!"> <span
+                                                                                    class="fab fa-whatsapp-square text-body-tertiary"></span></a>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="calendar"
+                                                                                style="width:16px; height:16px"></span>
                                                                             <p
-                                                                                class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
-                                                                                28-12-2022<span> . 02:19 PM</span></p>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="py-1">
-                                                                            <div class="d-flex align-items-center"><span
-                                                                                    class="me-2 text-body-tertiary"
-                                                                                    data-feather="headphones"
-                                                                                    style="width:16px; height:16px"></span>
-                                                                                <p
-                                                                                    class="fw-semibold fs-9 mb-0 text-body-tertiary">
-                                                                                    Assigned Agent </p>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
-                                                                        <td class="py-1">
-                                                                            <select
-                                                                                class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
-                                                                                <option selected="selected">Ally Aagaard
-                                                                                </option>
-                                                                                <option>Lonnie Kub</option>
-                                                                                <option>Aida Moen</option>
-                                                                                <option>Niko Koss</option>
-                                                                                <option>Alec Haag</option>
-                                                                                <option>Ola Smith</option>
-                                                                                <option>Leif Walsh</option>
-                                                                                <option>Brain Cole</option>
-                                                                                <option>Reese Mann</option>
-                                                                            </select>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                                <p class="fs-9 mb-1"> Probability:</p>
-                                                                <div class="progress" style="height:8px">
-                                                                    <div class="progress-bar rounded-pill bg-success"
-                                                                        role="progressbar" style="width: 100%"
-                                                                        aria-valuenow="100" aria-valuemin="0"
-                                                                        aria-valuemax="100"></div>
-                                                                </div>
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Closing Date &amp; Time</p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <p
+                                                                            class="ps-6 ps-sm-0 fw-semibold fs-9 mb-0 mb-0 pb-3 pb-sm-0 text-body-emphasis">
+                                                                            28-12-2022<span> . 02:19 PM</span></p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="py-1">
+                                                                        <div class="d-flex align-items-center"><span
+                                                                                class="me-2 text-body-tertiary"
+                                                                                data-feather="headphones"
+                                                                                style="width:16px; height:16px"></span>
+                                                                            <p
+                                                                                class="fw-semibold fs-9 mb-0 text-body-tertiary">
+                                                                                Assigned Agent </p>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="py-1 d-none d-sm-block pe-sm-2">:</td>
+                                                                    <td class="py-1">
+                                                                        <select
+                                                                            class="form-select form-select-sm py-0 ms-n3 border-0 shadow-none">
+                                                                            <option selected="selected">Ally Aagaard
+                                                                            </option>
+                                                                            <option>Lonnie Kub</option>
+                                                                            <option>Aida Moen</option>
+                                                                            <option>Niko Koss</option>
+                                                                            <option>Alec Haag</option>
+                                                                            <option>Ola Smith</option>
+                                                                            <option>Leif Walsh</option>
+                                                                            <option>Brain Cole</option>
+                                                                            <option>Reese Mann</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <p class="fs-9 mb-1"> Probability:</p>
+                                                            <div class="progress" style="height:8px">
+                                                                <div class="progress-bar rounded-pill bg-success"
+                                                                    role="progressbar" style="width: 100%"
+                                                                    aria-valuenow="100" aria-valuemin="0"
+                                                                    aria-valuemax="100"></div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -2822,11 +2795,12 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
                         {{-- </div> --}}
                     </div>
                     <!--======================================
-                                End Advanced AREA
-                            ======================================-->
+                                        End Advanced AREA
+                                    ======================================-->
                 </div>
             </div>
         </div>
@@ -2834,7 +2808,7 @@
         <div class="col-xl-12 col-xxl-12">
 
             <!-- this is the Add Attachement Modal for events -->
-            <div class="modal fade" id="addAttachementModal" tabindex="-1" data-bs-backdrop="static"
+            <div class="modal fade" id="addProjectAttachementModal" tabindex="-1" data-bs-backdrop="static"
                 aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-top">
                     <div class="modal-content bg-100">
@@ -2843,17 +2817,21 @@
                             <button class="btn p-1" type="button" data-bs-dismiss="modal" aria-label="Close"><span
                                     class="fas fa-times fs--1 text-danger"></span></button>
                         </div>
-                        <form id="fileUploadForm" class="needs-validation" novalidate="" action=""
-                            method="POST" enctype='multipart/form-data'>
+                        <form id="fileUploadForm" class="needs-validation form-submit-event" novalidate=""
+                            action="{{ route('file.store') }}" method="POST" enctype='multipart/form-data'>
                             @csrf
+
+                            <input type="hidden" id="model_id" name="model_id" value="{{ $projectData->id }}">
+                            <input type="hidden" id="employee_id" name="employee_id" value="0">
+                            <input type="hidden" name="model_name" value="project">
+                            <input type="hidden" name="table" value="global_file_table">
+
                             <div class="modal-body">
                                 <div class="modal-body px-0">
                                     <div class="row g-4">
                                         <div class="col-lg-12">
-                                            <input type="hidden" id="addId" name="event_id"
-                                                value="{{ $projectData->id }}">
                                             <div class="mb-4">
-                                                <label class="text-1000 fw-bold mb-2">Name</label>
+                                                <label class="text-1000 fw-bold mb-2">File</label>
                                                 <input class="form-control" type="file" name="file_name"
                                                     id="fileupld" required />
                                             </div>
@@ -2865,13 +2843,13 @@
                                                 </div>
                                             </div>
                                             <!-- <div class="mb-4">
-                                                                            <label class="text-1000 fw-bold mb-2">Status</label>
-                                                                            <select class="form-select" name="active_flag" id="activeFlag" required>
-                                                                                <option value="" >Select</option>
-                                                                                <option value="1" selected>Active</option>
-                                                                                <option value="2">Inactive</option>
-                                                                            </select>
-                                                                        </div> -->
+                                                                                    <label class="text-1000 fw-bold mb-2">Status</label>
+                                                                                    <select class="form-select" name="active_flag" id="activeFlag" required>
+                                                                                        <option value="" >Select</option>
+                                                                                        <option value="1" selected>Active</option>
+                                                                                        <option value="2">Inactive</option>
+                                                                                    </select>
+                                                                                </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -2879,7 +2857,7 @@
                             <div class="modal-footer">
                                 <button class="btn btn-outline-danger" type="button"
                                     data-bs-dismiss="modal">Cancel</button>
-                                <button class="btn btn-primary" type="submit">Save</button>
+                                <button class="btn btn-primary" type="submit" id="submit_btn">Upload</button>
                             </div>
                         </form>
                     </div>
@@ -2909,14 +2887,6 @@
                                                     min="0" name="prorgress_number" id="editPoregessNumber"
                                                     required />
                                             </div>
-                                            <!-- <div class="mb-4">
-                                                                            <label class="text-1000 fw-bold mb-2">Status</label>
-                                                                            <select class="form-select" name="active_flag" id="activeFlag" required>
-                                                                                <option value="" >Select</option>
-                                                                                <option value="1" selected>Active</option>
-                                                                                <option value="2">Inactive</option>
-                                                                            </select>
-                                                                        </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -2955,13 +2925,13 @@
 
                                             </div>
                                             <!-- <div class="mb-4">
-                                                                            <label class="text-1000 fw-bold mb-2">Status</label>
-                                                                            <select class="form-select" name="active_flag" id="activeFlag" required>
-                                                                                <option value="" >Select</option>
-                                                                                <option value="1" selected>Active</option>
-                                                                                <option value="2">Inactive</option>
-                                                                            </select>
-                                                                        </div> -->
+                                                                                    <label class="text-1000 fw-bold mb-2">Status</label>
+                                                                                    <select class="form-select" name="active_flag" id="activeFlag" required>
+                                                                                        <option value="" >Select</option>
+                                                                                        <option value="1" selected>Active</option>
+                                                                                        <option value="2">Inactive</option>
+                                                                                    </select>
+                                                                                </div> -->
                                         </div>
                                     </div>
                                 </div>

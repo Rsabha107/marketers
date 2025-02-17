@@ -1065,7 +1065,8 @@ class ProjectController extends Controller
         $LocationName = $projectData->locations?->name;
         $FundCategory = $projectData->fundCategories?->name;
         $eventNote = $projectData->notes;
-        $FileName = $projectData->files;
+        $FileName = $projectData->attachments;
+        // $FileName = $projectData->files;
 
         if ($projectData->budget_allocation == 0) {
             $budget_percentage_used = 0;

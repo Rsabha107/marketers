@@ -719,6 +719,12 @@
         'root' => 'C:\\xampp\\htdocs\\laravel\\marketers\\storage\\app/userfiles',
         'throw' => false,
       ),
+      'maketers' => 
+      array (
+        'driver' => 'local',
+        'root' => 'C:\\xampp\\htdocs\\laravel\\marketers\\storage\\app/attachments',
+        'throw' => false,
+      ),
       'msgraph' => 
       array (
         'driver' => 'msgraph',

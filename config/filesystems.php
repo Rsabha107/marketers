@@ -42,6 +42,13 @@ return [
             'throw' => false,
         ],
 
+        'maketers' => [
+            'driver' => 'local',
+            'root' => storage_path('app/attachments'),
+            'throw' => false,
+        ],
+
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),

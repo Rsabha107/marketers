@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\GeneralSettings\GlobalAttachment;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -56,6 +57,11 @@ class Project extends Model
     public function files()
     {
         return $this->hasMany(ProjectFileUpload::class, 'project_id', 'id');
+    }
+
+    public function attachments()
+    {
+        return $this->hasMany(GlobalAttachment::class, 'model_id', 'id')->where('model_name', 'project');
     }
 
     public function category()
