@@ -1,7 +1,7 @@
 <script src="{{ asset('fnx/assets/js/phoenix.js') }}"></script>
 {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/bootstrap-table.min.css" rel="stylesheet"> --}}
 <script src="{{ asset('assets/vendors/bootstrap-table-master/dist/bootstrap-table.min.js') }}"></script>
-<script src="{{ asset('assets/js/custom.js') }}"></script>
+{{-- <script src="{{ asset('assets/js/custom.js') }}"></script> --}}
 
 {{-- <input type="hidden" id="edit_task_id_h" name="id" value="{{ $task->id }}">
 <input type="hidden" id="edit_task_table_h" name="table" value="task_table">
@@ -477,7 +477,7 @@
                 <button class="btn p-1" type="button" data-bs-dismiss="modal" aria-label="Close"><span
                         class="fas fa-times fs--1 text-danger"></span></button>
             </div>
-            <form id="taskFileUploadForm" class="needs-validation form-submit-event" novalidate=""
+            <form id="taskFileUploadForm" class="needs-validation form-submit-event-task_file" novalidate=""
                 action="{{ route('file.store') }}" method="POST" enctype='multipart/form-data'>
                 @csrf
 
@@ -524,3 +524,136 @@
         </div>
     </div>
 </div>
+
+<script>
+        $(".form-submit-event-task_file").submit(function (event) {
+        // console.log("on submit of .form-submit-event");
+        $("#cover-spin").show();
+        event.preventDefault();
+
+        // console.log("after prevent");
+        var formData = new FormData(this);
+        var currentForm = $(this);
+        var formID = $(this).closest("form").attr("id");
+        // var modalType = $("#modal_type").val();
+        // var modalType = modalType.length ? modalType : "X";
+        var submit_btn = $(this).find("#submit_btn");
+        var multiple_selection = $(this).find(".js-example-basic-multiplex");
+        var btn_html = submit_btn.html();
+        var btn_val = submit_btn.val();
+        var button_text =
+            btn_html != "" || btn_html != "undefined" ? btn_html : btn_val;
+        var tableInput = currentForm.find('input[name="table"]');
+        // var redirectInput = currentForm.find('input[name="redirect"]');
+        var idInput = currentForm.find('input[name="id"]');
+        var tableID = tableInput.length ? tableInput.val() : "table";
+
+        const name = document.getElementById(formID);
+
+        // Display the key/value pairs
+        for (var pair of formData.entries()) {
+            console.log(pair[0] + ", " + pair[1]);
+        }
+
+        console.log("*****************************************");
+        console.log("custom.js");
+        console.log("currentForm: " + currentForm);
+        console.log("formID: " + formID);
+        console.log("tableInput: " + tableInput);
+        console.log("tableID: " + tableID);
+        console.log("submit_btn: " + submit_btn);
+        console.log("btn_html: " + btn_html);
+        console.log("btn_val: " + btn_val);
+        console.log("button_text: " + button_text);
+        console.log("tableID: " + tableID);
+        console.log("multiple_selection: " + multiple_selection);
+        console.log("formData: " + formData);
+        console.log("form action: " + $(this).attr("action"));
+        console.log("form name: " + name);
+        console.log("*****************************************");
+
+        // if (1>2){
+           if(!name.checkValidity()) {
+            console.log("inside checkValidity stop");
+            event.preventDefault();
+            event.stopPropagation();
+            toastr.error('please enter required fields');
+            $("#cover-spin").hide();
+
+        } else {
+            console.log("inside else");
+            $.ajax({
+                url: $(this).attr("action"),
+                type: "POST",
+                data: formData,
+                headers: {
+                    "X-CSRF-TOKEN": $('input[name="_token"]').attr("value"), // Replace with your method of getting the CSRF token
+                },
+                beforeSend: function () {
+                    submit_btn.html(label_please_wait);
+                    submit_btn.attr("disabled", true);
+                },
+                // data: formData, //form.serialize(),
+                dataType: "json",
+                cache: false,
+                contentType: false,
+                processData: false,
+                // async: false,
+                success: function (result) {
+                    // console.log(result);
+                    if (!result["error"]) {
+                        // alert('success ........')
+                        // console.log(result);
+                        //  events = result;
+                        // var modalWithClass = $('.modal.fade.show');
+                        submit_btn.html(button_text);
+                        submit_btn.attr("disabled", false);
+                        var modalID = $(".modal.fade.show").attr("id");
+                        var ofcanvasID = $(
+                            ".offcanvas.offcanvas-end.show"
+                        ).attr("id");
+                        // console.log('ofcanvasID:'+ofcanvasID)
+                        $("#" + modalID).modal("hide");
+                        // $("#" + ofcanvasID).offcanvas("hide");
+                        // console.log("before form reset");
+                        $("#" + formID)[0].reset();
+                        $(".js-example-basic-multiple").val("");
+                        $(".js-example-basic-multiple").trigger("change");
+                        $("#" + formID)[0].classList.remove("was-validated");
+                        console.log(result["message"])
+                        toastr.success(result["message"]);
+                        // if $('#')
+                        // location.reload(true)
+                        // console.log(redirectInput.val())
+                        // console.log(idInput.val())
+                        // if (redirectInput.val() == 'list'){
+                        //     update_overview_attributes(idInput.val())
+                        // }
+                        // console.log('before table refrest for #'+tableID)
+                        $("#cover-spin").hide();
+                        $("#" + tableID).bootstrapTable("refresh");
+                    } else {
+                        submit_btn.html(button_text);
+                        submit_btn.attr("disabled", false);
+                        toastr.error(result["message"]);
+                        $("#cover-spin").hide();
+
+                    }
+                }, // /success function
+                error: function (jqXhr, textStatus, errorMessage) {
+                    // error callback
+                    // add spinner to button
+                    // console.log(textStatus);
+                    // console.log(errorMessage);
+                    var responseText = jQuery.parseJSON(jqXhr.responseText);
+                    submit_btn.html(button_text);
+                    submit_btn.attr("disabled", false);
+                    // console.log(responseText["message"]);
+                    toastr.error(responseText["message"]);
+                    $("#cover-spin").hide();
+
+                }, // /error function // /response
+            }); // /ajax
+        }
+    });
+</script>

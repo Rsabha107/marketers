@@ -84,8 +84,6 @@ $(document).ready(function () {
         var formData = new FormData(this);
         var currentForm = $(this);
         var formID = $(this).closest("form").attr("id");
-        var modalType = $("#modal_type").val();
-        var modalType = modalType.length ? modalType : "X";
         var submit_btn = $(this).find("#submit_btn");
         var multiple_selection = $(this).find(".js-example-basic-multiplex");
         var btn_html = submit_btn.html();
@@ -163,9 +161,7 @@ $(document).ready(function () {
                         ).attr("id");
                         // console.log('ofcanvasID:'+ofcanvasID)
                         $("#" + modalID).modal("hide");
-                        if (modalType == "X") {
-                            $("#" + ofcanvasID).offcanvas("hide");
-                        }
+                        $("#" + ofcanvasID).offcanvas("hide");
                         // console.log("before form reset");
                         $("#" + formID)[0].reset();
                         $(".js-example-basic-multiple").val("");
