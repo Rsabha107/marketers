@@ -160,10 +160,16 @@ class TaskController extends Controller
                 (($op->subtask->count()) ? '<button class="btn p-0 text-body-tertiary fs-10 me-2"><span class="fas fas fa-network-wired me-1"></span>' . $op->subtask->count() . '</button>' : "");
 
             $div_action = '<div class="font-sans-serif btn-reveal-trigger position-static">';
+            $profile_action2 =
+            '<a href="javascript:void(0)" class="btn btn-sm" id="show_overview_task_offcanv" data-id="' .
+            $op->id .
+            '" data-table="task_table" data-bs-toggle="tooltip" data-bs-placement="right" title="Task Details">' .
+            '<i class="fa-solid fa-lightbulb text-warning"></i></a>';
+
             $profile_action =
                 '<a href="javascript:void(0)" class="btn btn-sm" id="taskCardView" data-id="' .
                 $op->id .
-                '" data-table="employee_table" data-bs-toggle="tooltip" data-bs-placement="right" title="Employee Details">' .
+                '" data-table="task_table" data-bs-toggle="tooltip" data-bs-placement="right" title="Task Details">' .
                 '<i class="fa-solid fa-lightbulb text-warning"></i></a>';
             $update_action =
                 '<a href="javascript:void(0)" class="btn btn-sm" id="edit_task_offcanv" data-id=' . $op->id .
@@ -189,7 +195,7 @@ class TaskController extends Controller
             $details_url = route('projects.admin.project.d', $op->project_id);
 
 
-            $actions = $div_action . $profile_action;
+            $actions = $div_action . $profile_action2 . $profile_action;
 
             ($user->can('employee.edit')) ? $actions = $actions . $update_action . $duplicate_action : $actions = $actions;
             ($user->can('employee.delete')) ? $actions = $actions . $delete_restore : $actions = $actions;
@@ -485,10 +491,117 @@ class TaskController extends Controller
         ]);
     } //end empoloyeeList
 
+    public function filelist($id = null)
+    {
+        $search = request('search');
+        $sort = (request('sort')) ? request('sort') : "id";
+        $order = (request('order')) ? request('order') : "DESC";
+        // $op = EmployeeAttachment::orderBy($sort, $order);
+        $employee = (request()->employee) ? request()->employee : "";
+        $attachment_type = (request()->attachment_type) ? request()->attachment_type : "";
+
+        $task = Task::find($id);
+
+        // $op = GlobalAttachment::orderBy($sort, $order);
+        $op = $task->attachments();
+        $op = $op->orderBy($sort, $order);
+
+        // dd($op);
+        if ($search) {
+            $op = $op->where(function ($query) use ($search) {
+                $query->where('name', 'like', '%' . $search . '%');
+            });
+        }
+
+        if ($employee) {
+            $op = $op->where(function ($query) use ($employee) {
+                $query->where('employee_id', 'like', '%' . $employee . '%');
+            });
+        }
+
+        if ($attachment_type) {
+            $op = $op->where(function ($query) use ($attachment_type) {
+                $query->where('model_name', 'like', '%' . $attachment_type . '%');
+            });
+        }
+
+        $total = $op->count();
+
+        //apply scope
+        // $op = $op->isActive('N');
+
+        $op = $op->paginate(request("limit"))->through(function ($op) {
+
+            $actions =
+                '<a href="javascript:void(0)" class="btn btn-sm" data-table="task_file_table" data-id="' .
+                $op->id .
+                '" id="delete_task_file" data-bs-toggle="tooltip" data-bs-placement="right" title="Delete">' .
+                '<i class="bx bx-trash text-danger"></i></a></div></div>';
+
+            // $profile_url = route('hr.admin.employee.profile', encrypt($op->employees->id));
+
+            return [
+                'id' => $op->id,
+                'id1' => '<div class="ms-3">' . $op->id . '</div>',
+                'description' => '<div class="ms-1">' . $op->description . '</div>',
+                'type' => '<div class="ms-1">' . $op->model_name . '</div>',
+                'original_file_name' => '<div class="align-middle white-space-wrap fw-bold fs-8 ms-3"><a href="' . route('global.file.serve', $op->id) . '" target="_blank"> ' . $op->original_file_name . '</a></div>',
+                'file_size' => '<div class="align-middle white-space-wrap fw-bold fs-8 ms-3">' . formatSizeUnits($op->file_size) . '</div>',
+                'actions' => $actions,
+                'created_at' => format_date($op->created_at,  'H:i:s'),
+                'updated_at' => format_date($op->updated_at, 'H:i:s'),
+            ];
+        });
+
+        return response()->json([
+            "rows" => $op->items(),
+            "total" => $total,
+        ]);
+    }
+
     public function taskOverview($id)
     {
         // dd('taskOverview');
-        $taskData = Task::where('id', $id);
+        $taskData = Task::find($id);
+        // $taskData = $taskData->paginate(request('limit'))->through(function ($task) {
+        //     return  [
+        //         'id' => $task->id,
+        //         'project_title' => $task->project->name,
+        //         // 'project_name' => $task->project->name,
+        //         'name' => $task->name,
+        //         'assigned_to' => $task->employees,
+        //         'status_name' => $task->status->title,
+        //         'status_color' => $task->status->color,
+        //         'start_date' => format_date($task->start_date,  'H:i:s'),
+        //         'due_date' => format_date($task->due_date,  'H:i:s'),
+        //         'budget_allocation' => $task->budget_allocation,
+        //         'actual_budget_allocated' => $task->actual_budget_allocated,
+        //         'event_id' => $task->event_id,
+        //         'notes' => $task->notes,
+        //         'files' => $task->files,
+        //         'subtasks' => $task->subtask,
+        //         // 'workspace' => $task->workspaces->title,
+        //         'attributes' => (($task->notes->count()) ? '<button class="btn p-0 text-body-tertiary fs-10 me-2"><span class="fas fa-sticky-note me-1"></span>' . $task->notes->count() . '</button>' : "") .
+        //             (($task->files->count()) ? '<button class="btn p-0 text-body-tertiary fs-10 me-2"><span class="fas fa-paperclip me-1"></span>' . $task->files->count() . '</button>' : ""),
+        //         // 'attributes' => '<div class="ms-3 text-secondary">'.(($task->files->count()) ? '<span class="fas fa-file-alt me-1"></span>':"").' '.(($task->notes->count()) ? '<span class="fas fa-clipboard me-1"></span>':"").'</div>',
+        //         'status' => '<span class="badge badge-phoenix fs--2 badge-phoenix-' . $task->status->color . ' "><span class="badge-label" data-bs-toggle="modal" data-bs-target="#taskStatusModal" id="editTaskStatus" data-id="' . $task->id . '" data-table="task_table">' . $task->status->title . '</span><span class="ms-1" data-feather="x" style="height:12.8px;width:12.8px;"></span></span>',
+        //         // 'workspace_formated' => '<span class="badge badge-phoenix fs--2 badge-phoenix-warning"><span class="badge-label" data-bs-toggle="modal" data-bs-target="#taskStatusModal" id="editTaskStatus" data-id="' . $task->workspaces->id . '" data-table="task_table">' . $task->workspaces->title . '</span><span class="ms-1" data-feather="x" style="height:12.8px;width:12.8px;"></span></span>',
+        //         'description' => $task->description,
+        //         // 'description' => '<button class="btn btn-secondary m-1" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top Popover">Top Popover</button>',
+        //         'created_at' => format_date($task->created_at,  'H:i:s'),
+        //         'updated_at' => format_date($task->updated_at, 'H:i:s'),
+        //     ];
+        // });
+        $view = view('/projects/admin/task/mv/overview', ['task' => $taskData])->render();
+        return response()->json(['view' => $view]);
+
+        // return response()->json(['data' => $taskData,]);
+    } // taskOverview2
+
+    public function taskOverview1($id)
+    {
+        // dd('taskOverview');
+        $taskData = Task::find($id);
         $taskData = $taskData->paginate(request('limit'))->through(function ($task) {
             return  [
                 'id' => $task->id,
@@ -518,6 +631,8 @@ class TaskController extends Controller
                 'updated_at' => format_date($task->updated_at, 'H:i:s'),
             ];
         });
+        // $view = view('/projects/admin/task/mv/overview', ['task' => $taskData])->render();
+        // return response()->json(['view' => $view]);
 
         return response()->json(['data' => $taskData,]);
     } // taskOverview

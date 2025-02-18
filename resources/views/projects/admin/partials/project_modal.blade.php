@@ -58,22 +58,17 @@
                 </path>
             </svg><!-- <i class="fa fa-times"></i> Font Awesome fontawesome.com --></span>
     </a>
-    <x-projects.admin-project-drawer id=""
-        formAction="{{ route('project.store') }}"
-        :functionalareas="$functional_areas"
-        :tags="$tags"
-        :projecttype="$project_type"
-        :eventcategory="$event_category"
-        :clients="$clients"
-        :employees="$employees"
+    <x-projects.admin-project-drawer id="" formAction="{{ route('project.store') }}" :functionalareas="$functional_areas"
+        :tags="$tags" :projecttype="$project_type" :eventcategory="$event_category" :clients="$clients" :employees="$employees"
         formId="add_project_form">
 
-    </x-admin-drawer-project>
+        </x-admin-drawer-project>
 
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -91,8 +86,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="add_new_project_type_modal" tabindex="-1"
-    aria-labelledby="ModalLabel" aria-hidden="true">
+<div class="modal fade" id="add_new_project_type_modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-top">
         <div class="modal-content bg-100">
             <div class="modal-header bg-modal-header">
@@ -108,7 +102,8 @@
                         <div class="row g-4">
                             <div class="col-lg-12">
                                 <input type="hidden" id="add_project_member_projectid" name="project_id">
-                                <input type="hidden" id="add_project_member_table" name="table" value="project_members_table">
+                                <input type="hidden" id="add_project_member_table" name="table"
+                                    value="project_members_table">
                                 <div class="mb-3 col-md-12">
                                     <label class="form-label" for="inputAddress2">Assign to (multiple)</label>
                                     <select required class="form-select js-select-project-member-assign-multiple"
@@ -116,9 +111,9 @@
                                         data-with="100%" data-placeholder="<?= get_label('Team', 'Team') ?>">
                                         {{-- <option value="">Select employees</option> --}}
                                         @foreach ($emps as $key => $item)
-                                        <option value="{{ $item->id }}">
-                                            {{ $item->full_name }}
-                                        </option>
+                                            <option value="{{ $item->id }}">
+                                                {{ $item->full_name }}
+                                            </option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -127,8 +122,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-outline-danger" type="button"
-                        data-bs-dismiss="modal">Cancel</button>
+                    <button class="btn btn-outline-danger" type="button" data-bs-dismiss="modal">Cancel</button>
                     <button class="btn btn-primary" type="submit" id="submit_btn">Save</button>
                 </div>
             </form>

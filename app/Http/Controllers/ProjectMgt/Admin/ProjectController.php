@@ -562,6 +562,74 @@ class ProjectController extends Controller
         ]);
     }
 
+    public function filelist($id = null)
+    {
+        $search = request('search');
+        $sort = (request('sort')) ? request('sort') : "id";
+        $order = (request('order')) ? request('order') : "DESC";
+        // $op = EmployeeAttachment::orderBy($sort, $order);
+        $employee = (request()->employee) ? request()->employee : "";
+        $attachment_type = (request()->attachment_type) ? request()->attachment_type : "";
+
+        $project = Project::find($id);
+
+        // $op = GlobalAttachment::orderBy($sort, $order);
+        $op = $project->attachments();
+        $op = $op->orderBy($sort, $order);
+
+        // dd($op);
+        if ($search) {
+            $op = $op->where(function ($query) use ($search) {
+                $query->where('name', 'like', '%' . $search . '%');
+            });
+        }
+
+        if ($employee) {
+            $op = $op->where(function ($query) use ($employee) {
+                $query->where('employee_id', 'like', '%' . $employee . '%');
+            });
+        }
+
+        if ($attachment_type) {
+            $op = $op->where(function ($query) use ($attachment_type) {
+                $query->where('model_name', 'like', '%' . $attachment_type . '%');
+            });
+        }
+
+        $total = $op->count();
+
+        //apply scope
+        $op = $op->isActive('N');
+
+        $op = $op->paginate(request("limit"))->through(function ($op) {
+
+            $actions =
+                '<a href="javascript:void(0)" class="btn btn-sm" data-table="project_file_table" data-id="' .
+                $op->id .
+                '" id="delete_project_file" data-bs-toggle="tooltip" data-bs-placement="right" title="Delete">' .
+                '<i class="bx bx-trash text-danger"></i></a></div></div>';
+
+            // $profile_url = route('hr.admin.employee.profile', encrypt($op->employees->id));
+
+            return [
+                'id' => $op->id,
+                'id1' => '<div class="ms-3">' . $op->id . '</div>',
+                'description' => '<div class="ms-1">' . $op->description . '</div>',
+                'type' => '<div class="ms-1">' . $op->model_name . '</div>',
+                'original_file_name' => '<div class="align-middle white-space-wrap fw-bold fs-8 ms-3"><a href="' . route('global.file.serve', $op->id) . '" target="_blank"> ' . $op->original_file_name . '</a></div>',
+                'file_size' => '<div class="align-middle white-space-wrap fw-bold fs-8 ms-3">' . formatSizeUnits($op->file_size) . '</div>',
+                'actions' => $actions,
+                'created_at' => format_date($op->created_at,  'H:i:s'),
+                'updated_at' => format_date($op->updated_at, 'H:i:s'),
+            ];
+        });
+
+        return response()->json([
+            "rows" => $op->items(),
+            "total" => $total,
+        ]);
+    }
+
     public function projectCardMV()
     {
 

@@ -208,6 +208,77 @@ $(document).ready(function () {
         });
     });
 
+    $("body").on("click", "#delete_task_file", function (e) {
+        var id = $(this).data("id");
+        var tableID = $(this).data("table");
+        e.preventDefault();
+        // alert("id: "+id);
+        // alert("tableID: "+tableID);
+        var link = $(this).attr("href");
+        Swal.fire({
+            title: "Are you sure?",
+            text: "Delete This Data?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    url: "/global/files/delete/" + id,
+                    type: "DELETE",
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'), // Replace with your method of getting the CSRF token
+                    },
+                    dataType: "json",
+                    success: function (result) {
+                        if (!result["error"]) {
+                            toastr.success(result["message"]);
+                            // divToRemove.remove();
+                            // $("#fileCount").html("File ("+result["count"]+")");
+                            // console.log('before table refrest for #'+tableID);
+                            $("#" + tableID).bootstrapTable("refresh");
+                            // Swal.fire(
+                            //     'Deleted!',
+                            //     'Your file has been deleted.',
+                            //     'success'
+                            //   )
+                        }
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        console.log(xhr.status);
+                        console.log(thrownError);
+                    },
+                });
+            }
+        });
+    });
+
+    $("body").on("click", "#show_overview_task_offcanv", function () {
+        console.log("inside #edit_task_offcanv");
+        $("#cover-spin").show();
+        var id = $(this).data("id");
+        console.log("id", id);
+        $.ajax({
+            url: "/projects/admin/task/mv/overview/" + id,
+            method: "GET",
+            async: true,
+            success: function (response) {
+                g_response = response.view;
+                $("#global-edit-task-overview-content").empty("").append(g_response);
+
+                $("#offcanvas-edit-task-overview-modal").offcanvas("show");
+                $("#cover-spin").hide();
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                console.log(xhr.status);
+                console.log(thrownError);
+                $("#cover-spin").hide();
+            },
+        });
+    });
+
     $("body").on("click", "#edit_task_offcanv", function () {
         console.log("inside #edit_task_offcanv");
         $("#cover-spin").show();
@@ -903,6 +974,11 @@ $("body").on("click", "#task-note-tab", function (event) {
     });
 });
 
+$("body").on("click", "#add_task_file", function () {
+    console.log("inside #add_task_file");
+    $("#addTaskAttachementModal").modal("show");
+});
+
 $("body").on("click", "#task-subtask-tab", function (event) {
     // alert('in activity-tab')
     $(".spinner-border").show();
@@ -971,6 +1047,7 @@ $("body").on("click", "#task-file-tab", function (event) {
 $("body").on("click", "#taskCardView", function (event) {
     // event.preventDefault();
     var taskId = $(this).data("id");
+    var tableName = $(this).data("table");
     console.log("click of taskCardView tasks.js");
     $(".spinner-border").show();
     // console.log("task id: " + taskId);
@@ -1220,6 +1297,8 @@ $("body").on("click", "#taskCardView", function (event) {
 
             console.log("taskCardView taskId: " + taskId);
             $("#note_parent_task_id_overview").val(taskId);
+            $("#model_id").val(taskId);
+            $("#task_card_view_table").val(tableName);
             $("#subtask_parent_task_id_overview").val(taskId);
             $("#file_parent_task_id_overview").val(taskId);
             $(".spinner-border").hide();

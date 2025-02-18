@@ -9,7 +9,7 @@
 <div class="card">
     <div class="card-header d-flex align-items-center border-bottom">
         <div class="ms-3">
-            <h5 class="mb-0 fs-sm">Add Task</h5>
+            <h5 class="mb-0 fs-sm">Edit Task</h5>
         </div>
     </div>
     <div class="card-body">

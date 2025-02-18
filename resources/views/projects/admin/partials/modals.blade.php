@@ -759,7 +759,7 @@ Request::is('tracki/todo/manage'))
 </div>
 
 <!-- The main Task overview ***************************************************************************************************-->
-<div class="modal fade" id="taskCardViewModal" tabindex="-1" aria-labelledby="taskCardViewModal"
+{{-- <div class="modal fade" id="taskCardViewModal" tabindex="-1" aria-labelledby="taskCardViewModal"
     aria-hidden="true">
 
     <!-- <div class="d-flex justify-content-center">
@@ -1029,7 +1029,7 @@ Request::is('tracki/todo/manage'))
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
 @if (Request::is('projects/admin/task/template*'))
 <div class="modal fade" id="add_task_template_modal" tabindex="-1" data-bs-backdrop="static"

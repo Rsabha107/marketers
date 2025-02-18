@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\GeneralSettings\GlobalAttachment;
 use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -81,6 +82,11 @@ class Task extends Model
     public function files()
     {
         return $this->hasMany(TaskFileUpload::class)->orderBy('created_at', 'desc');
+    }
+
+    public function attachments()
+    {
+        return $this->hasMany(GlobalAttachment::class, 'model_id', 'id')->where('model_name', 'task');
     }
 
     public function notes()

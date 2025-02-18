@@ -870,7 +870,7 @@
                                 <div class="row align-items-center justify-content-between g-3 mt-2 ms-2">
                                     <div class="col-12 col-md-auto d-flex">
                                         @if (Auth::user()->can('project.file.create'))
-                                            <a href="#!" data-id="{{ $projectData->id }}" data-table="global_file_table"
+                                            <a href="#!" data-id="{{ $projectData->id }}" data-table="project_file_table"
                                                 class="btn btn-phoenix-primary px-3 px-sm-5 me-2" data-bs-toggle="modal"
                                                 data-bs-target="#addProjectAttachementModal" aria-haspopup="true"
                                                 aria-expanded="false" data-bs-reference="parent"><span
@@ -880,7 +880,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <x-global.attachment-card :projectId="$projectData->id" />
+                            <x-projects.admin-projects-attachment-card :projectId="$projectData->id" />
 
                             {{-- @foreach ($fileName as $key => $item)
                                 <div class="border-top border-dashed border-300 px-3 pt-3 pb-4">
@@ -2807,7 +2807,7 @@
 
         <div class="col-xl-12 col-xxl-12">
 
-            <!-- this is the Add Attachement Modal for events -->
+            <!-- this is the Add Attachement Modal for projects -->
             <div class="modal fade" id="addProjectAttachementModal" tabindex="-1" data-bs-backdrop="static"
                 aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-top">
@@ -2817,14 +2817,14 @@
                             <button class="btn p-1" type="button" data-bs-dismiss="modal" aria-label="Close"><span
                                     class="fas fa-times fs--1 text-danger"></span></button>
                         </div>
-                        <form id="fileUploadForm" class="needs-validation form-submit-event" novalidate=""
+                        <form id="projectFileUploadForm" class="needs-validation form-submit-event" novalidate=""
                             action="{{ route('file.store') }}" method="POST" enctype='multipart/form-data'>
                             @csrf
 
                             <input type="hidden" id="model_id" name="model_id" value="{{ $projectData->id }}">
                             <input type="hidden" id="employee_id" name="employee_id" value="0">
                             <input type="hidden" name="model_name" value="project">
-                            <input type="hidden" name="table" value="global_file_table">
+                            <input type="hidden" name="table" value="project_file_table">
 
                             <div class="modal-body">
                                 <div class="modal-body px-0">
@@ -2920,7 +2920,7 @@
                                             <input type="hidden" id="addId" name="event_id"
                                                 value="{{ $projectData->id }}">
                                             <div class="mb-4">
-                                                <label class="text-1000 fw-bold mb-2">Name</label>
+                                                <label class="text-1000 fw-bold mb-2">Note</label>
                                                 <textarea class="form-control mb-3" id="notes" name="note_text" rows="4"> </textarea>
 
                                             </div>

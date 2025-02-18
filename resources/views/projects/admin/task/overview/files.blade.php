@@ -4,7 +4,7 @@
     </div>
 </div>
 <div class="mb-5">
-    @if ($task->files->isEmpty())
+    @if ($task->attachments->isEmpty())
     <div class="d-flex flex-wrap p-20" id="task-file-list">
         <div class="align-items-center d-flex flex-column text-lightest p-20 w-100">
             <svg class="svg-inline--fa fa-file fa-w-12 f-21 w-100" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="file" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
@@ -17,7 +17,7 @@
         </div>
     </div>
     @else
-    @foreach ($task->files as $key => $file )
+    @foreach ($task->attachments as $key => $file )
     <!-- <div class="border-top py-3"> -->
     <div class="border-bottom border-dashed mb-3">
         <div class="me-n3 mb-4">

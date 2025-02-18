@@ -769,7 +769,7 @@ $(document).ready(function () {
         });
     });
 
-    $("body").on("click", "#delete_global_file", function (e) {
+    $("body").on("click", "#delete_project_file", function (e) {
         var id = $(this).data("id");
         var tableID = $(this).data("table");
         e.preventDefault();

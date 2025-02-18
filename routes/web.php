@@ -155,6 +155,7 @@ Route::group(['middleware' => 'prevent-back-history', 'XssSanitizer'], function 
         Route::controller(AttachmentController::class)->group(function () {
             Route::post('file/store', 'store')->name('file.store');
             Route::get('/global/files/list/{id?}', 'list')->name('global.files.list')->middleware('permission:employee.file.list');
+            // Route::get('/global/files/list/{project?}', 'list')->name('global.files.list')->middleware('permission:employee.file.list');
             Route::get('/global/file/serve/{file}', 'serve')->name('global.file.serve');
             Route::delete('/global/files/delete/{id}', 'delete')->name('global.files.delete');
         });
@@ -246,6 +247,7 @@ Route::group(['middleware' => 'prevent-back-history', 'XssSanitizer'], function 
             Route::get('/projects/admin/project/mv/create', 'createmv')->name('projects.admin.project.mv.create')->middleware('permission:project.show');
             Route::get('/projects/admin/project/duplicate/{id}', 'duplicate')->name('projects.admin.project.duplicate')->middleware('permission:project.show');
             Route::get('/projects/admin/project/list/{id?}', 'list')->name('projects.admin.project.list')->middleware('permission:project.show');
+            Route::get('/projects/admin/project/files/list/{id?}', 'filelist')->name('projects.admin.project.files.list')->middleware('permission:employee.file.list');
             Route::get('/projects/admin/project/employee/list/{id?}', 'employeeList')->name('projects.admin.employee.project.list')->middleware('permission:project.show');
             Route::get('/projects/admin/project/d/{id}', 'detail')->name('projects.admin.project.d')->middleware('permission:project.show');
             Route::get('/projects/admin/project/mv', 'projectCardMV')->name('projects.admin.project.mv');
@@ -279,10 +281,12 @@ Route::group(['middleware' => 'prevent-back-history', 'XssSanitizer'], function 
         Route::controller(AdminTaskController::class)->group(function () {
             Route::get('/projects/admin/task/list/{id?}', 'list')->name('projects.admin.task.list')->middleware('permission:project.show');
             Route::get('/projects/admin/task/employee/list/{id?}', 'employeeList')->name('projects.admin.employee.task.list')->middleware('permission:project.show');
-            Route::get('/projects/admin/task/overview/{id}', 'taskOverview')->name('projects.admin.task.overview')->middleware('permission:task.show');
+            // Route::get('/projects/admin/task/overview/{id}', 'taskOverview')->name('projects.admin.task.overview')->middleware('permission:task.show');
+            Route::get('/projects/admin/task/mv/overview/{id}', 'taskOverview')->name('projects.admin.task.mv.overview')->middleware('permission:task.show');
             Route::get('/projects/admin/task/notes/{id}', 'getTaskNotesView')->name('projects.admin.task.notes')->middleware('permission:task.show');
             Route::get('/projects/admin/task/subtask/{id}', 'getTaskSubView')->name('projects.admin.task.subtask')->middleware('permission:task.show');
             Route::get('/projects/admin/task/files/{id}', 'getTaskFilesView')->name('projects.admin.task.files')->middleware('permission:task.show');
+            Route::get('/projects/admin/task/files/list/{id?}', 'filelist')->name('projects.admin.task.files.list')->middleware('permission:employee.file.list');
             Route::get('/projects/admin/task', 'index')->name('projects.admin.task')->middleware('permission:task.show');
             Route::delete('/projects/admin/task/delete/{id}', 'destroy')->name('projects.admin.task.delete');
 
