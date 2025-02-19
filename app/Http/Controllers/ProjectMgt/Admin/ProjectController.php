@@ -607,8 +607,7 @@ class ProjectController extends Controller
                 '<a href="javascript:void(0)" class="btn btn-sm" data-table="project_file_table" data-id="' .
                 $op->id .
                 '" id="delete_project_file" data-bs-toggle="tooltip" data-bs-placement="right" title="Delete">' .
-                '<i class="bx bx-trash text-danger"></i></a></div></div>';
-
+                '<i class="fa-solid fa-trash text-danger"></i></a></div></div>';
             // $profile_url = route('hr.admin.employee.profile', encrypt($op->employees->id));
 
             return [
