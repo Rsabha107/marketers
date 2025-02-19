@@ -769,9 +769,9 @@ $(document).ready(function () {
         });
     });
 
-    $("body").on("click", "#delete_project_file", function (e) {
-        console.log("inside #delete_project_file");
-    });
+    // $("body").on("click", "#delete_project_file", function (e) {
+    //     console.log("inside #delete_project_file");
+    // });
 
     // $("body").on("click", "#delete_project_file", function (e) {
     //     var id = $(this).data("id");

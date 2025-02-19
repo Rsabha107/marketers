@@ -2964,6 +2964,10 @@
             console.log('taskTab')
             $("#task_table").bootstrapTable("refresh");
         });
+
+        $("body").on("click", "#delete_project_file", function (e) {
+        console.log("inside #delete_project_file");
+    });
     </script>
 
     <script type="text/javascript">
